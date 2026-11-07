@@ -3,24 +3,25 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # Browser branding
-ac_add_options --with-app-name=${binName}
-ac_add_options --with-app-basename=Zen
+ac_add_options --with-app-name=umbral
+ac_add_options --with-app-basename=Umbral
 
 # Localization (Must be an absolute path)
 ac_add_options --with-l10n-base="${topsrcdir}/browser/locales"
 
-export MOZ_APP_BASENAME=Zen
+export MOZ_APP_BASENAME=Umbral
+export MOZ_APP_DISPLAYNAME="Umbral Browser"
 export MOZ_BRANDING_DIRECTORY=${brandingDir}
 export MOZ_OFFICIAL_BRANDING_DIRECTORY=${brandingDir}
 
-ac_add_options --with-distribution-id=app.zen-browser
+ac_add_options --with-distribution-id=app.umbral.browser
 
 # Uncomment if builds are too resource hungry
 # mk_add_options MOZ_MAKE_FLAGS="-j4"
 # ac_add_options --enable-linker=gold
 
 # Misc
-export MOZ_SOURCE_REPO=https://github.com/zen-browser/desktop
+export MOZ_SOURCE_REPO=https://github.com/Martin08ABM/umbral-browser
 export MOZ_SOURCE_CHANGESET=${changeset}
 export MOZ_INCLUDE_SOURCE_INFO=1
 
@@ -53,7 +54,7 @@ fi
 if test "$ZEN_RELEASE"; then
 
   ac_add_options --enable-clang-plugin
-  
+
   if ! test "$ZEN_DISABLE_BOOTSTRAP"; then
     ac_add_options --enable-bootstrap=-sccache
   fi

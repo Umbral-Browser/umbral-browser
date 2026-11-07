@@ -14,8 +14,8 @@ permissions:
 
 jobs:
   build-windows-x86_64:
-    name: Build Windows x86_64 ZIP
-    runs-on: ubuntu-24.04
+    name: Build Windows x86_64 installer
+    runs-on: warp-ubuntu-latest-x64-16x
     timeout-minutes: 360
     env:
       CARGO_INCREMENTAL: 0
@@ -162,6 +162,7 @@ jobs:
             echo 'At least 30 GiB free is required for the Windows object directory and package.' >&2
             exit 1
           fi
+
       - name: Provide source metadata for Windows build
         shell: bash
         run: |
@@ -170,6 +171,7 @@ jobs:
           git -C engine config user.email "umbral-ci@users.noreply.github.com"
           git -C engine add config/milestone.txt
           git -C engine commit -m "Provide Firefox build metadata"
+
       - name: Build Windows x86_64
         env:
           SURFER_COMPAT: x86_64
@@ -180,7 +182,7 @@ jobs:
           ZEN_GA_DISABLE_PGO: 1
         run: bash .github/workflows/src/release-build.sh
 
-      - name: Package the portable ZIP
+      - name: Package and validate Windows installer
         env:
           SURFER_COMPAT: x86_64
           SURFER_PLATFORM: win32
@@ -189,35 +191,37 @@ jobs:
           ZEN_GA_DISABLE_PGO: 1
         run: |
           set -euxo pipefail
-          available_kib="$(df -Pk -- "$GITHUB_WORKSPACE" | awk 'NR == 2 { print $4 }')"
-          if (( available_kib < 4194304 )); then
-            echo 'At least 4 GiB free is required to package and validate the Windows ZIP.' >&2
-            exit 1
-          fi
           npm run package
-          package_file="$(find dist -maxdepth 1 -type f -name 'zen-*.win64.zip' -print -quit)"
+
+          package_file="$(find dist -maxdepth 1 -type f -name '*.win64.zip' -print -quit)"
           test -n "$package_file"
           unzip -tq "$package_file"
+
           entries="$(unzip -Z1 "$package_file")"
-          exe_path="$(printf '%s\n' "$entries" | awk '$0 ~ /(^|\/)zen\.exe$/ { print; exit }')"
+          exe_path="$(printf '%s\n' "$entries" | awk '$0 ~ /(^|\/)(umbral|zen)\.exe$/ { print; exit }')"
           xpi_path="$(printf '%s\n' "$entries" | awk '$0 ~ /(^|\/)distribution\/extensions\/uBlock0@raymondhill\.net\.xpi$/ { print; exit }')"
           printf '%s\n' "$entries" | grep -Eq '(^|\/)browser\/omni\.ja$'
           test -n "$exe_path"
           test -n "$xpi_path"
-          unzip -p "$package_file" "$exe_path" > "$RUNNER_TEMP/umbral-zen.exe"
+
           unzip -p "$package_file" "$xpi_path" > "$RUNNER_TEMP/umbral-ublock.xpi"
-          file "$RUNNER_TEMP/umbral-zen.exe" | grep -Eq 'PE32\+ executable.*x86-64'
           unzip -tq "$RUNNER_TEMP/umbral-ublock.xpi"
           echo '5b74415860456370644bd80f16125e865b0e6c356bb5dfcfb84069967eaa5287  '"$RUNNER_TEMP/umbral-ublock.xpi" | sha256sum -c -
+
           xpi_entries="$(unzip -Z1 "$RUNNER_TEMP/umbral-ublock.xpi")"
           printf '%s\n' "$xpi_entries" | grep -Fxq 'META-INF/mozilla.rsa'
           printf '%s\n' "$xpi_entries" | grep -Fxq 'META-INF/mozilla.sf'
-          cp "$package_file" umbral-windows-x86_64.zip
 
-      - name: Upload Windows ZIP artifact
+          installer_file="$(find dist -maxdepth 1 -type f -name '*.installer.exe' -print -quit)"
+          test -n "$installer_file"
+          test -s "$installer_file"
+          file "$installer_file" | grep -q 'PE32'
+          cp "$installer_file" umbral-windows-x86_64-installer.exe
+
+      - name: Upload Windows installer artifact
         uses: actions/upload-artifact@v4
         with:
-          name: umbral-windows-x86_64
-          path: umbral-windows-x86_64.zip
+          name: umbral-windows-x86_64-installer
+          path: umbral-windows-x86_64-installer.exe
           if-no-files-found: error
           retention-days: 3
