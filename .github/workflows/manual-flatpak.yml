@@ -15,7 +15,7 @@ permissions:
 jobs:
   build-flatpak:
     name: Build Linux x86_64 Flatpak
-    runs-on: warp-ubuntu-latest-x64-16x
+    runs-on: warp-ubuntu-latest-x64-32x
     timeout-minutes: 360
     env:
       CARGO_INCREMENTAL: 0
@@ -117,7 +117,7 @@ jobs:
             org.freedesktop.Platform//25.08 \
             org.freedesktop.Sdk//25.08 \
             org.mozilla.firefox.BaseApp//25.08
-            
+
       - name: Build Flatpak bundle
         run: |
           archive_file="$(find dist -maxdepth 1 -type f -name 'zen-*.tar.xz' -print -quit)"
