@@ -1,0 +1,119 @@
+name: Manual Flatpak build
+
+on:
+  workflow_dispatch:
+    inputs:
+      display_version:
+        description: Version label for this build
+        required: true
+        type: string
+        default: 1.0.0-test
+
+permissions:
+  contents: read
+
+jobs:
+  build-flatpak:
+    name: Build Linux x86_64 Flatpak
+    runs-on: warp-ubuntu-latest-x64-16x
+    timeout-minutes: 360
+    env:
+      CARGO_INCREMENTAL: 0
+      CARGO_TERM_COLOR: always
+      SURFER_PLATFORM: linux
+      SURFER_COMPAT: x86_64
+      ZEN_GA_DISABLE_PGO: 1
+
+    steps:
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          preinstalled-runtimes: true
+
+      - name: Check out Umbral
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install build and Flatpak prerequisites
+        run: |
+          sudo apt-get -o Acquire::Retries=3 update
+          sudo apt-get install -y \
+            python3 python3-pip python3-launchpadlib dos2unix yasm nasm \
+            build-essential libgtk2.0-dev libpython3-dev m4 uuid libasound2-dev \
+            libcurl4-openssl-dev libdbus-1-dev libdrm-dev libdbus-glib-1-dev \
+            libgtk-3-dev libpulse-dev libx11-xcb-dev libxt-dev xvfb lld llvm \
+            autoconf autoconf2.13 automake bison cabextract curl cmake flex gawk \
+            git gnupg jq libbz2-dev libexpat1-dev libffi-dev libncursesw5-dev \
+            libsqlite3-dev libssl-dev libtool libucl-dev libxml2-dev ninja-build \
+            pkg-config procps python3-requests python3-toml scons subversion \
+            tar unzip uuid-dev wget zip zlib1g-dev aria2 zstd file \
+            flatpak flatpak-builder
+
+          sudo flatpak remote-add --if-not-exists flathub \
+            https://flathub.org/repo/flathub.flatpakrepo
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Configure Umbral build
+        env:
+          DISPLAY_VERSION: ${{ inputs.display_version }}
+        run: npm run surfer -- ci --brand release --display-version "$DISPLAY_VERSION"
+
+      - name: Download Firefox source and build dependencies
+        run: npm run download
+
+      - name: Set up Rust
+        run: |
+          rust_channel="$(sed -n 's/^channel *= *"\(.*\)"/\1/p' rust-toolchain.toml)"
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+            | sh -s -- -y --default-toolchain "$rust_channel"
+          . "$HOME/.cargo/env"
+          rustup target add x86_64-unknown-linux-gnu
+
+      - name: Import Umbral sources
+        run: |
+          . "$HOME/.cargo/env"
+          npm run import -- --verbose
+
+      - name: Download language packs
+        run: sh scripts/download-language-packs.sh
+
+      - name: Bootstrap Firefox
+        run: |
+          cd engine
+          ./mach --no-interactive bootstrap --application-choice browser
+
+      - name: Build Umbral
+        env:
+          ZEN_RELEASE_BRANCH: release
+        run: bash .github/workflows/src/release-build.sh
+
+      - name: Package Linux build
+        env:
+          ZEN_RELEASE: 1
+          ZEN_RELEASE_BRANCH: release
+        run: npm run package
+
+      - name: Build Flatpak bundle
+        run: |
+          archive_file="$(find dist -maxdepth 1 -type f -name 'zen-*.tar.xz' -print -quit)"
+          test -n "$archive_file"
+          bash scripts/build-flatpak.sh "$archive_file"
+          test -s dist/umbral-linux-x86_64.flatpak
+
+      - name: Upload Flatpak artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: umbral-linux-x86_64-flatpak
+          path: dist/umbral-linux-x86_64.flatpak
+          if-no-files-found: error
+          retention-days: 7
