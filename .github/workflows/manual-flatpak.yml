@@ -111,6 +111,13 @@ jobs:
           ZEN_RELEASE_BRANCH: release
         run: npm run package
 
+      - name: Install Flatpak runtimes
+        run: |
+          sudo flatpak install --system --noninteractive --assumeyes flathub \
+            org.freedesktop.Platform//25.08 \
+            org.freedesktop.Sdk//25.08 \
+            org.mozilla.firefox.BaseApp//25.08
+            
       - name: Build Flatpak bundle
         run: |
           archive_file="$(find dist -maxdepth 1 -type f -name 'zen-*.tar.xz' -print -quit)"
