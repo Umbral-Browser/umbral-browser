@@ -86,6 +86,14 @@ jobs:
 
       - name: Download language packs
         run: sh scripts/download-language-packs.sh
+      
+      - name: Provide source metadata for Firefox build
+        run: |
+          git -C engine init -b umbral_browser
+          git -C engine config user.name "Umbral CI"
+          git -C engine config user.email "umbral-ci@users.noreply.github.com"
+          git -C engine add config/milestone.txt
+          git -C engine commit -m "Provide Firefox build metadata"
 
       - name: Bootstrap Firefox
         run: |
