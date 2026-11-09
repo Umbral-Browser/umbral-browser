@@ -55,7 +55,7 @@ jobs:
             libsqlite3-dev libssl-dev libtool libucl-dev libxml2-dev ninja-build \
             pkg-config procps python3-requests python3-toml scons subversion \
             tar unzip uuid-dev wget zip zlib1g-dev aria2 zstd file \
-            flatpak flatpak-builder
+            flatpak
 
           sudo flatpak remote-add --if-not-exists flathub \
             https://flathub.org/repo/flathub.flatpakrepo

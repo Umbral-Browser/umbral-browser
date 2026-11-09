@@ -5,12 +5,10 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 archive_file="${1:-}"
 app_id='io.github.martin08abm.umbralbrowser'
 branch='stable'
+runtime_version='25.08'
 arch='x86_64'
 build_root="$repo_root/dist/flatpak-build"
 repo_dir="$repo_root/dist/flatpak-repo"
-input_root="$repo_root/dist/flatpak-input"
-manifest="$input_root/${app_id}.yml"
-template="$repo_root/build/flatpak/${app_id}.yml.template"
 metadata_source="$repo_root/build/flatpak/metadata"
 
 if [[ -z "$archive_file" ]]; then
@@ -19,10 +17,9 @@ if [[ -z "$archive_file" ]]; then
 fi
 [[ "$archive_file" = /* ]] || archive_file="$repo_root/$archive_file"
 [[ -f "$archive_file" ]] || { printf 'Archive not found: %s\n' "$archive_file" >&2; exit 1; }
-command -v flatpak-builder >/dev/null
 command -v flatpak >/dev/null
-command -v sha256sum >/dev/null
 command -v python3 >/dev/null
+command -v tar >/dev/null
 
 python3 - "$archive_file" <<'PY'
 import sys
@@ -56,31 +53,47 @@ with tarfile.open(sys.argv[1], "r:xz") as archive:
         raise SystemExit("Browser executable is not x86_64")
 PY
 
-archive_hash="$(sha256sum "$archive_file" | cut -d ' ' -f1)"
-archive_url="$(python3 - "$archive_file" <<'PY'
-from pathlib import Path
-from urllib.parse import quote
-import sys
+rm -rf "$build_root" "$repo_dir"
+flatpak build-init \
+  --arch="$arch" \
+  --base=org.mozilla.firefox.BaseApp \
+  --base-version="$runtime_version" \
+  "$build_root" "$app_id" org.freedesktop.Sdk org.freedesktop.Platform "$runtime_version"
 
-print("file://" + quote(str(Path(sys.argv[1]).resolve())))
-PY
-)"
+mkdir -p "$build_root/files/umbral"
+archive_root="$(mktemp -d "$repo_root/dist/flatpak-extract.XXXXXX")"
+trap 'rm -rf "$archive_root"' EXIT
+tar -xJf "$archive_file" -C "$archive_root"
+cp -a "$archive_root/zen/." "$build_root/files/umbral/"
+install -Dm0755 "$metadata_source/umbral-launcher" "$build_root/files/bin/umbral-launcher"
+install -Dm0644 "$metadata_source/io.github.martin08abm.umbralbrowser.desktop" \
+  "$build_root/files/share/applications/io.github.martin08abm.umbralbrowser.desktop"
+install -Dm0644 "$metadata_source/io.github.martin08abm.umbralbrowser.metainfo.xml" \
+  "$build_root/files/share/metainfo/io.github.martin08abm.umbralbrowser.metainfo.xml"
+install -Dm0644 "$metadata_source/io.github.martin08abm.umbralbrowser.png" \
+  "$build_root/files/share/icons/hicolor/512x512/apps/io.github.martin08abm.umbralbrowser.png"
+install -Dm0644 "$metadata_source/LICENSE" \
+  "$build_root/files/share/licenses/io.github.martin08abm.umbralbrowser/LICENSE"
+install -Dm0644 "$metadata_source/CREDITS.md" \
+  "$build_root/files/share/doc/io.github.martin08abm.umbralbrowser/CREDITS.md"
 
-mkdir -p "$input_root"
-rm -rf "$input_root/metadata"
-cp -a "$metadata_source" "$input_root/metadata"
-python3 - "$template" "$manifest" "$archive_url" "$archive_hash" <<'PY'
-from pathlib import Path
-import sys
-
-template_path, output_path = map(Path, sys.argv[1:3])
-text = template_path.read_text()
-text = text.replace("{archive_url}", sys.argv[3])
-text = text.replace("{archive_sha256}", sys.argv[4])
-output_path.write_text(text)
-PY
-
-flatpak-builder --force-clean --default-branch="$branch" --repo="$repo_dir" "$build_root" "$manifest"
+flatpak build-finish \
+  --command=umbral-launcher \
+  --allow=devel \
+  --share=ipc \
+  --share=network \
+  --socket=pulseaudio \
+  --socket=wayland \
+  --socket=fallback-x11 \
+  --device=all \
+  --filesystem=xdg-download:rw \
+  --env=DICPATH=/usr/share/hunspell \
+  --talk-name=org.a11y.Bus \
+  '--talk-name=org.gtk.vfs.*' \
+  --talk-name=org.freedesktop.FileManager1 \
+  '--own-name=org.mpris.MediaPlayer2.firefox.*' \
+  "$build_root"
+flatpak build-export --arch="$arch" --disable-sandbox "$repo_dir" "$build_root" "$branch"
 bundle="$repo_root/dist/umbral-linux-x86_64.flatpak"
 flatpak build-bundle \
   --arch="$arch" \
