@@ -1,0 +1,11 @@
+diff --git a/browser/branding/release/branding.nsi b/browser/branding/release/branding.nsi
+--- a/browser/branding/release/branding.nsi
++++ b/browser/branding/release/branding.nsi
+@@ -9,6 +9,6 @@
+ # BrandFullNameInternal is used for some registry and file system values
+ # instead of BrandFullName and typically should not be modified.
+-!define BrandFullNameInternal "Umbral Browser"
++!define BrandFullNameInternal "Zen Browser"
+ !define BrandFullName         "Umbral Browser"
+ !define CompanyName           "Umbral Browser contributors"
+ !define URLInfoAbout          "https://zen-browser.app"

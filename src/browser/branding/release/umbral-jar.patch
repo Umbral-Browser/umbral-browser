@@ -1,0 +1,11 @@
+diff --git a/browser/branding/release/content/jar.mn b/browser/branding/release/content/jar.mn
+index 490670db04..d38af468fc 100644
+--- a/browser/branding/release/content/jar.mn
++++ b/browser/branding/release/content/jar.mn
+@@ -19,4 +19,6 @@ browser.jar:
+   content/branding/icon48.png                    (../default48.png)
+   content/branding/icon64.png                    (../default64.png)
+   content/branding/icon128.png                   (../default128.png)
++  content/branding/umbral-logo-dark.png
++  content/branding/umbral-logo-light.png
+   content/branding/aboutDialog.css

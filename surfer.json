@@ -16,9 +16,9 @@
   "brands": {
     "release": {
       "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Zen",
-      "brandFullName": "Zen Browser",
+      "brandShorterName": "Umbral",
+      "brandShortName": "Umbral Browser",
+      "brandFullName": "Umbral Browser",
       "release": {
         "displayVersion": "1.23.4b",
         "github": {
