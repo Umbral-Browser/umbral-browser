@@ -3,6 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import os
+import shutil
 
 FILES = [
     "index.d.ts",
@@ -37,7 +38,7 @@ def update_ts_types():
       src_file = os.path.join(ENGINE_PATH, file)
     dest_file = os.path.join(SRC_PATH, file)
     if os.path.exists(src_file):
-      os.system(f"cp {src_file} {dest_file}")
+      shutil.copy2(src_file, dest_file)
     else:
       print(f"File {src_file} does not exist.")
 

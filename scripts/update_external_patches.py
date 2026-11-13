@@ -3,12 +3,18 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import os
+from pathlib import Path
+from urllib.parse import urlsplit
+import hashlib
 import sys
 import json
 import requests
 from json_with_comments import JSONWithCommentsDecoder
 
 BASE_URI = "https://phabricator.services.mozilla.com"
+ALLOWED_PATCH_HOSTS = {"phabricator.services.mozilla.com", "codeberg.org"}
+REQUEST_TIMEOUT = (10, 30)
+MAX_PATCH_BYTES = 10 * 1024 * 1024
 OUTPUT_DIR = os.path.join(os.getcwd(), "src", "external-patches")
 
 
@@ -22,13 +28,20 @@ def download_phab_patch(phab_id, output_file):
   patch_url = f"{BASE_URI}/{phab_id}?download=true"
   try:
     print(f"Downloading patch from {patch_url}")
-    response = requests.get(patch_url)
+    response = requests.get(patch_url, timeout=REQUEST_TIMEOUT, allow_redirects=False, stream=True)
+    if 300 <= response.status_code < 400:
+      die(f"Redirect rejected for patch {phab_id}")
     response.raise_for_status()  # Raise an error for bad responses
     folder = os.path.dirname(output_file)
     if not os.path.exists(folder):
       os.makedirs(folder)
     with open(output_file, 'wb') as f:
-      f.write(response.content)
+      total = 0
+      for chunk in response.iter_content(64 * 1024):
+        total += len(chunk)
+        if total > MAX_PATCH_BYTES:
+          die(f"Patch {phab_id} exceeds {MAX_PATCH_BYTES} bytes")
+        f.write(chunk)
     print(f"Patch saved to {output_file}")
   except requests.RequestException as e:
     die(f"Failed to download patch {phab_id}: {e}")
@@ -38,10 +51,24 @@ def download_patch_from_url(url, output_file):
   """Download a patch from a given URL and save it to output_file."""
   try:
     print(f"Downloading patch from {url}")
-    response = requests.get(url)
+    parsed = urlsplit(url)
+    if parsed.scheme != "https" or parsed.hostname not in ALLOWED_PATCH_HOSTS or parsed.username or parsed.password:
+      die("Patch URL must use HTTPS and an approved host")
+    output_root = Path(OUTPUT_DIR).resolve()
+    output_path = Path(output_file).resolve()
+    if not output_path.is_relative_to(output_root):
+      die("Patch destination escapes external-patches directory")
+    response = requests.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=False, stream=True)
+    if 300 <= response.status_code < 400:
+      die("Redirect rejected for patch URL")
     response.raise_for_status()  # Raise an error for bad responses
     with open(output_file, 'wb') as f:
-      f.write(response.content)
+      total = 0
+      for chunk in response.iter_content(64 * 1024):
+        total += len(chunk)
+        if total > MAX_PATCH_BYTES:
+          die(f"Patch exceeds {MAX_PATCH_BYTES} bytes")
+        f.write(chunk)
     print(f"Patch saved to {output_file}")
   except requests.RequestException as e:
     die(f"Failed to download patch from {url}: {e}")
