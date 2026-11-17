@@ -68,6 +68,8 @@ class nsZenWorkspaces {
   #lastUsedContainerByWorkspace = new Map();
 
   _workspaceCache = [];
+  _bookmarkContainerRefresh = null;
+  _bookmarkContainerRefreshPending = false;
 
   #lastScrollTime = 0;
   #currentSpaceSwitchContext = {
@@ -304,10 +306,7 @@ class nsZenWorkspaces {
    */
   #startupPersonalContextId() {
     const pref = "umbral.startup.use-personal-container";
-    if (
-      this.isPrivateWindow ||
-      !Services.prefs.getBoolPref(pref, false)
-    ) {
+    if (this.isPrivateWindow || !Services.prefs.getBoolPref(pref, false)) {
       return 0;
     }
     Services.prefs.setBoolPref(pref, false);
@@ -322,9 +321,7 @@ class nsZenWorkspaces {
       const { ContextualIdentityService } = ChromeUtils.importESModule(
         "moz-src:///toolkit/components/contextualidentity/ContextualIdentityService.sys.mjs"
       );
-      return !!ContextualIdentityService.getPublicIdentityFromId(
-        userContextId
-      );
+      return !!ContextualIdentityService.getPublicIdentityFromId(userContextId);
     } catch {
       return false;
     }
@@ -1480,6 +1477,8 @@ class nsZenWorkspaces {
    * real homepage only when this window has no other navigable tab left.
    * Other spaces, private windows, and a window that is already closing
    * keep the previous behavior.
+   *
+   * @param {MozTabbrowserTab} closingTab
    */
   #shouldOpenHomepageForLastTab(closingTab) {
     if (
@@ -3014,14 +3013,71 @@ class nsZenWorkspaces {
   }
 
   _invalidateBookmarkContainers() {
-    for (let i = 0, len = this.bookmarkMenus.length; i < len; i++) {
-      const element = document.getElementById(this.bookmarkMenus[i]);
-      if (element && element._placesView) {
-        const placesView = element._placesView;
-        placesView.invalidateContainer(placesView._resultNode);
-      }
+    if (window.closed) {
+      return Promise.resolve();
     }
-    BookmarkingUI.updateEmptyToolbarMessage();
+    // Places notifications and explicit workspace invalidations can otherwise
+    // start overlapping asynchronous rebuilds of the same result tree.
+    this._bookmarkContainerRefreshPending = true;
+    if (this._bookmarkContainerRefresh) {
+      return this._bookmarkContainerRefresh;
+    }
+
+    this._bookmarkContainerRefresh = (async () => {
+      try {
+        do {
+          this._bookmarkContainerRefreshPending = false;
+          const views = this.bookmarkMenus
+            .map(id => document.getElementById(id)?._placesView)
+            .filter(Boolean);
+          if (!(await this.#waitForBookmarkContainerRebuilds(views))) {
+            return;
+          }
+          for (const view of views) {
+            view.invalidateContainer(view._resultNode);
+          }
+          if (!(await this.#waitForBookmarkContainerRebuilds(views))) {
+            return;
+          }
+          BookmarkingUI.updateEmptyToolbarMessage();
+        } while (this._bookmarkContainerRefreshPending);
+      } catch (error) {
+        console.error("Failed to refresh bookmark containers", error);
+      } finally {
+        this._bookmarkContainerRefresh = null;
+      }
+    })();
+    return this._bookmarkContainerRefresh;
+  }
+
+  async #waitForBookmarkContainerRebuilds(views) {
+    const deadline = Date.now() + 5000;
+    let onUnload;
+    const closed = new Promise(resolve => {
+      onUnload = () => resolve(false);
+      window.addEventListener("unload", onUnload, { once: true });
+    });
+    try {
+      while (views.some(view => view._rebuilding)) {
+        if (window.closed) {
+          return false;
+        }
+        if (Date.now() >= deadline) {
+          console.warn("Timed out waiting for Places bookmark toolbar rebuild");
+          return false;
+        }
+        const stillOpen = await Promise.race([
+          new Promise(resolve => window.setTimeout(() => resolve(true), 10)),
+          closed,
+        ]);
+        if (!stillOpen) {
+          return false;
+        }
+      }
+      return !window.closed;
+    } finally {
+      window.removeEventListener("unload", onUnload);
+    }
   }
 
   updateWorkspacesChangeContextMenu() {

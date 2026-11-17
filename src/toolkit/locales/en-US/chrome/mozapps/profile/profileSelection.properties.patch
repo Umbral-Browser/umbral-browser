@@ -1,0 +1,22 @@
+diff --git a/toolkit/locales/en-US/chrome/mozapps/profile/profileSelection.properties b/toolkit/locales/en-US/chrome/mozapps/profile/profileSelection.properties
+--- a/toolkit/locales/en-US/chrome/mozapps/profile/profileSelection.properties
++++ b/toolkit/locales/en-US/chrome/mozapps/profile/profileSelection.properties
+@@ -5,12 +5,12 @@
+ # LOCALIZATION NOTE: These strings are used for startup/profile problems and the profile manager.
+ 
+ # Application not responding
+-# LOCALIZATION NOTE (restartTitle, restartMessageNoUnlocker2, restartMessageUnlocker, restartMessageNoUnlockerMac, restartMessageUnlockerMac): Messages displayed when the application is running but is not responding to commands. %S is the application name.
+-restartTitle=Close %S
+-restartMessageNoUnlocker2=%S is already running, but is not responding. To use %S, you must first close the existing %S process, restart your device, or use a different profile.
+-restartMessageUnlocker=%S is already running, but is not responding. The old %S process must be closed to open a new window.
+-restartMessageNoUnlockerMac=A copy of %S is already open. Only one copy of %S can be open at a time.
+-restartMessageUnlockerMac=A copy of %S is already open. The running copy of %S will quit in order to open this one.
++# Messages displayed when Umbral is already running but cannot respond to a new invocation.
++restartTitle=Close Umbral
++restartMessageNoUnlocker2=Umbral is already running, but is not responding. To use Umbral, you must first close the existing Umbral process, restart your device, or use a different profile.
++restartMessageUnlocker=Umbral is already running, but is not responding. The old Umbral process must be closed to open a new window.
++restartMessageNoUnlockerMac=A copy of Umbral is already open. Only one copy of Umbral can be open at a time.
++restartMessageUnlockerMac=A copy of Umbral is already open. The running copy of Umbral will quit in order to open this one.
+ 
+ # Profile manager
+ # LOCALIZATION NOTE (profileTooltip): First %S is the profile name, second %S is the path to the profile folder.

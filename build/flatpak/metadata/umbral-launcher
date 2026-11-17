@@ -3,4 +3,4 @@ set -eu
 profile_dir="${XDG_DATA_HOME:?}/umbral/profile"
 mkdir -p "$profile_dir" "${XDG_CACHE_HOME:?}/tmp"
 export TMPDIR="$XDG_CACHE_HOME/tmp"
-exec /app/umbral/zen --name io.github.martin08abm.umbralbrowser -no-remote -profile "$profile_dir" "$@"
+exec /app/umbral/zen --name io.github.martin08abm.umbralbrowser -profile "$profile_dir" "$@"

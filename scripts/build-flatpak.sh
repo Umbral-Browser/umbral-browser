@@ -91,6 +91,7 @@ flatpak build-finish \
   --talk-name=org.a11y.Bus \
   '--talk-name=org.gtk.vfs.*' \
   --talk-name=org.freedesktop.FileManager1 \
+  '--own-name=org.mozilla.zen.*' \
   '--own-name=org.mpris.MediaPlayer2.firefox.*' \
   "$build_root"
 flatpak build-export --arch="$arch" --disable-sandbox "$repo_dir" "$build_root" "$branch"

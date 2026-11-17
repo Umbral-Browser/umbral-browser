@@ -78,7 +78,7 @@ cat > "$HOME/.local/share/applications/umbral.desktop" <<EOF
 Type=Application
 Name=Umbral Browser
 Comment=Browse with Umbral
-Exec="$install_dir/zen" -no-remote -profile "$profile_dir" %u
+Exec="$install_dir/zen" -profile "$profile_dir" %u
 Icon=umbral
 Terminal=false
 Categories=Network;WebBrowser;
@@ -89,7 +89,7 @@ EOF
 Open **Umbral Browser** from the desktop application menu. It launches with `~/.local/share/umbral-test-profile`, separate from Firefox and Zen profiles. To run it from a terminal instead:
 
 ```sh
-"$HOME/.local/opt/umbral/zen" -no-remote \
+"$HOME/.local/opt/umbral/zen" \
   -profile "$HOME/.local/share/umbral-test-profile"
 ```
 

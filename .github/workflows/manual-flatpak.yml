@@ -15,7 +15,7 @@ permissions:
 jobs:
   build-flatpak:
     name: Build Linux x86_64 Flatpak
-    runs-on: warp-ubuntu-latest-x64-32x
+    runs-on: warp-ubuntu-latest-x64-32x 
     timeout-minutes: 360
     env:
       CARGO_INCREMENTAL: 0

@@ -18,6 +18,8 @@ finish-args:
   - --talk-name=org.a11y.Bus
   - --talk-name=org.gtk.vfs.*
   - --talk-name=org.freedesktop.FileManager1
+  # Flatpak's own permission includes talk access; duplicate names overwrite it.
+  - --own-name=org.mozilla.zen.*
   - --own-name=org.mpris.MediaPlayer2.firefox.*
 modules:
   - name: umbral-browser
