@@ -1,0 +1,481 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_181018.json
+ 0:00.17 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.17 INFO     a11y_checks: False
+ 0:00.17 INFO     android: False
+ 0:00.17 INFO     apple_catalina: False
+ 0:00.17 INFO     apple_silicon: False
+ 0:00.17 INFO     appname: zen
+ 0:00.17 INFO     arch: x86_64
+ 0:00.17 INFO     artifact: False
+ 0:00.17 INFO     asan: False
+ 0:00.17 INFO     automation: False
+ 0:00.17 INFO     bin_suffix: 
+ 0:00.17 INFO     bits: 64
+ 0:00.17 INFO     buildapp: browser
+ 0:00.17 INFO     buildtype: opt
+ 0:00.17 INFO     buildtype_guess: opt
+ 0:00.17 INFO     cc_type: clang
+ 0:00.17 INFO     ccov: False
+ 0:00.17 INFO     condprof: False
+ 0:00.17 INFO     coverage: False
+ 0:00.17 INFO     crashreporter: True
+ 0:00.17 INFO     datareporting: True
+ 0:00.17 INFO     dbus_enabled: True
+ 0:00.17 INFO     debug: False
+ 0:00.17 INFO     devedition: False
+ 0:00.17 INFO     display: wayland
+ 0:00.17 INFO     e10s: True
+ 0:00.17 INFO     early_beta_or_earlier: False
+ 0:00.17 INFO     enterprise: False
+ 0:00.17 INFO     fission: True
+ 0:00.17 INFO     has_sandbox: True
+ 0:00.17 INFO     headless: True
+ 0:00.17 INFO     healthreport: True
+ 0:00.17 INFO     http2: False
+ 0:00.17 INFO     http3: False
+ 0:00.17 INFO     inc_origin_init: False
+ 0:00.17 INFO     is_emulator: False
+ 0:00.17 INFO     is_ubuntu: False
+ 0:00.17 INFO     isolated_process: False
+ 0:00.17 INFO     linux_distro: Cachyos Linux
+ 0:00.17 INFO     macos_vm: False
+ 0:00.17 INFO     mda_gpu: False
+ 0:00.17 INFO     mingw: False
+ 0:00.17 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.17 INFO     msix: False
+ 0:00.17 INFO     nightly_build: False
+ 0:00.17 INFO     nogpu: False
+ 0:00.17 INFO     normandy: True
+ 0:00.17 INFO     nova: True
+ 0:00.17 INFO     official: False
+ 0:00.17 INFO     opt: True
+ 0:00.17 INFO     os: linux
+ 0:00.17 INFO     os_version: Rolling
+ 0:00.17 INFO     pgo: False
+ 0:00.17 INFO     platform_guess: linux64
+ 0:00.17 INFO     processor: x86_64
+ 0:00.17 INFO     release_or_beta: True
+ 0:00.17 INFO     require_signing: False
+ 0:00.17 INFO     sessionHistoryInParent: True
+ 0:00.17 INFO     socketprocess_e10s: False
+ 0:00.17 INFO     socketprocess_networking: False
+ 0:00.17 INFO     standalone: False
+ 0:00.17 INFO     stylo: True
+ 0:00.17 INFO     swgl: False
+ 0:00.17 INFO     sync: True
+ 0:00.17 INFO     telemetry: False
+ 0:00.17 INFO     tests_enabled: True
+ 0:00.17 INFO     toolkit: gtk
+ 0:00.17 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.17 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.17 INFO     tsan: False
+ 0:00.17 INFO     ubsan: False
+ 0:00.17 INFO     updater: True
+ 0:00.17 INFO     verify: False
+ 0:00.17 INFO     verify_fission: False
+ 0:00.17 INFO     version: Cachyos Linux Rolling
+ 0:00.17 INFO     vertical_tab: False
+ 0:00.17 INFO     win10_2009: False
+ 0:00.17 INFO     win11_2009: False
+ 0:00.17 INFO     wmfme: 0
+ 0:00.17 INFO     xorigin: False
+ 0:00.17 INFO Checking for ssltunnel processes...
+ 0:00.19 INFO Checking for xpcshell processes...
+ 0:00.20 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.21 INFO Running manifest: browser/components/newtab/test/browser/browser.toml
+ 0:00.21 INFO The following extra prefs will be set:
+  browser.newtabpage.resource-mapping.log=true
+  browser.newtabpage.activity-stream.debug=false
+  browser.newtabpage.activity-stream.discoverystream.enabled=true
+  browser.newtabpage.activity-stream.discoverystream.endpoints=data:
+  browser.newtabpage.activity-stream.feeds.system.topstories=true
+  browser.newtabpage.activity-stream.feeds.section.topstories=true
+  messaging-system.log=all
+  browser.newtabpage.sponsor-protection.enabled=true
+  browser.newtabpage.sponsor-protection.debug=true
+ 0:00.24 pid:44844 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmpbv5d9plf.mozrunner/.crtdbpw -d /tmp/tmpbv5d9plf.mozrunner
+pid:44844 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.29 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmpbv5d9plf.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.29 INFO runtests.py | Server pid: 44854
+ 0:00.29 INFO runtests.py | Websocket server pid: 44855
+ 0:00.29 INFO runtests.py | SSL tunnel pid: 44856
+ 0:00.34 INFO use http3 server: False
+ 0:00.34 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.34 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.34 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.39 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 35967,36471
+
+ 0:00.39 INFO moz-http2 server started on ports 35967, 36471
+ 0:00.39 INFO node moz-http2 [stderr] (node:44897) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.39 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.39 INFO runtests.py | Running with scheme: http
+ 0:00.39 INFO runtests.py | Running with e10s: True
+ 0:00.39 INFO runtests.py | Running with fission: True
+ 0:00.39 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.39 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.39 INFO runtests.py | Running http tests: start.
+
+ 0:00.41 INFO Application command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmpbv5d9plf.mozrunner
+ 0:00.41 INFO runtests.py | Application pid: 44906
+ 0:00.41 Started process `GECKO(44906)`
+ 0:00.44 GECKO(44906) *** You are running in headless mode.
+ 0:00.48 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_socket_pid44944.log
+ 0:00.78 GECKO(44906) 1795021819671	Marionette	INFO	Marionette enabled
+ 0:00.78 GECKO(44906) 1795021819671	Marionette	TRACE	Received observer notification final-ui-startup
+ 0:00.78 GECKO(44906) 1795021819671	Marionette	DEBUG	Initializing Marionette
+ 0:00.84 GECKO(44906) console.error: "Warning: unrecognized command line flag" "-foreground"
+ 0:00.84 GECKO(44906) JavaScript warning: moz-src:///browser/components/aiwindow/ui/modules/AIWindow.sys.mjs, line 414: unreachable code after return statement
+ 0:00.85 GECKO(44906) 1795021819746	Marionette	INFO	Listening on port 2828
+ 0:00.85 GECKO(44906) 1795021819747	Marionette	DEBUG	Marionette is listening
+ 0:00.87 GECKO(44906) 1795021819760	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:42866
+ 0:00.89 GECKO(44906) 1795021819781	Marionette	DEBUG	Closed connection 0
+ 0:00.89 GECKO(44906) 1795021819781	Marionette	DEBUG	Accepted connection 1 from 127.0.0.1:42882
+ 0:00.95 GECKO(44906) 1795021819839	Marionette	DEBUG	1 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+ 0:00.95 GECKO(44906) 1795021819844	Marionette	DEBUG	Waiting for initial application window
+ 0:00.96 GECKO(44906) console.debug: "ZenSessionManager:" "Initializing session manager"
+ 0:00.96 GECKO(44906) console.debug: "ZenSessionManager:" "Session file path:" "/tmp/tmpbv5d9plf.mozrunner/zen-sessions.jsonlz4"
+ 0:00.96 GECKO(44906) console.debug: "ZenSessionManager:" "Reading Zen session file from disk"
+ 0:00.99 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45012.log
+ 0:00.99 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45012.log
+ 0:00.99 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_rdd_pid45021.log
+ 0:00.99 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_rdd_pid45021.log
+ 0:01.02 GECKO(44906) JavaScript warning: chrome://browser/content/tabbrowser/drag-and-drop.js, line 1587: unreachable code after return statement
+ 0:01.04 GECKO(44906) JavaScript warning: chrome://browser/content/tabbrowser/tabs.mjs, line 1042: unreachable code after return statement
+ 0:01.11 GECKO(44906) console.error: "Failed to read backup file /tmp/tmpbv5d9plf.mozrunner/zen-sessions-backup/clean.jsonlz4" (new NotFoundError("Could not open `/tmp/tmpbv5d9plf.mozrunner/zen-sessions-backup/clean.jsonlz4': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:01.11 GECKO(44906) console.debug: "ZenSessionManager:" "No spaces data found in session file, running migration" [object Object]
+ 0:01.13 GECKO(44906) console.error: "Failed to read spaces data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_workspaces", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:01.13 GECKO(44906) console.error: "Failed to read pins data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_pins", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:01.14 GECKO(44906) console.debug: "ZenSessionManager:" "Restoring tabs from Places DB after migration" null (void 0) [object Object]
+ 0:01.14 GECKO(44906) console.debug: "ZenSessionManager:" "Build ID has changed since last session, not restoring only pinned tabs" ({buildId:"20261104111407", lastBuildId:""})
+ 0:01.14 GECKO(44906) console.debug: "ZenSessionManager:" "Saving windata state after migration"
+ 0:01.14 GECKO(44906) console.debug: "ZenSessionManager:" "Saving Zen session data with 0 tabs"
+ 0:01.17 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+ 0:01.20 GECKO(44906) JavaScript warning: moz-src:///browser/components/urlbar/UrlbarMuxerStandard.sys.mjs, line 936: unreachable code after return statement
+ 0:01.22 GECKO(44906) console.error: (new TypeError("can't access property \"tabContainer\", gBrowser is undefined", "resource:///modules/zen/ZenVerticalTabsManager.mjs", 394))
+ 0:01.23 GECKO(44906) console.error: (new TypeError("can't access property \"selectedTab\", node.documentGlobal.gBrowser is undefined", "chrome://browser/content/parent/ext-browserAction.js", 855))
+ 0:01.23 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+ 0:01.23 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+ 0:01.32 GECKO(44906) JavaScript warning: moz-src:///browser/components/tabbrowser/Tabbrowser.sys.mjs, line 498: unreachable code after return statement
+ 0:01.32 GECKO(44906) console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:01.33 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45065.log
+ 0:01.33 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45065.log
+ 0:01.34 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+ 0:01.34 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+ 0:01.34 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+ 0:01.34 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+ 0:01.36 GECKO(44906) console.warn: "Error loading shortcuts file" (new NotFoundError("Could not open `/tmp/tmpbv5d9plf.mozrunner/zen-keyboard-shortcuts.json': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:01.37 GECKO(44906) console.warn: "Zen CKS: Migrating shortcuts from version" 0 "to" 21
+ 0:01.40 GECKO(44906) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.40 GECKO(44906) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.40 GECKO(44906) JavaScript error: resource:///modules/ZenSiteDataPanel.sys.mjs, line 173: TypeError: can't access property "addProgressListener", this.window.gBrowser is undefined
+ 0:01.41 GECKO(44906) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.47 GECKO(44906) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+ 0:01.55 GECKO(44906) console.debug: AboutNewTabResourceMapping: "Initializing:"
+ 0:01.55 GECKO(44906) console.log: AboutNewTabResourceMapping: "Mapping newtab resources from built-in add-on version 158.2.0 on application version 1.0.0"
+ 0:01.55 GECKO(44906) console.debug: AboutNewTabResourceMapping: "Newtab resource mapping completed successfully"
+ 0:01.55 GECKO(44906) console.debug: AboutNewTabResourceMapping: "Initialized"
+ 0:01.56 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:01.59 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45095.log
+ 0:01.59 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45095.log
+ 0:01.59 GECKO(44906) console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+ 0:01.65 GECKO(44906) console.debug: "[gZenWorkspaces]:" "Changing workspace to" "{36fca1a4-c01a-49e2-a74b-9ddc1f15c89c}"
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+ 0:01.65 GECKO(44906) [Parent 44906: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+ 0:01.72 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.72 GECKO(44906)   applyMigrations init-started: latestMigration = -1
+ 0:01.72 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.72 GECKO(44906)   applyMigrations init-started: applying migration 0: multi-phase-migrations
+ 0:01.72 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.72 GECKO(44906)   applyMigrations: applied migration 0: multi-phase-migrations
+ 0:01.72 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.72 GECKO(44906)   applyMigrations init-started: applying migration 1: separate-rollout-opt-out
+ 0:01.72 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.72 GECKO(44906)   applyMigrations: applied migration 1: separate-rollout-opt-out
+ 0:01.80 GECKO(44906) JavaScript error: , line 0: InvalidStateError: [fluent] Missing message in locale en-US: umbral-home-period-all-time
+ 0:01.84 GECKO(44906) console.debug: NimbusEnrollments:
+ 0:01.84 GECKO(44906)   Loaded 0 enrollments
+ 0:01.84 GECKO(44906) console.debug: AboutNewTabResourceMapping: "creating _updateAddonStateDeferredTask"
+ 0:01.84 GECKO(44906) console.debug: AboutNewTabResourceMapping: "re-arming _updateAddonStateDeferredTask"
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations after-store-initialized: latestMigration = -1
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations after-store-initialized: applying migration 0: noop
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations: applied migration 0: noop
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations after-store-initialized: applying migration 1: noop
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations: applied migration 1: noop
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations after-store-initialized: applying migration 2: import-enrollments-to-sql
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations: applied migration 2: import-enrollments-to-sql
+ 0:01.89 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.89 GECKO(44906)   applyMigrations after-store-initialized: applying migration 3: graduate-firefox-labs-auto-pip
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations: applied migration 3: graduate-firefox-labs-auto-pip
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations after-store-initialized: applying migration 4: graduate-firefox-labs-jpeg-xl
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations: applied migration 4: graduate-firefox-labs-jpeg-xl
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations after-store-initialized: applying migration 5: bug-2054546-mitigation
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations: applied migration 5: bug-2054546-mitigation
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations after-store-initialized: applying migration 6: graduate-firefox-labs-jpeg-xl-all-channels
+ 0:01.90 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.90 GECKO(44906)   applyMigrations: applied migration 6: graduate-firefox-labs-jpeg-xl-all-channels
+ 0:01.90 GECKO(44906) console.debug: ExperimentManager:
+ 0:01.90 GECKO(44906)   onStartup
+ 0:01.90 GECKO(44906) console.debug: RSLoader:
+ 0:01.90 GECKO(44906)   Registered update timer
+ 0:01.90 GECKO(44906) console.debug: RSLoader:
+ 0:01.90 GECKO(44906)   Updating recipes with trigger "enabled"
+ 0:01.94 GECKO(44906) console.error: services.settings:
+ 0:01.94 GECKO(44906)   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+ 0:01.94 GECKO(44906)   Stack:
+ 0:01.94 GECKO(44906)     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+ 0:01.94 GECKO(44906) list@resource://services-settings/Database.sys.mjs:96:13
+ 0:01.94 GECKO(44906) async*get@resource://services-settings/RemoteSettingsClient.sys.mjs:570:28
+ 0:01.94 GECKO(44906) async*getRecipesFromCollection/recipes<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:793:16
+ 0:01.94 GECKO(44906) #raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:749:34
+ 0:01.94 GECKO(44906) getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:792:41
+ 0:01.94 GECKO(44906) getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+ 0:01.94 GECKO(44906) #updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+ 0:01.94 GECKO(44906) async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+ 0:01.95 GECKO(44906) LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+ 0:01.95 GECKO(44906) updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+ 0:01.95 GECKO(44906) enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+ 0:01.95 GECKO(44906) #init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+ 0:01.95 GECKO(44906) async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+ 0:01.95 GECKO(44906) finishInit@resource://normandy/Normandy.sys.mjs:108:30
+ 0:01.95 GECKO(44906) async*init@resource://normandy/Normandy.sys.mjs:79:16
+ 0:01.95 GECKO(44906) async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+ 0:01.95 GECKO(44906) callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+ 0:01.95 GECKO(44906) callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+ 0:01.95 GECKO(44906) BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+ 0:01.95 GECKO(44906) BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+ 0:01.95 GECKO(44906) console.debug: RSLoader:
+ 0:01.95 GECKO(44906)   Failed to update
+ 0:01.95 GECKO(44906)   Message: Error: Could not sync nimbus-desktop-experiments: not-yet-synced
+ 0:01.95 GECKO(44906)   Stack:
+ 0:01.95 GECKO(44906)     RemoteSettingsSyncError@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:1562:5
+ 0:01.95 GECKO(44906) getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:816:13
+ 0:01.95 GECKO(44906) async*getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+ 0:01.95 GECKO(44906) #updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+ 0:01.95 GECKO(44906) async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+ 0:01.95 GECKO(44906) LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+ 0:01.95 GECKO(44906) updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+ 0:01.95 GECKO(44906) enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+ 0:01.95 GECKO(44906) #init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+ 0:01.95 GECKO(44906) async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+ 0:01.95 GECKO(44906) finishInit@resource://normandy/Normandy.sys.mjs:108:30
+ 0:01.95 GECKO(44906) async*init@resource://normandy/Normandy.sys.mjs:79:16
+ 0:01.95 GECKO(44906) async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+ 0:01.95 GECKO(44906) callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+ 0:01.95 GECKO(44906) callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+ 0:01.95 GECKO(44906) BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+ 0:01.95 GECKO(44906) BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+ 0:01.95 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.95 GECKO(44906)   applyMigrations after-remote-settings-update: latestMigration = -1
+ 0:01.95 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.95 GECKO(44906)   applyMigrations after-remote-settings-update: applying migration 0: firefox-labs-enrollments
+ 0:01.95 GECKO(44906) console.debug: NimbusMigrations:
+ 0:01.95 GECKO(44906)   applyMigrations: applied migration 0: firefox-labs-enrollments
+ 0:02.06 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_utility_pid45154.log
+ 0:02.06 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_utility_pid45154.log
+ 0:02.09 GECKO(44906) 1795021820984	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+ 0:02.25 GECKO(44906) 1795021821137	RemoteAgent	TRACE	[11] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+ 0:02.25 GECKO(44906) 1795021821138	RemoteAgent	TRACE	[11] ProgressListener Setting unload timer (5000ms)
+ 0:02.25 GECKO(44906) 1795021821138	RemoteAgent	TRACE	[11] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+ 0:02.25 GECKO(44906) 1795021821138	RemoteAgent	TRACE	[11] Document already finished loading: about:blank
+ 0:02.25 GECKO(44906) 1795021821138	RemoteAgent	TRACE	[11] ProgressListener Stop: has error=false url=about:blank
+ 0:02.25 GECKO(44906) 1795021821143	Marionette	DEBUG	1 <- [1,1,null,{"sessionId":"de5e184d-b420-44a6-bd8a-7dd9b1c147e2","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":44906,"moz:profile":"/tmp/tmpbv5d9plf.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+ 0:02.26 GECKO(44906) 1795021821151	Marionette	DEBUG	1 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmpg9d8jq91.zip"}]
+ 0:02.26 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45174.log
+ 0:02.26 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45174.log
+ 0:02.27 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45180.log
+ 0:02.27 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45180.log
+ 0:02.28 GECKO(44906) 1795021821170	Marionette	DEBUG	1 <- [1,2,null,{"value":"special-powers@mozilla.org"}]
+ 0:02.28 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45198.log
+ 0:02.28 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45198.log
+ 0:02.29 GECKO(44906) 1795021821184	Marionette	DEBUG	1 -> [0,3,"Addon:Install",{"temporary":false,"path":"/tmp/tmpvm2x94jm.zip"}]
+ 0:02.30 GECKO(44906) 1795021821196	Marionette	DEBUG	1 <- [1,3,null,{"value":"mochikit@mozilla.org"}]
+ 0:02.30 GECKO(44906) 1795021821197	Marionette	DEBUG	1 -> [0,4,"Marionette:GetContext",{}]
+ 0:02.30 GECKO(44906) 1795021821197	Marionette	DEBUG	1 <- [1,4,null,{"value":"content"}]
+ 0:02.30 GECKO(44906) 1795021821197	Marionette	DEBUG	1 -> [0,5,"Marionette:SetContext",{"value":"chrome"}]
+ 0:02.31 GECKO(44906) 1795021821198	Marionette	DEBUG	1 <- [1,5,null,{"value":null}]
+ 0:02.31 GECKO(44906) 1795021821199	Marionette	DEBUG	1 -> [0,6,"WebDriver:ExecuteScript",{"script":"/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distr ... \n// the flavor and url to load.\nlet ev = new CustomEvent(\"mochitest-load\", { detail: [flavor, url] });\nwin.dispatchEvent(ev);","args":[{"flavor":"browser-chrome","testUrl":"about:blank"}],"newSandbox":true,"sandbox":"default","line":2377,"filename":"_tests/testing/mochitest/runtests.py"}]
+ 0:02.31 GECKO(44906) 1795021821203	RemoteAgent	TRACE	WebDriverProcessData actor created for PID 44906
+ 0:02.31 GECKO(44906) 1795021821203	Marionette	TRACE	[1] MarionetteCommands actor created for window id 2
+ 0:02.31 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:02.32 GECKO(44906) 1795021821217	Marionette	TRACE	Remoteness change detected. Set new top-level browsing context to 11
+ 0:02.33 GECKO(44906) 1795021821218	Marionette	DEBUG	1 <- [1,6,null,{"value":null}]
+ 0:02.34 GECKO(44906) 1795021821232	Marionette	DEBUG	1 -> [0,7,"Marionette:SetContext",{"value":"content"}]
+ 0:02.34 GECKO(44906) 1795021821232	Marionette	DEBUG	1 <- [1,7,null,{"value":null}]
+ 0:02.34 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.35 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.35 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.35 GECKO(44906) 1795021821246	Marionette	DEBUG	1 -> [0,8,"WebDriver:DeleteSession",{}]
+ 0:02.35 GECKO(44906) 1795021821246	Marionette	TRACE	[1] MarionetteCommands actor destroyed for window id 2
+ 0:02.35 GECKO(44906) 1795021821247	Marionette	DEBUG	1 <- [1,8,null,{"value":null}]
+ 0:02.35 INFO runtests.py | Waiting for browser...
+ 0:02.35 GECKO(44906) 1795021821248	Marionette	DEBUG	Closed connection 1
+ 0:02.39 INFO *** Start BrowserChrome Test Results ***
+ 0:02.39 INFO checking for open sidebars
+ 0:02.39 INFO checking window state
+ 0:02.50 TEST_START: browser/components/newtab/test/browser/browser_umbral_privacy_stats.js
+ 0:02.50 INFO Entering test test_umbral_home_displays_firefox_etp_categories
+ 0:02.52 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:02.54 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.56 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.56 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.56 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "12" == "12"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "3" == "3"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "Trackers · ETP" == "Trackers · ETP"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "Tracking cookies · ETP" == "Tracking cookies · ETP"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "All time · Registered profiles and current profile; other open profiles may update later" == "All time · Registered profiles and current profile; other open profiles may update later"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "All time · Registered profiles and current profile; other open profiles may update later" == "All time · Registered profiles and current profile; other open profiles may update later"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - true == true
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - true == true
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - true == true
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - true == true
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "umbral-home-trackers-tooltip" == "umbral-home-trackers-tooltip"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - "umbral-home-cookies-tooltip" == "umbral-home-cookies-tooltip"
+ 0:02.60 PASS test_umbral_home_displays_firefox_etp_categories - null != "umbral-home-no-data"
+ 0:02.61 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45275.log
+ 0:02.61 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45275.log
+ 0:02.61 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.61 INFO Leaving test test_umbral_home_displays_firefox_etp_categories
+ 0:02.62 INFO Entering test test_umbral_home_displays_valid_zero
+ 0:02.62 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:02.63 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.64 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.64 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.65 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.66 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.66 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.69 PASS test_umbral_home_displays_valid_zero - "0" == "0"
+ 0:02.69 PASS test_umbral_home_displays_valid_zero - "0" == "0"
+ 0:02.69 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.70 INFO Leaving test test_umbral_home_displays_valid_zero
+ 0:02.70 INFO Entering test test_umbral_home_refreshes_when_visible_again
+ 0:02.71 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:02.71 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.72 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.72 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.73 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.74 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.74 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.76 PASS test_umbral_home_refreshes_when_visible_again
+ 0:02.77 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.78 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.78 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.11 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.12 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.12 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.13 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.14 INFO Leaving test test_umbral_home_refreshes_when_visible_again
+ 0:03.14 INFO Entering test test_umbral_home_shows_no_data_for_source_failure
+ 0:03.15 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:03.15 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.16 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.16 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.17 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.17 GECKO(44906) console.error: "Umbral homepage could not read ETP metrics" (new Error("controlled ETP database failure", "chrome://mochitests/content/browser/browser/components/newtab/test/browser/browser_umbral_privacy_stats.js", 136))
+ 0:03.17 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.17 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.20 PASS test_umbral_home_shows_no_data_for_source_failure - "No data" == "No data"
+ 0:03.20 PASS test_umbral_home_shows_no_data_for_source_failure - "No data" == "No data"
+ 0:03.20 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.21 INFO Leaving test test_umbral_home_shows_no_data_for_source_failure
+ 0:03.21 INFO Entering test test_umbral_home_shows_no_data_when_source_disabled
+ 0:03.21 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.21 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.22 GECKO(44906) console.debug: SponsorProtection: "Unregistering browser for sponsor protection"
+ 0:03.22 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.25 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.26 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.26 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.28 PASS test_umbral_home_shows_no_data_when_source_disabled - "No data" == "No data"
+ 0:03.28 PASS test_umbral_home_shows_no_data_when_source_disabled - "No data" == "No data"
+ 0:03.29 GECKO(44906) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.29 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.29 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.29 INFO Leaving test test_umbral_home_shows_no_data_when_source_disabled
+ 0:03.29 INFO checking for open popups
+ 0:03.38 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45313.log
+ 0:03.38 GECKO(44906) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpbv5d9plf.mozrunner/runtests_leaks_tab_pid45313.log
+ 0:03.83 GECKO(44906) MEMORY STAT vsizeMaxContiguous not supported in this build configuration.
+ 0:03.83 GECKO(44906) MEMORY STAT | vsize 11428MB | residentFast 442MB | heapAllocated 307MB
+ 0:03.83 INFO checking for open sidebars
+ 0:03.83 INFO checking window state
+ 0:03.83 TEST_END: Test PASS. Subtests passed 20/20. Unexpected 0
+ 0:04.85 GECKO(44906) Completed ShutdownLeaks collections in process 45095
+ 0:04.85 GECKO(44906) Completed ShutdownLeaks collections in process 45174
+ 0:04.85 GECKO(44906) Completed ShutdownLeaks collections in process 45180
+ 0:04.88 GECKO(44906) Completed ShutdownLeaks collections in process 45065
+ 0:04.94 GECKO(44906) Completed ShutdownLeaks collections in process 45012
+ 0:05.08 GECKO(44906) Completed ShutdownLeaks collections in process 44906
+ 0:05.08 INFO TEST-START | Shutdown
+ 0:05.08 INFO Browser Chrome Test Summary
+ 0:05.08 INFO Passed:  20
+ 0:05.08 INFO Failed:  0
+ 0:05.08 INFO Todo:    0
+ 0:05.08 INFO Mode:    e10s
+ 0:05.08 INFO *** End BrowserChrome Test Results ***
+ 0:05.25 GECKO(44906) console.debug: "ZenSessionManager:" "Skipping blank tab data" ({entries:[{url:"about:blank", title:"about:blank", cacheKey:0, ID:13, docshellUUID:"{8ad63d9d-aa04-4e75-b453-8897d8e1accb}", resultPrincipalURI:null, principalToInherit_base64:"{\"0\":{\"0\":\"moz-nullprincipal:{63b689c8-46a9-4573-bb4a-2ad58819d9b1}\"}}", hasUserInteraction:false, triggeringPrincipal_base64:"{\"3\":{}}", docIdentifier:14, transient:false, navigationKey:"{afd887af-48e0-472b-aaaf-bef4635a46a5}", navigationId:"{7094c004-50be-4cd2-983f-ca1d40c2c9cb}"}], lastAccessed:1795021823974, hidden:false, zenWorkspace:"{36fca1a4-c01a-49e2-a74b-9ddc1f15c89c}", zenSyncId:"1795021820544-0408d978-2cb5-470b-9e43-cd08ee7434d7", zenEssential:false, pinned:false, zenDefaultUserContextId:null, zenPinnedIcon:null, zenIsEmpty:false, zenStaticLabel:(void 0), zenHasStaticIcon:false, zenGlanceId:null, zenIsGlance:false, _zenPinnedInitialState:(void 0), _zenIsActiveTab:true, zenLiveFolderItemId:null, searchMode:null, userContextId:0, attributes:{}, index:1, requestedIndex:0, image:null})
+ 0:05.25 GECKO(44906) console.debug: "ZenSessionManager:" "Saving Zen session data with 1 tabs"
+ 0:05.25 GECKO(44906) 1795021824144	Marionette	TRACE	Received observer notification quit-application
+ 0:05.25 GECKO(44906) 1795021824144	Marionette	TRACE	Application is shutting down with reason: "shutdown"
+ 0:05.25 GECKO(44906) 1795021824144	Marionette	INFO	Stopped listening on port 2828
+ 0:05.30 GECKO(44906) 1795021824191	Marionette	DEBUG	Marionette stopped listening
+ 0:05.31 GECKO(44906) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:05.38 GECKO(44906) 1795021824274	Marionette	TRACE	Received observer notification xpcom-shutdown
+ 0:05.39 GECKO(44906) 1795021824286	Marionette	TRACE	Received observer notification xpcom-shutdown-threads
+ 0:05.42 Main app process: exit 0
+ 0:05.42 INFO runtests.py | Main app process exited normally
+ 0:05.42 INFO runtests.py | Application ran for: 0:00:05.014695
+ 0:05.42 INFO zombiecheck | Reading PID log: /tmp/tmpgd2ukr69pidlog
+ 0:05.42 INFO ==> process 44906 launched child process 44944
+ 0:05.42 INFO ==> process 44906 launched child process 45009
+ 0:05.42 INFO zombiecheck | Checking for orphan process with PID: 44944
+ 0:05.42 INFO zombiecheck | Checking for orphan process with PID: 45009
+ 0:05.42 INFO runtests.py | Running http tests: end. status: 0
+ 0:05.42 INFO Stopping web server
+ 0:05.43 INFO Server shut down.
+ 0:05.43 INFO Web server killed.
+ 0:05.43 INFO Stopping web socket server
+ 0:05.43 INFO Stopping ssltunnel
+ 0:05.43 WARNING leakcheck | refcount logging is off, so leaks can't be detected!
+ 0:05.44 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 20
+	Failed: 0
+	Todo: 0
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:05.44 INFO Buffered messages finished
+ 0:05.44 SUITE_END
+ 0:05.44 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 21 checks (20 subtests, 1 tests)
+Expected results: 21
+Unexpected results: 0
+OK

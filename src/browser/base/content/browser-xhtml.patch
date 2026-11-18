@@ -10,6 +10,12 @@ index d8ed09dca6c8ae99ed1a84cef22462a0d7b517fe..dcb65c4268913fdf32302c9b4ac72313
          persist="screenX screenY width height sizemode"
          data-l10n-sync="true">
  <head>
+@@ -62,4 +63,5 @@
+   <link rel="localization" href="branding/brand.ftl"/>
++  <link rel="localization" href="browser/preferences/zen-preferences.ftl"/>
+   <link rel="localization" href="browser/allTabsMenu.ftl"/>
+   <link rel="localization" href="browser/appmenu.ftl"/>
+   <link rel="localization" href="browser/browser.ftl"/>
 @@ -100,8 +101,10 @@
  
    <title data-l10n-id="browser-main-window-default-title"></title>

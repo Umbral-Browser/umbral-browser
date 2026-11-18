@@ -1,0 +1,910 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_184615.json
+ 0:00.17 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.17 INFO     a11y_checks: False
+ 0:00.17 INFO     android: False
+ 0:00.17 INFO     apple_catalina: False
+ 0:00.17 INFO     apple_silicon: False
+ 0:00.17 INFO     appname: zen
+ 0:00.17 INFO     arch: x86_64
+ 0:00.17 INFO     artifact: False
+ 0:00.17 INFO     asan: False
+ 0:00.17 INFO     automation: False
+ 0:00.17 INFO     bin_suffix: 
+ 0:00.17 INFO     bits: 64
+ 0:00.17 INFO     buildapp: browser
+ 0:00.17 INFO     buildtype: opt
+ 0:00.17 INFO     buildtype_guess: opt
+ 0:00.17 INFO     cc_type: clang
+ 0:00.17 INFO     ccov: False
+ 0:00.17 INFO     condprof: False
+ 0:00.17 INFO     coverage: False
+ 0:00.17 INFO     crashreporter: True
+ 0:00.17 INFO     datareporting: True
+ 0:00.17 INFO     dbus_enabled: True
+ 0:00.17 INFO     debug: False
+ 0:00.17 INFO     devedition: False
+ 0:00.17 INFO     display: wayland
+ 0:00.17 INFO     e10s: True
+ 0:00.17 INFO     early_beta_or_earlier: False
+ 0:00.17 INFO     enterprise: False
+ 0:00.17 INFO     fission: True
+ 0:00.17 INFO     has_sandbox: True
+ 0:00.17 INFO     headless: True
+ 0:00.17 INFO     healthreport: True
+ 0:00.17 INFO     http2: False
+ 0:00.17 INFO     http3: False
+ 0:00.17 INFO     inc_origin_init: False
+ 0:00.17 INFO     is_emulator: False
+ 0:00.17 INFO     is_ubuntu: False
+ 0:00.17 INFO     isolated_process: False
+ 0:00.17 INFO     linux_distro: Cachyos Linux
+ 0:00.17 INFO     macos_vm: False
+ 0:00.17 INFO     mda_gpu: False
+ 0:00.17 INFO     mingw: False
+ 0:00.17 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.17 INFO     msix: False
+ 0:00.17 INFO     nightly_build: False
+ 0:00.17 INFO     nogpu: False
+ 0:00.17 INFO     normandy: True
+ 0:00.17 INFO     nova: True
+ 0:00.17 INFO     official: False
+ 0:00.17 INFO     opt: True
+ 0:00.17 INFO     os: linux
+ 0:00.17 INFO     os_version: Rolling
+ 0:00.17 INFO     pgo: False
+ 0:00.17 INFO     platform_guess: linux64
+ 0:00.17 INFO     processor: x86_64
+ 0:00.17 INFO     release_or_beta: True
+ 0:00.17 INFO     require_signing: False
+ 0:00.17 INFO     sessionHistoryInParent: True
+ 0:00.17 INFO     socketprocess_e10s: False
+ 0:00.17 INFO     socketprocess_networking: False
+ 0:00.17 INFO     standalone: False
+ 0:00.17 INFO     stylo: True
+ 0:00.17 INFO     swgl: False
+ 0:00.17 INFO     sync: True
+ 0:00.17 INFO     telemetry: False
+ 0:00.17 INFO     tests_enabled: True
+ 0:00.17 INFO     toolkit: gtk
+ 0:00.17 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.17 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.17 INFO     tsan: False
+ 0:00.17 INFO     ubsan: False
+ 0:00.17 INFO     updater: True
+ 0:00.17 INFO     verify: False
+ 0:00.17 INFO     verify_fission: False
+ 0:00.17 INFO     version: Cachyos Linux Rolling
+ 0:00.17 INFO     vertical_tab: False
+ 0:00.17 INFO     win10_2009: False
+ 0:00.17 INFO     win11_2009: False
+ 0:00.17 INFO     wmfme: 0
+ 0:00.17 INFO     xorigin: False
+ 0:00.17 INFO Checking for ssltunnel processes...
+ 0:00.20 INFO Checking for xpcshell processes...
+ 0:00.21 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.21 INFO Running manifest: toolkit/components/antitracking/test/browser/browser.toml
+ 0:00.21 INFO The following extra prefs will be set:
+  dom.storage_access.prompt.testing=true
+  dom.storage_access.prompt.testing.allow=true
+  dom.storage_access.frame_only=true
+  privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction=true
+  network.cookie.sameSite.laxByDefault=false
+  dom.security.https_first=false
+  dom.storage_access.dont_grant_insecure_contexts=true
+  network.lna.block_trackers=false
+ 0:00.24 pid:54662 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmppaia6485.mozrunner/.crtdbpw -d /tmp/tmppaia6485.mozrunner
+pid:54662 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.29 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmppaia6485.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.29 INFO runtests.py | Server pid: 54672
+ 0:00.29 INFO runtests.py | Websocket server pid: 54673
+ 0:00.29 INFO runtests.py | SSL tunnel pid: 54674
+ 0:00.34 INFO use http3 server: False
+ 0:00.34 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.34 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.34 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.40 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 38743,46763
+
+ 0:00.40 INFO moz-http2 server started on ports 38743, 46763
+ 0:00.40 INFO node moz-http2 [stderr] (node:54714) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.40 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.40 INFO runtests.py | Running with scheme: http
+ 0:00.40 INFO runtests.py | Running with e10s: True
+ 0:00.40 INFO runtests.py | Running with fission: True
+ 0:00.40 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.40 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.40 INFO runtests.py | Running http tests: start.
+
+ 0:00.41 INFO Application command: /usr/bin/gdb -batch -x /tmp/umbral-promises-detail.gdb -q --args /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmppaia6485.mozrunner
+ 0:00.41 INFO runtests.py | Application pid: 54724
+ 0:00.41 Started process `GECKO(54724)`
+Function "mozilla::dom::Promise::MaybeRejectWithUndefined()" not defined.
+Breakpoint 1 (mozilla::dom::Promise::MaybeRejectWithUndefined()) pending.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[New Thread 0x7fffef5ff6c0 (LWP 54752) (id 2)]
+[Thread 0x7fffef5ff6c0 (LWP 54752) (id 2) exited]
+[New Thread 0x7fffef5ff6c0 (LWP 54753) (id 3)]
+warning: Corrupted shared library list: 0x7ffff7689100 != 0x7ffff769a600
+[Detaching after fork from child process 54754]
+warning: Corrupted shared library list: 0x7ffff769ca00 != 0x7ffff7689100
+warning: Corrupted shared library list: 0x7ffff769ca00 != 0x7ffff7689100
+warning: Corrupted shared library list: 0x7ffff7699400 != 0x7ffff7698e00
+warning: Corrupted shared library list: 0x7ffff7699a00 != 0x7ffff769d000
+warning: Corrupted shared library list: 0x7ffff769dc00 != 0x7ffff7699a00
+warning: Corrupted shared library list: 0x7ffff76e1600 != 0x7ffff769ac00
+warning: Corrupted shared library list: 0x7ffff76e1600 != 0x7ffff769ac00
+warning: File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/libxul.so-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+	add-auto-load-safe-path /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/libxul.so-gdb.py
+line to your configuration file "/home/martin/.config/gdb/gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/home/martin/.config/gdb/gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+warning: Corrupted shared library list: 0x7ffff76e2a00 != 0x7ffff769b800
+warning: Corrupted shared library list: 0x7ffff76e2a00 != 0x7ffff769b800
+[New Thread 0x7fffdd4b26c0 (LWP 54760) (id 4)]
+[Thread 0x7fffef5ff6c0 (LWP 54753) (id 3) exited]
+[New Thread 0x7fffeaf626c0 (LWP 54761) (id 5)]
+*** You are running in headless mode.
+[New Thread 0x7fffef5ff6c0 (LWP 54762) (id 6)]
+[New Thread 0x7fffdc4b16c0 (LWP 54763) (id 7)]
+[New Thread 0x7fffdb4b06c0 (LWP 54764) (id 8)]
+[New Thread 0x7fffd9dff6c0 (LWP 54765) (id 9)]
+[New Thread 0x7fffd8dfe6c0 (LWP 54766) (id 10)]
+warning: Corrupted shared library list: 0x7fffe8b20d00 != 0x7fffe8b1e500
+warning: Corrupted shared library list: 0x7fffe8b22600 != 0x7fffe8b1db00
+[New Thread 0x7fffd7ae56c0 (LWP 54767) (id 11)]
+[Detaching after vfork from child process 54768]
+[New Thread 0x7fffd7d536c0 (LWP 54769) (id 12)]
+[New Thread 0x7fffd78e46c0 (LWP 54770) (id 13)]
+[New Thread 0x7fffd78a36c0 (LWP 54771) (id 14)]
+[New Thread 0x7fffd78626c0 (LWP 54772) (id 15)]
+[New Thread 0x7fffd75ff6c0 (LWP 54773) (id 16)]
+[New Thread 0x7fffd75be6c0 (LWP 54774) (id 17)]
+[New Thread 0x7fffd757d6c0 (LWP 54775) (id 18)]
+[New Thread 0x7fffd753c6c0 (LWP 54776) (id 19)]
+[New Thread 0x7fffd74fb6c0 (LWP 54777) (id 20)]
+[New Thread 0x7fffd74ba6c0 (LWP 54778) (id 21)]
+[New Thread 0x7fffd74796c0 (LWP 54779) (id 22)]
+[New Thread 0x7fffd6eff6c0 (LWP 54780) (id 23)]
+[New Thread 0x7fffd5efe6c0 (LWP 54781) (id 24)]
+[New Thread 0x7fffd4efd6c0 (LWP 54782) (id 25)]
+[New Thread 0x7fffd3efc6c0 (LWP 54783) (id 26)]
+[Thread 0x7fffd3efc6c0 (LWP 54783) (id 26) exited]
+[New Thread 0x7fffd780d6c0 (LWP 54784) (id 27)]
+[New Thread 0x7fffd2efb6c0 (LWP 54785) (id 28)]
+[New Thread 0x7fffd2eba6c0 (LWP 54786) (id 29)]
+[New Thread 0x7fffd27ff6c0 (LWP 54787) (id 30)]
+[New Thread 0x7fffd27be6c0 (LWP 54788) (id 31)]
+[Detaching after fork from child process 54789]
+[New Thread 0x7fffd277d6c0 (LWP 54790) (id 32)]
+[New Thread 0x7fffd273c6c0 (LWP 54794) (id 33)]
+[New Thread 0x7fffd24ff6c0 (LWP 54795) (id 34)]
+[New Thread 0x7fffd23006c0 (LWP 54796) (id 35)]
+[New Thread 0x7fffd21016c0 (LWP 54797) (id 36)]
+[New Thread 0x7fffd1f026c0 (LWP 54798) (id 37)]
+[New Thread 0x7fffd1d036c0 (LWP 54799) (id 38)]
+[New Thread 0x7fffd1b046c0 (LWP 54800) (id 39)]
+[New Thread 0x7fffd19056c0 (LWP 54801) (id 40)]
+[New Thread 0x7fffd17066c0 (LWP 54802) (id 41)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_socket_pid54789.log
+[New Thread 0x7fffd26fb6c0 (LWP 54808) (id 42)]
+[New Thread 0x7fffd26ba6c0 (LWP 54809) (id 43)]
+[New Thread 0x7fffd26756c0 (LWP 54810) (id 44)]
+[Thread 0x7fffd2eba6c0 (LWP 54786) (id 29) exited]
+[New Thread 0x7fffd10ff6c0 (LWP 54811) (id 45)]
+[New Thread 0x7fffd10be6c0 (LWP 54813) (id 46)]
+[New Thread 0x7fffd2eba6c0 (LWP 54815) (id 47)]
+[New Thread 0x7fffd107d6c0 (LWP 54816) (id 48)]
+[New Thread 0x7fffd07ff6c0 (LWP 54817) (id 49)]
+warning: Corrupted shared library list: 0x7fffd7608700 != 0x7fffe8b22600
+[New Thread 0x7fffd02a06c0 (LWP 54819) (id 50)]
+[New Thread 0x7fffcfcfe6c0 (LWP 54820) (id 51)]
+[New Thread 0x7fffcf9ff6c0 (LWP 54821) (id 52)]
+[New Thread 0x7fffcf7fe6c0 (LWP 54822) (id 53)]
+[New Thread 0x7fffcf3ff6c0 (LWP 54823) (id 54)]
+[New Thread 0x7fffcefff6c0 (LWP 54824) (id 55)]
+[New Thread 0x7fffcebff6c0 (LWP 54825) (id 56)]
+[New Thread 0x7fffce7ff6c0 (LWP 54826) (id 57)]
+[New Thread 0x7fffce3ff6c0 (LWP 54827) (id 58)]
+[New Thread 0x7fffcdfff6c0 (LWP 54828) (id 59)]
+[New Thread 0x7fffcdbff6c0 (LWP 54829) (id 60)]
+[New Thread 0x7fffcd7ff6c0 (LWP 54830) (id 61)]
+[New Thread 0x7fffcd3ff6c0 (LWP 54831) (id 62)]
+[New Thread 0x7fffcd1fe6c0 (LWP 54832) (id 63)]
+[New Thread 0x7fffcccff6c0 (LWP 54833) (id 64)]
+[New Thread 0x7fffcc8ff6c0 (LWP 54834) (id 65)]
+[New Thread 0x7fffcc6fe6c0 (LWP 54835) (id 66)]
+[New Thread 0x7fffcc4fd6c0 (LWP 54836) (id 67)]
+[New Thread 0x7fffcc2fc6c0 (LWP 54837) (id 68)]
+[New Thread 0x7fffcc0fb6c0 (LWP 54838) (id 69)]
+[New Thread 0x7fffcbefa6c0 (LWP 54839) (id 70)]
+[New Thread 0x7fffcfcbd6c0 (LWP 54840) (id 71)]
+[New Thread 0x7fffd3efc6c0 (LWP 54841) (id 72)]
+[New Thread 0x7fffcf5fd6c0 (LWP 54842) (id 73)]
+1795023979515	Marionette	INFO	Marionette enabled
+1795023979515	Marionette	TRACE	Received observer notification final-ui-startup
+1795023979515	Marionette	DEBUG	Initializing Marionette
+[Detaching after fork from child process 54843]
+console.error: "Warning: unrecognized command line flag" "-foreground"
+JavaScript warning: moz-src:///browser/components/aiwindow/ui/modules/AIWindow.sys.mjs, line 414: unreachable code after return statement
+[New Thread 0x7fffcf5bc6c0 (LWP 54844) (id 74)]
+1795023979589	Marionette	INFO	Listening on port 2828
+1795023979590	Marionette	DEBUG	Marionette is listening
+1795023979605	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:49918
+[New Thread 0x7fffcabff6c0 (LWP 54845) (id 75)]
+1795023979617	Marionette	DEBUG	Closed connection 0
+1795023979617	Marionette	DEBUG	Accepted connection 1 from 127.0.0.1:49926
+[New Thread 0x7fffcf57b6c0 (LWP 54846) (id 76)]
+1795023979675	Marionette	DEBUG	1 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+1795023979680	Marionette	DEBUG	Waiting for initial application window
+console.debug: "ZenSessionManager:" "Initializing session manager"
+console.debug: "ZenSessionManager:" "Session file path:" "/tmp/tmppaia6485.mozrunner/zen-sessions.jsonlz4"
+console.debug: "ZenSessionManager:" "Reading Zen session file from disk"
+JavaScript warning: chrome://browser/content/tabbrowser/drag-and-drop.js, line 1587: unreachable code after return statement
+JavaScript warning: chrome://browser/content/tabbrowser/tabs.mjs, line 1042: unreachable code after return statement
+[New Thread 0x7fffcf1746c0 (LWP 54848) (id 77)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54847.log
+[New Thread 0x7fffced746c0 (LWP 54851) (id 78)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54847.log
+[New Thread 0x7fffce9506c0 (LWP 54853) (id 79)]
+[New Thread 0x7fffce5506c0 (LWP 54854) (id 80)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_rdd_pid54856.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_rdd_pid54856.log
+[New Thread 0x7fffce1fe6c0 (LWP 54875) (id 81)]
+[New Thread 0x7fffce1bd6c0 (LWP 54882) (id 82)]
+[New Thread 0x7fffce17c6c0 (LWP 54883) (id 83)]
+[New Thread 0x7fffcddfe6c0 (LWP 54884) (id 84)]
+[New Thread 0x7fffcddbd6c0 (LWP 54885) (id 85)]
+[New Thread 0x7fffcdd7c6c0 (LWP 54886) (id 86)]
+console.error: "Failed to read backup file /tmp/tmppaia6485.mozrunner/zen-sessions-backup/clean.jsonlz4" (new NotFoundError("Could not open `/tmp/tmppaia6485.mozrunner/zen-sessions-backup/clean.jsonlz4': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+console.debug: "ZenSessionManager:" "No spaces data found in session file, running migration" [object Object]
+[New Thread 0x7fffcd9fe6c0 (LWP 54889) (id 87)]
+console.error: "Failed to read spaces data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_workspaces", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+console.error: "Failed to read pins data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_pins", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+console.debug: "ZenSessionManager:" "Restoring tabs from Places DB after migration" null (void 0) [object Object]
+console.debug: "ZenSessionManager:" "Build ID has changed since last session, not restoring only pinned tabs" ({buildId:"20261104111407", lastBuildId:""})
+console.debug: "ZenSessionManager:" "Saving windata state after migration"
+console.debug: "ZenSessionManager:" "Saving Zen session data with 0 tabs"
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+JavaScript warning: moz-src:///browser/components/urlbar/UrlbarMuxerStandard.sys.mjs, line 936: unreachable code after return statement
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffc86bda40) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471b4cb in mozilla::dom::DOMLocalization::TranslateElements (this=this@entry=0x7fffcbabac40, aElements=..., aProto=aProto@entry=0x7fffcba7fe00, aRv=...) at ./../../../dom/l10n/DOMLocalization.cpp:353
+#2  0x00007fffe471dcc2 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffcbabac40, aRv=...) at ./../../../dom/l10n/DocumentL10n.cpp:254
+#3  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabac40) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#1  0x00007fffe471b4cb in mozilla::dom::DOMLocalization::TranslateElements (this=this@entry=0x7fffcbabac40, aElements=..., aProto=aProto@entry=0x7fffcba7fe00, aRv=...) at ./../../../dom/l10n/DOMLocalization.cpp:353
+353	      return nullptr;
+l10nMessages = {<nsTArray_Impl<mozilla::dom::Nullable<mozilla::dom::L10nMessage>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffde7c3368 <sEmptyTArrayHeader>}, static NoIndex = <optimized out>}, <No data fields>}
+allTranslated = <optimized out>
+l10nKeys = {<FallibleTArray<mozilla::dom::OwningUTF8StringOrL10nIdArgs>> = {<nsTArray_Impl<mozilla::dom::OwningUTF8StringOrL10nIdArgs, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc85de000}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+nativeHandler = {mRawPtr = 0x7fffc86bd500}
+domElements = @0x7fffc86bd510: {<nsTArray_Impl<nsCOMPtr<mozilla::dom::Element>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc852a000}, static NoIndex = <optimized out>}, <No data fields>}
+promise = <optimized out>
+callbackResult = <optimized out>
+this = 0x7fffcbabac40
+aElements = @0x7fffffffade0: {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffcb8ea000}, static NoIndex = <optimized out>}, <No data fields>}
+aProto = 0x7fffcba7fe00
+aRv = @0x7fffffffaeb8: {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_ERROR_INTERNAL_ERRORRESULT_DOMEXCEPTION, mExtra = {mMessage = 0x7fffc828f840, mJSException = {asBits_ = 140736551516224}, mDOMExceptionInfo = 0x7fffc828f840}}, <No data fields>}
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffc86bd7a0) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471de36 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffcbabac40, aRv=...) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/dom/Element.h:2769
+#2  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabac40) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#3  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#1  0x00007fffe471de36 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffcbabac40, aRv=...) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/dom/Element.h:2769
+2769	NON_VIRTUAL_ADDREF_RELEASE(mozilla::dom::Element)
+nonProtoElements = {<FallibleTArray<mozilla::OwningNonNull<mozilla::dom::Element> >> = {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc975e400}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+exemption = {static sAutoAllowLegacyScriptExecution = <optimized out>}
+promises = {<nsTArray_Impl<RefPtr<mozilla::dom::Promise>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffde7c3368 <sEmptyTArrayHeader>}, static NoIndex = <optimized out>}, <No data fields>}
+aes = {<mozilla::dom::AutoJSAPI> = {<mozilla::dom::ScriptSettingsStackEntry> = {mGlobalObject = {mRawPtr = 0x7fffc86bda40}, mType = 4294946816, mOlder = 0x7fffffffaf50}, mAutoNullableRealm = {<mozilla::detail::MaybeStorage<JSAutoNullableRealm, 0>> = {<mozilla::detail::MaybeStorageBase<JSAutoNullableRealm, 0>> = {mStorage = {val = {cx_ = 0x0, oldRealm_ = 0x7fffe23570e5 <mozilla::dom::Element::BindToTree(nsIContent::BindContext&, nsINode&)+1045>}, empty = 0 '\000'}}, mIsSome = 1 '\001'}, <mozilla::detail::Maybe_CopyMove_Enabler<JSAutoNullableRealm, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCx = 0x7fffde7adb66 <nsGkAtoms::detail::gGkAtoms+11694>, mIsMainThread = 6, mOldWarningReporter = {<mozilla::detail::MaybeStorage<void (*)(JSContext*, JSErrorReport*), 1>> = {<mozilla::detail::MaybeStorageBase<void (*)(JSContext*, JSErrorReport*), 1>> = {mStorage = {val = 0x3f, empty = 63 '?'}}, mIsSome = 0 '\000', padding = "Q\263\255\000\000\000"}, <mozilla::detail::Maybe_CopyMove_Enabler<void (*)(JSContext*, JSErrorReport*), 1, 1, 1>> = {<No data fields>}, <No data fields>}}, mWebIDLCallerPrincipal = 0xa7a04b2fd650b300, mScriptActivity = {<mozilla::detail::MaybeStorage<xpc::AutoScriptActivity, 0>> = {<mozilla::detail::MaybeStorageBase<xpc::AutoScriptActivity, 0>> = {mStorage = {val = {mActive = 248, mOldValue = 174}, empty = -8 '\370'}}, mIsSome = -1 '\377'}, <mozilla::detail::Maybe_CopyMove_Enabler<xpc::AutoScriptActivity, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCallerOverride = {mContext = 0x7fffffffaec0}, mAutoProfilerLabel = {mProfilingStack = 0xcba2c801}, mJSThreadExecution = {mExecutionGrantingManager = {mRawPtr = 0x7fffe22e856a <NS_NewElement(mozilla::dom::Element**, already_AddRefed<mozilla::dom::NodeInfo>, mozilla::dom::FromParser, nsAtom*, mozilla::dom::CustomElementDefinition*, mozilla::Maybe<RefPtr<mozilla::dom::CustomElementRegistry> >)+122>}, mOldGrantingManager = {mRawPtr = 0x7fffc84fd6b0}, mIsMainThread = 160}}
+i = <optimized out>
+elements = {<FallibleTArray<mozilla::OwningNonNull<mozilla::dom::Element> >> = {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffcb8ea000}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+promise = {mRawPtr = 0x7fffc86bd7a0}
+elem = <optimized out>
+proto = {mRawPtr = 0x7fffcba7fe00}
+this = 0x7fffcbabac40
+aRv = @0x7fffffffaeb8: {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_ERROR_INTERNAL_ERRORRESULT_DOMEXCEPTION, mExtra = {mMessage = 0x7fffc828f840, mJSException = {asBits_ = 140736551516224}, mDOMExceptionInfo = 0x7fffc828f840}}, <No data fields>}
+console.error: (new TypeError("can't access property \"tabContainer\", gBrowser is undefined", "resource:///modules/zen/ZenVerticalTabsManager.mjs", 394))
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+JavaScript warning: moz-src:///browser/components/tabbrowser/Tabbrowser.sys.mjs, line 498: unreachable code after return statement
+console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+[New Thread 0x7fffcedfe6c0 (LWP 54907) (id 88)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54906.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54906.log
+[New Thread 0x7fffcf53a6c0 (LWP 54911) (id 89)]
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=0x7fffca7a1920) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471d80d in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabac40) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/RefPtr.h:314
+#2  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#3  0x00007fffe417387c in mozilla::dom::PrototypeDocumentContentSink::MaybeDoneWalking (this=0x7fffcba16400) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:641
+#1  0x00007fffe471d80d in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabac40) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/RefPtr.h:314
+314	    return const_cast<T*>(mRawPtr);
+exemption = {static sAutoAllowLegacyScriptExecution = <optimized out>}
+promises = {<nsTArray_Impl<RefPtr<mozilla::dom::Promise>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc9f15830}, static NoIndex = <optimized out>}, <No data fields>}
+rv = {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_OK, mExtra = {mMessage = 0x0, mJSException = {asBits_ = 0}, mDOMExceptionInfo = 0x0}}, <No data fields>}
+aes = {<mozilla::dom::AutoJSAPI> = {<mozilla::dom::ScriptSettingsStackEntry> = {mGlobalObject = {mRawPtr = 0x7fffcac036a0}, mType = 3614454312, mOlder = 0x7fffc84eeb00}, mAutoNullableRealm = {<mozilla::detail::MaybeStorage<JSAutoNullableRealm, 0>> = {<mozilla::detail::MaybeStorageBase<JSAutoNullableRealm, 0>> = {mStorage = {val = {cx_ = 0x7fffffffb000, oldRealm_ = 0x24100036}, empty = 0 '\000'}}, mIsSome = 0 '\000'}, <mozilla::detail::Maybe_CopyMove_Enabler<JSAutoNullableRealm, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCx = 0x7fffcac036a0, mIsMainThread = false, mOldWarningReporter = {<mozilla::detail::MaybeStorage<void (*)(JSContext*, JSErrorReport*), 1>> = {<mozilla::detail::MaybeStorageBase<void (*)(JSContext*, JSErrorReport*), 1>> = {mStorage = {val = 0x7fffe24502fd <nsINode::InsertChildBefore(nsIContent*, nsIContent*, bool, nsINode::ErrorResult&, nsINode*, MutationEffectOnScript)+653>, empty = -3 '\375'}}, mIsSome = 1 '\001', padding = "\277u\367\000\000\000"}, <mozilla::detail::Maybe_CopyMove_Enabler<void (*)(JSContext*, JSErrorReport*), 1, 1, 1>> = {<No data fields>}, <No data fields>}}, mWebIDLCallerPrincipal = 0x0, mScriptActivity = {<mozilla::detail::MaybeStorage<xpc::AutoScriptActivity, 0>> = {<mozilla::detail::MaybeStorageBase<xpc::AutoScriptActivity, 0>> = {mStorage = {val = {mActive = false, mOldValue = false}, empty = 0 '\000'}}, mIsSome = 0 '\000'}, <mozilla::detail::Maybe_CopyMove_Enabler<xpc::AutoScriptActivity, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCallerOverride = {mContext = 0x0}, mAutoProfilerLabel = {mProfilingStack = 0x7ffff771b3d8}, mJSThreadExecution = {mExecutionGrantingManager = {mRawPtr = 0x7ffff771b3c0}, mOldGrantingManager = {mRawPtr = 0x7fffcbabac40}, mIsMainThread = 192}}
+documentElement = <optimized out>
+promise = <optimized out>
+this = 0x7fffcbabac40
+console.warn: "Error loading shortcuts file" (new NotFoundError("Could not open `/tmp/tmppaia6485.mozrunner/zen-keyboard-shortcuts.json': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+[Thread 0x7fffd26ba6c0 (LWP 54809) (id 43) exited]
+console.warn: "Zen CKS: Migrating shortcuts from version" 0 "to" 21
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: resource:///modules/ZenSiteDataPanel.sys.mjs, line 173: TypeError: can't access property "addProgressListener", this.window.gBrowser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=8.14292) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+[New Thread 0x7fffd26ba6c0 (LWP 54932) (id 90)]
+[New Thread 0x7fffbf7ff6c0 (LWP 54933) (id 91)]
+[New Thread 0x7fffcf1fe6c0 (LWP 54935) (id 92)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54934.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54934.log
+console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+console.debug: "[gZenWorkspaces]:" "Changing workspace to" "{f4b4bd11-d05b-4a9e-b089-49046cd01210}"
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+[New Thread 0x7fffcedbd6c0 (LWP 54959) (id 93)]
+[New Thread 0x7fffcd5666c0 (LWP 54961) (id 94)]
+[New Thread 0x7fffccf656c0 (LWP 54962) (id 95)]
+[New Thread 0x7fffcca666c0 (LWP 54963) (id 96)]
+[New Thread 0x7fffcbb6f6c0 (LWP 54982) (id 97)]
+[New Thread 0x7fffcbbf96c0 (LWP 54983) (id 98)]
+[New Thread 0x7fffbc9ff6c0 (LWP 54984) (id 99)]
+console.error: services.settings: 
+  Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+  Stack:
+    EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+list@resource://services-settings/Database.sys.mjs:96:13
+async*get@resource://services-settings/RemoteSettingsClient.sys.mjs:570:28
+async*getRecipesFromCollection/recipes<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:793:16
+#raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:749:34
+getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:792:41
+getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+#updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+#init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+finishInit@resource://normandy/Normandy.sys.mjs:108:30
+async*init@resource://normandy/Normandy.sys.mjs:79:16
+async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+
+[New Thread 0x7fffcbbb86c0 (LWP 54986) (id 100)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54987.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54987.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54990.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid54990.log
+[New Thread 0x7fffbda4b6c0 (LWP 54996) (id 101)]
+[New Thread 0x7fffbcd376c0 (LWP 54998) (id 102)]
+[New Thread 0x7fffbccf66c0 (LWP 54999) (id 103)]
+warning: Corrupted shared library list: 0x7fffbeac0e00 != 0x7fffd0b2e100
+warning: Corrupted shared library list: 0x7fffbeabf600 != 0x7fffbeac0e00
+[New Thread 0x7fffbcc586c0 (LWP 55024) (id 104)]
+[New Thread 0x7fffbc6cc6c0 (LWP 55035) (id 105)]
+[New Thread 0x7fffbc68b6c0 (LWP 55052) (id 106)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_utility_pid55053.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_utility_pid55053.log
+[New Thread 0x7fffbc64a6c0 (LWP 55060) (id 107)]
+1795023984707	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+[New Thread 0x7fffbbfff6c0 (LWP 55061) (id 108)]
+[New Thread 0x7fffbbfbe6c0 (LWP 55062) (id 109)]
+[New Thread 0x7fffbbf7d6c0 (LWP 55063) (id 110)]
+[New Thread 0x7fffbbf3c6c0 (LWP 55064) (id 111)]
+[New Thread 0x7fffbbefb6c0 (LWP 55065) (id 112)]
+1795023984857	RemoteAgent	TRACE	[10] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+1795023984857	RemoteAgent	TRACE	[10] ProgressListener Setting unload timer (5000ms)
+1795023984857	RemoteAgent	TRACE	[10] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+1795023984857	RemoteAgent	TRACE	[10] Document already finished loading: about:blank
+1795023984857	RemoteAgent	TRACE	[10] ProgressListener Stop: has error=false url=about:blank
+1795023984862	Marionette	DEBUG	1 <- [1,1,null,{"sessionId":"8060a5d6-9e7e-44a3-b74c-56eff60b0675","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":54749,"moz:profile":"/tmp/tmppaia6485.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+[New Thread 0x7fffbb5ff6c0 (LWP 55067) (id 113)]
+[New Thread 0x7fffbb3fe6c0 (LWP 55068) (id 114)]
+[Thread 0x7fffbb3fe6c0 (LWP 55068) (id 114) exited]
+[New Thread 0x7fffbb3fe6c0 (LWP 55070) (id 115)]
+[New Thread 0x7fffbb1fd6c0 (LWP 55071) (id 116)]
+[Thread 0x7fffbb1fd6c0 (LWP 55071) (id 116) exited]
+[New Thread 0x7fffbdaff6c0 (LWP 55072) (id 117)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55069.log
+1795023984884	Marionette	DEBUG	1 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmp23j2epks.zip"}]
+[New Thread 0x7fffbaffc6c0 (LWP 55075) (id 118)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55069.log
+[Thread 0x7fffbaffc6c0 (LWP 55075) (id 118) exited]
+[New Thread 0x7fffbb1fd6c0 (LWP 55081) (id 119)]
+[Thread 0x7fffbb1fd6c0 (LWP 55081) (id 119) exited]
+[New Thread 0x7fffbaffc6c0 (LWP 55091) (id 120)]
+[Thread 0x7fffbaffc6c0 (LWP 55091) (id 120) exited]
+[New Thread 0x7fffbb1fd6c0 (LWP 55092) (id 121)]
+[Thread 0x7fffbb5ff6c0 (LWP 55067) (id 113) exited]
+[Thread 0x7fffbb1fd6c0 (LWP 55092) (id 121) exited]
+1795023984912	Marionette	DEBUG	1 <- [1,2,null,{"value":"special-powers@mozilla.org"}]
+1795023984924	Marionette	DEBUG	1 -> [0,3,"Addon:Install",{"temporary":false,"path":"/tmp/tmpwe3ztb_y.zip"}]
+1795023984935	Marionette	DEBUG	1 <- [1,3,null,{"value":"mochikit@mozilla.org"}]
+1795023984936	Marionette	DEBUG	1 -> [0,4,"Marionette:GetContext",{}]
+1795023984936	Marionette	DEBUG	1 <- [1,4,null,{"value":"content"}]
+1795023984936	Marionette	DEBUG	1 -> [0,5,"Marionette:SetContext",{"value":"chrome"}]
+1795023984936	Marionette	DEBUG	1 <- [1,5,null,{"value":null}]
+1795023984937	Marionette	DEBUG	1 -> [0,6,"WebDriver:ExecuteScript",{"script":"/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distr ... \n// the flavor and url to load.\nlet ev = new CustomEvent(\"mochitest-load\", { detail: [flavor, url] });\nwin.dispatchEvent(ev);","args":[{"flavor":"browser-chrome","testUrl":"about:blank"}],"newSandbox":true,"sandbox":"default","line":2377,"filename":"_tests/testing/mochitest/runtests.py"}]
+1795023984940	RemoteAgent	TRACE	WebDriverProcessData actor created for PID 54749
+1795023984941	Marionette	TRACE	[1] MarionetteCommands actor created for window id 2
+1795023984953	Marionette	TRACE	Remoteness change detected. Set new top-level browsing context to 10
+1795023984954	Marionette	DEBUG	1 <- [1,6,null,{"value":null}]
+1795023984966	Marionette	DEBUG	1 -> [0,7,"Marionette:SetContext",{"value":"content"}]
+1795023984966	Marionette	DEBUG	1 <- [1,7,null,{"value":null}]
+console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+1795023984981	Marionette	DEBUG	1 -> [0,8,"WebDriver:DeleteSession",{}]
+1795023984982	Marionette	TRACE	[1] MarionetteCommands actor destroyed for window id 2
+1795023984982	Marionette	DEBUG	1 <- [1,8,null,{"value":null}]
+ 0:09.59 INFO runtests.py | Waiting for browser...
+1795023984983	Marionette	DEBUG	Closed connection 1
+[New Thread 0x7fffbdabe6c0 (LWP 55108) (id 122)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55107.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55107.log
+[New Thread 0x7fffcdd0f6c0 (LWP 55113) (id 123)]
+
+ⰲ겿{"action":"log","time":1795023985020,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"*** Start BrowserChrome Test Results ***","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985021,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"checking for open sidebars","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985021,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"checking window state","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_start","time":1795023985110,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985115,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering setup bound ","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+[New Thread 0x7fffbad446c0 (LWP 55139) (id 124)]
+
+ⰲ겿{"action":"log","time":1795023985133,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving setup bound ","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"bound "},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985134,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering test flush_on_query_reflects_live_tab","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985134,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab","status":"PASS","message":"DB is empty at test start","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985181,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985230,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.4687709796398636” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985230,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab","status":"PASS","message":"ContentBlockingLog recorded one origin","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985232,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab","status":"PASS","message":"Open-tab events appear in DB via flush-on-query","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985233,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab","status":"PASS","message":"Repeat query does not double-count the same events (cursor works)","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985238,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab","status":"PASS","message":"Teardown flush is idempotent with a prior query-time flush","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985238,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving test flush_on_query_reflects_live_tab","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_reflects_live_tab"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985239,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering test private_window_events_are_not_persisted","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffbccf66c0 (LWP 54999) (id 103) exited]
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffbec97880) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471b4cb in mozilla::dom::DOMLocalization::TranslateElements (this=this@entry=0x7fffc64efd40, aElements=..., aProto=aProto@entry=0x7fffcba7fe00, aRv=...) at ./../../../dom/l10n/DOMLocalization.cpp:353
+#2  0x00007fffe471dcc2 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffc64efd40, aRv=...) at ./../../../dom/l10n/DocumentL10n.cpp:254
+#3  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffc64efd40) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#1  0x00007fffe471b4cb in mozilla::dom::DOMLocalization::TranslateElements (this=this@entry=0x7fffc64efd40, aElements=..., aProto=aProto@entry=0x7fffcba7fe00, aRv=...) at ./../../../dom/l10n/DOMLocalization.cpp:353
+353	      return nullptr;
+l10nMessages = {<nsTArray_Impl<mozilla::dom::Nullable<mozilla::dom::L10nMessage>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffde7c3368 <sEmptyTArrayHeader>}, static NoIndex = <optimized out>}, <No data fields>}
+allTranslated = <optimized out>
+l10nKeys = {<FallibleTArray<mozilla::dom::OwningUTF8StringOrL10nIdArgs>> = {<nsTArray_Impl<mozilla::dom::OwningUTF8StringOrL10nIdArgs, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc722c000}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+nativeHandler = {mRawPtr = 0x7fffbec977c0}
+domElements = @0x7fffbec977d0: {<nsTArray_Impl<nsCOMPtr<mozilla::dom::Element>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffb84ba000}, static NoIndex = <optimized out>}, <No data fields>}
+promise = <optimized out>
+callbackResult = <optimized out>
+this = 0x7fffc64efd40
+aElements = @0x7fffffffacc0: {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffd0b9f000}, static NoIndex = <optimized out>}, <No data fields>}
+aProto = 0x7fffcba7fe00
+aRv = @0x7fffffffad98: {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_ERROR_INTERNAL_ERRORRESULT_DOMEXCEPTION, mExtra = {mMessage = 0x7fffc86df0a0, mJSException = {asBits_ = 140736556036256}, mDOMExceptionInfo = 0x7fffc86df0a0}}, <No data fields>}
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffbec97af0) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471de36 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffc64efd40, aRv=...) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/dom/Element.h:2769
+#2  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffc64efd40) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#3  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#1  0x00007fffe471de36 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffc64efd40, aRv=...) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/dom/Element.h:2769
+2769	NON_VIRTUAL_ADDREF_RELEASE(mozilla::dom::Element)
+nonProtoElements = {<FallibleTArray<mozilla::OwningNonNull<mozilla::dom::Element> >> = {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc76bd800}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+exemption = {static sAutoAllowLegacyScriptExecution = <optimized out>}
+promises = {<nsTArray_Impl<RefPtr<mozilla::dom::Promise>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffde7c3368 <sEmptyTArrayHeader>}, static NoIndex = <optimized out>}, <No data fields>}
+aes = {<mozilla::dom::AutoJSAPI> = {<mozilla::dom::ScriptSettingsStackEntry> = {mGlobalObject = {mRawPtr = 0x7fffbec97880}, mType = 4294946528, mOlder = 0x7fffffffae30}, mAutoNullableRealm = {<mozilla::detail::MaybeStorage<JSAutoNullableRealm, 0>> = {<mozilla::detail::MaybeStorageBase<JSAutoNullableRealm, 0>> = {mStorage = {val = {cx_ = 0x0, oldRealm_ = 0x7fffe23570e5 <mozilla::dom::Element::BindToTree(nsIContent::BindContext&, nsINode&)+1045>}, empty = 0 '\000'}}, mIsSome = 1 '\001'}, <mozilla::detail::Maybe_CopyMove_Enabler<JSAutoNullableRealm, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCx = 0x7fffde7adb66 <nsGkAtoms::detail::gGkAtoms+11694>, mIsMainThread = 6, mOldWarningReporter = {<mozilla::detail::MaybeStorage<void (*)(JSContext*, JSErrorReport*), 1>> = {<mozilla::detail::MaybeStorageBase<void (*)(JSContext*, JSErrorReport*), 1>> = {mStorage = {val = 0x3f, empty = 63 '?'}}, mIsSome = 0 '\000', padding = "Q\263\255\000\000\000"}, <mozilla::detail::Maybe_CopyMove_Enabler<void (*)(JSContext*, JSErrorReport*), 1, 1, 1>> = {<No data fields>}, <No data fields>}}, mWebIDLCallerPrincipal = 0xa7a04b2fd650b300, mScriptActivity = {<mozilla::detail::MaybeStorage<xpc::AutoScriptActivity, 0>> = {<mozilla::detail::MaybeStorageBase<xpc::AutoScriptActivity, 0>> = {mStorage = {val = {mActive = 216, mOldValue = 173}, empty = -40 '\330'}}, mIsSome = -1 '\377'}, <mozilla::detail::Maybe_CopyMove_Enabler<xpc::AutoScriptActivity, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCallerOverride = {mContext = 0x7fffffffada0}, mAutoProfilerLabel = {mProfilingStack = 0xc840c901}, mJSThreadExecution = {mExecutionGrantingManager = {mRawPtr = 0x7fffe22e856a <NS_NewElement(mozilla::dom::Element**, already_AddRefed<mozilla::dom::NodeInfo>, mozilla::dom::FromParser, nsAtom*, mozilla::dom::CustomElementDefinition*, mozilla::Maybe<RefPtr<mozilla::dom::CustomElementRegistry> >)+122>}, mOldGrantingManager = {mRawPtr = 0x7fffb6a7b8e0}, mIsMainThread = 160}}
+i = <optimized out>
+elements = {<FallibleTArray<mozilla::OwningNonNull<mozilla::dom::Element> >> = {<nsTArray_Impl<mozilla::OwningNonNull<mozilla::dom::Element>, nsTArrayFallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffd0b9f000}, static NoIndex = <optimized out>}, <No data fields>}, <No data fields>}
+promise = {mRawPtr = 0x7fffbec97af0}
+elem = <optimized out>
+proto = {mRawPtr = 0x7fffcba7fe00}
+this = 0x7fffc64efd40
+aRv = @0x7fffffffad98: {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_ERROR_INTERNAL_ERRORRESULT_DOMEXCEPTION, mExtra = {mMessage = 0x7fffc86df0a0, mJSException = {asBits_ = 140736556036256}, mDOMExceptionInfo = 0x7fffc86df0a0}}, <No data fields>}
+console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+[New Thread 0x7fffcd5256c0 (LWP 55142) (id 125)]
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+
+DETAIL-REJECTION
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=0x7fffc8f34ed0) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471d80d in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffc64efd40) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/RefPtr.h:314
+#2  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#3  0x00007fffe417387c in mozilla::dom::PrototypeDocumentContentSink::MaybeDoneWalking (this=0x7fffc712bc00) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:641
+#1  0x00007fffe471d80d in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffc64efd40) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/RefPtr.h:314
+314	    return const_cast<T*>(mRawPtr);
+exemption = {static sAutoAllowLegacyScriptExecution = <optimized out>}
+promises = {<nsTArray_Impl<RefPtr<mozilla::dom::Promise>, nsTArrayInfallibleAllocator>> = {<nsTArray_base<nsTArray_RelocateUsingMemutils>> = {mHdr = 0x7fffc9f1bc90}, static NoIndex = <optimized out>}, <No data fields>}
+rv = {<mozilla::binding_danger::TErrorResult<mozilla::binding_danger::AssertAndSuppressCleanupPolicy>> = {mResult = nsresult::NS_OK, mExtra = {mMessage = 0x0, mJSException = {asBits_ = 0}, mDOMExceptionInfo = 0x0}}, <No data fields>}
+aes = {<mozilla::dom::AutoJSAPI> = {<mozilla::dom::ScriptSettingsStackEntry> = {mGlobalObject = {mRawPtr = 0x7fffc840c930}, mType = 3614454312, mOlder = 0x7fffb6a5a200}, mAutoNullableRealm = {<mozilla::detail::MaybeStorage<JSAutoNullableRealm, 0>> = {<mozilla::detail::MaybeStorageBase<JSAutoNullableRealm, 0>> = {mStorage = {val = {cx_ = 0x7fffffffaee0, oldRealm_ = 0x24100036}, empty = -32 '\340'}}, mIsSome = 0 '\000'}, <mozilla::detail::Maybe_CopyMove_Enabler<JSAutoNullableRealm, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCx = 0x7fffc840c930, mIsMainThread = false, mOldWarningReporter = {<mozilla::detail::MaybeStorage<void (*)(JSContext*, JSErrorReport*), 1>> = {<mozilla::detail::MaybeStorageBase<void (*)(JSContext*, JSErrorReport*), 1>> = {mStorage = {val = 0x7fffe24502fd <nsINode::InsertChildBefore(nsIContent*, nsIContent*, bool, nsINode::ErrorResult&, nsINode*, MutationEffectOnScript)+653>, empty = -3 '\375'}}, mIsSome = 1 '\001', padding = "\277u\367\000\000\000"}, <mozilla::detail::Maybe_CopyMove_Enabler<void (*)(JSContext*, JSErrorReport*), 1, 1, 1>> = {<No data fields>}, <No data fields>}}, mWebIDLCallerPrincipal = 0x0, mScriptActivity = {<mozilla::detail::MaybeStorage<xpc::AutoScriptActivity, 0>> = {<mozilla::detail::MaybeStorageBase<xpc::AutoScriptActivity, 0>> = {mStorage = {val = {mActive = false, mOldValue = false}, empty = 0 '\000'}}, mIsSome = 0 '\000'}, <mozilla::detail::Maybe_CopyMove_Enabler<xpc::AutoScriptActivity, 0, 1, 1>> = {<No data fields>}, <No data fields>}, mCallerOverride = {mContext = 0x0}, mAutoProfilerLabel = {mProfilingStack = 0x7ffff771b3d8}, mJSThreadExecution = {mExecutionGrantingManager = {mRawPtr = 0x7ffff771b3c0}, mOldGrantingManager = {mRawPtr = 0x7fffc64efd40}, mIsMainThread = 192}}
+documentElement = <optimized out>
+promise = <optimized out>
+this = 0x7fffc64efd40
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+
+ⰲ겿{"action":"log","time":1795023985624,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Error: \"uncaught exception: undefined\"]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985624,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Error: \"uncaught exception: undefined\"]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985624,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Error: \"uncaught exception: undefined\"]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+console.debug: 
+  [gZenWorkspaces]:
+  Changing workspace to
+  {68ca3647-3b54-4db0-86f5-e70f205b2fba}
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+[Parent 54749: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+
+ⰲ겿{"action":"log","time":1795023985788,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"HTTPS-First Mode: Upgrading insecure speculative TCP connection “http://example.net/browser/toolkit/components/antitracking/test/browser/page.html” to use “https”.\"]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+
+ⰲ겿{"action":"log","time":1795023985800,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"HTTPS-First Mode: Upgrading insecure request “http://example.net/browser/toolkit/components/antitracking/test/browser/page.html” to use “https”.\"]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+[New Thread 0x7fffbadfb6c0 (LWP 55147) (id 126)]
+[New Thread 0x7fffbadba6c0 (LWP 55149) (id 127)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55148.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55148.log
+[Thread 0x7fffbdabe6c0 (LWP 55108) (id 122) exited]
+[New Thread 0x7fffb67486c0 (LWP 55170) (id 128)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55169.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55169.log
+[New Thread 0x7fffb67076c0 (LWP 55178) (id 129)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55175.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55175.log
+[New Thread 0x7fffb66c66c0 (LWP 55185) (id 130)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55184.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55184.log
+
+ⰲ겿{"action":"log","time":1795023985884,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.\" {file: \"https://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985936,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?private=0.4933929581927502” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"https://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985937,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted","status":"PASS","message":"Private tab records a blocked tracker in memory","js_source":"TestRunner.js"}ⰲ겿
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+[Thread 0x7fffcd5256c0 (LWP 55142) (id 125) exited]
+
+ⰲ겿{"action":"test_status","time":1795023985963,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted","status":"PASS","message":"Private-window content-blocking events are not added to persistent ETP counts","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985610,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted","status":"FAIL","expected":"PASS","message":"uncaught rejection: undefined","stack":"(No stack available.)\n","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985610,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted","status":"FAIL","expected":"PASS","message":"uncaught rejection: undefined","stack":"(No stack available.)\n","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023985621,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted","status":"FAIL","expected":"PASS","message":"uncaught rejection: undefined","stack":"(No stack available.)\n","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985963,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving test private_window_events_are_not_persisted","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"private_window_events_are_not_persisted"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023985964,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering test flush_on_query_handles_aggregated_repeat_count","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffbdaff6c0 (LWP 55072) (id 117) exited]
+[Thread 0x7fffbadba6c0 (LWP 55149) (id 127) exited]
+
+ⰲ겿{"action":"log","time":1795023985989,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986034,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?first=0.06582577056177363” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986035,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count","status":"PASS","message":"Tracker origin recorded after first load","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986036,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count","status":"PASS","message":"First load reaches the DB via flush - 1 > 0","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986039,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?second=0.47149351035059384” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986039,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count","status":"PASS","message":"Second load aggregated onto an existing LogEntry (mRepeatCount >= 2) - 2 >= 2","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986040,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count","status":"PASS","message":"Second flush reports exactly one additional aggregated event","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986047,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving test flush_on_query_handles_aggregated_repeat_count","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_on_query_handles_aggregated_repeat_count"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986048,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering test concurrent_reads_see_flushed_event","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+
+ⰲ겿{"action":"log","time":1795023986101,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event"},"js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffb67486c0 (LWP 55170) (id 128) exited]
+
+ⰲ겿{"action":"log","time":1795023986119,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.9633178443682451” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986119,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event","status":"PASS","message":"ContentBlockingLog recorded one origin","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986121,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event","status":"PASS","message":"First concurrent read sees the live-log event","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986121,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event","status":"PASS","message":"Second concurrent read sees the same data (no stale read)","js_source":"TestRunner.js"}ⰲ겿
+console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+
+ⰲ겿{"action":"log","time":1795023986137,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving test concurrent_reads_see_flushed_event","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"concurrent_reads_see_flushed_event"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986137,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Entering test flush_disabled_pref_is_respected","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffb67076c0 (LWP 55178) (id 129) exited]
+[New Thread 0x7fffb66856c0 (LWP 55277) (id 131)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55276.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55276.log
+
+ⰲ겿{"action":"log","time":1795023986162,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_disabled_pref_is_respected"},"js_source":"TestRunner.js"}ⰲ겿
+[New Thread 0x7fffb66446c0 (LWP 55283) (id 132)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55282.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55282.log
+[New Thread 0x7fffb62486c0 (LWP 55290) (id 133)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55287.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmppaia6485.mozrunner/runtests_leaks_tab_pid55287.log
+
+ⰲ겿{"action":"log","time":1795023986212,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Console message: [JavaScript Warning: \"The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.725913219525561” was blocked because Enhanced Tracking Protection is enabled.\" {file: \"http://example.net/browser/toolkit/components/antitracking/test/browser/page.html\" line: 0}]","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_disabled_pref_is_respected"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_status","time":1795023986213,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_disabled_pref_is_respected","status":"PASS","message":"Flush-on-query is gated by the pref","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986218,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Leaving test flush_disabled_pref_is_respected","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":"flush_disabled_pref_is_respected"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986235,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"checking for open popups","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffb66c66c0 (LWP 55185) (id 130) exited]
+[New Thread 0x7fffadf646c0 (LWP 55370) (id 134)]
+[New Thread 0x7fffadf236c0 (LWP 55371) (id 135)]
+[New Thread 0x7fffadee26c0 (LWP 55372) (id 136)]
+[New Thread 0x7fffadea16c0 (LWP 55373) (id 137)]
+
+ⰲ겿{"action":"test_status","time":1795023986572,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","subtest":null,"status":"FAIL","message":"changed preference: zen.ui.migration.compact-mode-button-added","js_source":"TestRunner.js"}ⰲ겿
+MEMORY STAT vsizeMaxContiguous not supported in this build configuration.
+MEMORY STAT | vsize 11498MB | residentFast 434MB | heapAllocated 320MB
+
+ⰲ겿{"action":"log","time":1795023986574,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"checking for open sidebars","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023986574,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"checking window state","extra":{"test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js"},"js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"test_end","time":1795023986574,"thread":null,"pid":null,"source":"mochitest","test":"chrome://mochitests/content/browser/toolkit/components/antitracking/test/browser/browser_flushOnQuery.js","status":"FAIL","expected":"PASS","message":"finished in 1460ms","js_source":"TestRunner.js"}ⰲ겿
+[Thread 0x7fffcca666c0 (LWP 54963) (id 96) exited]
+[Thread 0x7fffbcc586c0 (LWP 55024) (id 104) exited]
+[Thread 0x7fffadea16c0 (LWP 55373) (id 137) exited]
+[Thread 0x7fffadf236c0 (LWP 55371) (id 135) exited]
+[Thread 0x7fffadf646c0 (LWP 55370) (id 134) exited]
+[Thread 0x7fffbc68b6c0 (LWP 55052) (id 106) exited]
+[Thread 0x7fffd07ff6c0 (LWP 54817) (id 49) exited]
+[Thread 0x7fffd26fb6c0 (LWP 54808) (id 42) exited]
+Completed ShutdownLeaks collections in process 54934
+Completed ShutdownLeaks collections in process 54987
+Completed ShutdownLeaks collections in process 54906
+Completed ShutdownLeaks collections in process 54847
+[Thread 0x7fffbbfff6c0 (LWP 55061) (id 108) exited]
+Completed ShutdownLeaks collections in process 54749
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"TEST-START | Shutdown","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Browser Chrome Test Summary","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Passed:  15","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Failed:  3","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Todo:    1","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"Mode:    e10s","js_source":"TestRunner.js"}ⰲ겿
+
+ⰲ겿{"action":"log","time":1795023987906,"thread":null,"pid":null,"source":"mochitest","level":"INFO","message":"*** End BrowserChrome Test Results ***","js_source":"TestRunner.js"}ⰲ겿
+[New Thread 0x7fffbbfff6c0 (LWP 55375) (id 138)]
+[New Thread 0x7fffadda96c0 (LWP 55376) (id 139)]
+[New Thread 0x7fffbaffc6c0 (LWP 55377) (id 140)]
+[Thread 0x7fffbaffc6c0 (LWP 55377) (id 140) exited]
+console.debug: "ZenSessionManager:" "Skipping blank tab data" ({entries:[{url:"about:blank", title:"about:blank", cacheKey:0, ID:12, docshellUUID:"{8287d937-d22b-44dd-a121-e3b622d1aed3}", resultPrincipalURI:null, principalToInherit_base64:"{\"0\":{\"0\":\"moz-nullprincipal:{71cf5d4e-c801-438c-a309-b20b87901c27}\"}}", hasUserInteraction:false, triggeringPrincipal_base64:"{\"3\":{}}", docIdentifier:13, transient:false, navigationKey:"{de86c116-5327-4931-b18d-f5864af938f8}", navigationId:"{fd1ab477-3279-43ba-9df7-6195bc7872c6}"}], lastAccessed:1795023987909, hidden:false, zenWorkspace:"{f4b4bd11-d05b-4a9e-b089-49046cd01210}", zenSyncId:"1795023984256-0aa4c667-79b5-45a5-917d-426d59b50383", zenEssential:false, pinned:false, zenDefaultUserContextId:null, zenPinnedIcon:null, zenIsEmpty:false, zenStaticLabel:(void 0), zenHasStaticIcon:false, zenGlanceId:null, zenIsGlance:false, _zenPinnedInitialState:(void 0), _zenIsActiveTab:true, zenLiveFolderItemId:null, searchMode:null, userContextId:0, attributes:{}, index:1, requestedIndex:0, image:null})
+console.debug: "ZenSessionManager:" "Saving Zen session data with 1 tabs"
+1795023988088	Marionette	TRACE	Received observer notification quit-application
+1795023988088	Marionette	TRACE	Application is shutting down with reason: "shutdown"
+1795023988088	Marionette	INFO	Stopped listening on port 2828
+[Thread 0x7fffcdd0f6c0 (LWP 55113) (id 123) exited]
+1795023988104	Marionette	DEBUG	Marionette stopped listening
+console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+[Thread 0x7fffcf53a6c0 (LWP 54911) (id 89) exited]
+[Thread 0x7fffbadfb6c0 (LWP 55147) (id 126) exited]
+[Thread 0x7fffd78626c0 (LWP 54772) (id 15) exited]
+[Thread 0x7fffcbbb86c0 (LWP 54986) (id 100) exited]
+[Thread 0x7fffd26ba6c0 (LWP 54932) (id 90) exited]
+[Thread 0x7fffbad446c0 (LWP 55139) (id 124) exited]
+[Thread 0x7fffbda4b6c0 (LWP 54996) (id 101) exited]
+[Thread 0x7fffd273c6c0 (LWP 54794) (id 33) exited]
+[New Thread 0x7fffd273c6c0 (LWP 55378) (id 141)]
+[New Thread 0x7fffbb1fd6c0 (LWP 55379) (id 142)]
+[Thread 0x7fffbb1fd6c0 (LWP 55379) (id 142) exited]
+[Thread 0x7fffd273c6c0 (LWP 55378) (id 141) exited]
+[Thread 0x7fffcdd7c6c0 (LWP 54886) (id 86) exited]
+[Thread 0x7fffcedbd6c0 (LWP 54959) (id 93) exited]
+[Thread 0x7fffcbb6f6c0 (LWP 54982) (id 97) exited]
+[Thread 0x7fffce1fe6c0 (LWP 54875) (id 81) exited]
+[Thread 0x7fffbcd376c0 (LWP 54998) (id 102) exited]
+[Thread 0x7fffcf1fe6c0 (LWP 54935) (id 92) exited]
+[Thread 0x7fffb62486c0 (LWP 55290) (id 133) exited]
+[Thread 0x7fffb66446c0 (LWP 55283) (id 132) exited]
+[Thread 0x7fffb66856c0 (LWP 55277) (id 131) exited]
+[Thread 0x7fffce9506c0 (LWP 54853) (id 79) exited]
+[Thread 0x7fffce5506c0 (LWP 54854) (id 80) exited]
+[Thread 0x7fffd277d6c0 (LWP 54790) (id 32) exited]
+[New Thread 0x7fffd277d6c0 (LWP 55380) (id 143)]
+[New Thread 0x7fffce5506c0 (LWP 55381) (id 144)]
+[New Thread 0x7fffce1fe6c0 (LWP 55382) (id 145)]
+[Thread 0x7fffce1fe6c0 (LWP 55382) (id 145) exited]
+[Thread 0x7fffce5506c0 (LWP 55381) (id 144) exited]
+[Thread 0x7fffd277d6c0 (LWP 55380) (id 143) exited]
+[Thread 0x7fffadee26c0 (LWP 55372) (id 136) exited]
+[Thread 0x7fffd107d6c0 (LWP 54816) (id 48) exited]
+[Thread 0x7fffcedfe6c0 (LWP 54907) (id 88) exited]
+[Thread 0x7fffbb3fe6c0 (LWP 55070) (id 115) exited]
+[Thread 0x7fffd7ae56c0 (LWP 54767) (id 11) exited]
+[New Thread 0x7fffd7ae56c0 (LWP 55383) (id 146)]
+[Thread 0x7fffd7ae56c0 (LWP 55383) (id 146) exited]
+[Thread 0x7fffbc64a6c0 (LWP 55060) (id 107) exited]
+[Thread 0x7fffbc6cc6c0 (LWP 55035) (id 105) exited]
+[Thread 0x7fffcbbf96c0 (LWP 54983) (id 98) exited]
+1795023988183	Marionette	TRACE	Received observer notification xpcom-shutdown
+[Thread 0x7fffd2eba6c0 (LWP 54815) (id 47) exited]
+[Thread 0x7fffbbefb6c0 (LWP 55065) (id 112) exited]
+[Thread 0x7fffbbf3c6c0 (LWP 55064) (id 111) exited]
+[Thread 0x7fffbbf7d6c0 (LWP 55063) (id 110) exited]
+[Thread 0x7fffbbfbe6c0 (LWP 55062) (id 109) exited]
+[Thread 0x7fffced746c0 (LWP 54851) (id 78) exited]
+[Thread 0x7fffd3efc6c0 (LWP 54841) (id 72) exited]
+[Thread 0x7fffcf7fe6c0 (LWP 54822) (id 53) exited]
+[Thread 0x7fffcf9ff6c0 (LWP 54821) (id 52) exited]
+[Thread 0x7fffcfcfe6c0 (LWP 54820) (id 51) exited]
+[Thread 0x7fffce3ff6c0 (LWP 54827) (id 58) exited]
+[Thread 0x7fffcf3ff6c0 (LWP 54823) (id 54) exited]
+[Thread 0x7fffcefff6c0 (LWP 54824) (id 55) exited]
+[Thread 0x7fffcc0fb6c0 (LWP 54838) (id 69) exited]
+[Thread 0x7fffcc6fe6c0 (LWP 54835) (id 66) exited]
+[Thread 0x7fffcbefa6c0 (LWP 54839) (id 70) exited]
+[Thread 0x7fffcc2fc6c0 (LWP 54837) (id 68) exited]
+[Thread 0x7fffcc4fd6c0 (LWP 54836) (id 67) exited]
+[Thread 0x7fffcc8ff6c0 (LWP 54834) (id 65) exited]
+[Thread 0x7fffcd3ff6c0 (LWP 54831) (id 62) exited]
+[Thread 0x7fffcd7ff6c0 (LWP 54830) (id 61) exited]
+[Thread 0x7fffcdbff6c0 (LWP 54829) (id 60) exited]
+[Thread 0x7fffcdfff6c0 (LWP 54828) (id 59) exited]
+[Thread 0x7fffce7ff6c0 (LWP 54826) (id 57) exited]
+[Thread 0x7fffcebff6c0 (LWP 54825) (id 56) exited]
+1795023988196	Marionette	TRACE	Received observer notification xpcom-shutdown-threads
+[Thread 0x7fffbc9ff6c0 (LWP 54984) (id 99) exited]
+[Thread 0x7fffbf7ff6c0 (LWP 54933) (id 91) exited]
+[Thread 0x7fffcd9fe6c0 (LWP 54889) (id 87) exited]
+[Thread 0x7fffce1bd6c0 (LWP 54882) (id 82) exited]
+[Thread 0x7fffcf1746c0 (LWP 54848) (id 77) exited]
+[Thread 0x7fffcabff6c0 (LWP 54845) (id 75) exited]
+[Thread 0x7fffcf5fd6c0 (LWP 54842) (id 73) exited]
+[Thread 0x7fffcccff6c0 (LWP 54833) (id 64) exited]
+[Thread 0x7fffcd1fe6c0 (LWP 54832) (id 63) exited]
+[Thread 0x7fffd27be6c0 (LWP 54788) (id 31) exited]
+[Thread 0x7fffd75ff6c0 (LWP 54773) (id 16) exited]
+[Thread 0x7fffd78a36c0 (LWP 54771) (id 14) exited]
+[Thread 0x7fffccf656c0 (LWP 54962) (id 95) exited]
+[Thread 0x7fffcd5666c0 (LWP 54961) (id 94) exited]
+[Thread 0x7fffcf57b6c0 (LWP 54846) (id 76) exited]
+[Thread 0x7fffd10be6c0 (LWP 54813) (id 46) exited]
+[Thread 0x7fffd2efb6c0 (LWP 54785) (id 28) exited]
+[Thread 0x7fffbbfff6c0 (LWP 55375) (id 138) exited]
+[Thread 0x7fffd26756c0 (LWP 54810) (id 44) exited]
+[Thread 0x7fffd78e46c0 (LWP 54770) (id 13) exited]
+[Thread 0x7fffcf5bc6c0 (LWP 54844) (id 74) exited]
+[Thread 0x7fffd75be6c0 (LWP 54774) (id 17) exited]
+[Thread 0x7fffcfcbd6c0 (LWP 54840) (id 71) exited]
+[Thread 0x7fffd10ff6c0 (LWP 54811) (id 45) exited]
+[Thread 0x7fffd27ff6c0 (LWP 54787) (id 30) exited]
+[Thread 0x7fffadda96c0 (LWP 55376) (id 139) exited]
+[Thread 0x7fffcddbd6c0 (LWP 54885) (id 85) exited]
+[Thread 0x7fffcddfe6c0 (LWP 54884) (id 84) exited]
+[Thread 0x7fffce17c6c0 (LWP 54883) (id 83) exited]
+[Thread 0x7fffd17066c0 (LWP 54802) (id 41) exited]
+[Thread 0x7fffd19056c0 (LWP 54801) (id 40) exited]
+[Thread 0x7fffd1b046c0 (LWP 54800) (id 39) exited]
+[Thread 0x7fffd1d036c0 (LWP 54799) (id 38) exited]
+[Thread 0x7fffd1f026c0 (LWP 54798) (id 37) exited]
+[Thread 0x7fffd21016c0 (LWP 54797) (id 36) exited]
+[Thread 0x7fffd23006c0 (LWP 54796) (id 35) exited]
+[Thread 0x7fffd24ff6c0 (LWP 54795) (id 34) exited]
+[Thread 0x7fffd780d6c0 (LWP 54784) (id 27) exited]
+[Thread 0x7fffd4efd6c0 (LWP 54782) (id 25) exited]
+[Thread 0x7fffd5efe6c0 (LWP 54781) (id 24) exited]
+[Thread 0x7fffd6eff6c0 (LWP 54780) (id 23) exited]
+[Thread 0x7fffd74796c0 (LWP 54779) (id 22) exited]
+[Thread 0x7fffd74ba6c0 (LWP 54778) (id 21) exited]
+[Thread 0x7fffd74fb6c0 (LWP 54777) (id 20) exited]
+[Thread 0x7fffd753c6c0 (LWP 54776) (id 19) exited]
+[Thread 0x7fffd757d6c0 (LWP 54775) (id 18) exited]
+[Thread 0x7fffd7d536c0 (LWP 54769) (id 12) exited]
+[Thread 0x7fffd8dfe6c0 (LWP 54766) (id 10) exited]
+[Thread 0x7fffd9dff6c0 (LWP 54765) (id 9) exited]
+[Thread 0x7fffdb4b06c0 (LWP 54764) (id 8) exited]
+[Thread 0x7fffdc4b16c0 (LWP 54763) (id 7) exited]
+[Thread 0x7fffef5ff6c0 (LWP 54762) (id 6) exited]
+[Thread 0x7fffeaf626c0 (LWP 54761) (id 5) exited]
+[Thread 0x7fffdd4b26c0 (LWP 54760) (id 4) exited]
+[Thread 0x7ffff7f35c00 (LWP 54749) (id 1) exited]
+[Thread 0x7fffd02a06c0 (LWP 54819) (id 50) exited]
+[New process 54749 (id 147)]
+[Inferior 1 (process 54749) exited normally]
+ 0:12.95 Main app process: exit 0
+ 0:12.95 INFO runtests.py | Main app process exited normally
+ 0:12.95 INFO runtests.py | Application ran for: 0:00:12.534431
+ 0:12.95 INFO zombiecheck | Reading PID log: /tmp/tmpaftqpzclpidlog
+ 0:12.95 INFO ==> process 54749 launched child process 54789
+ 0:12.95 INFO ==> process 54749 launched child process 54843
+ 0:12.95 INFO zombiecheck | Checking for orphan process with PID: 54843
+ 0:12.95 INFO zombiecheck | Checking for orphan process with PID: 54789
+ 0:12.95 INFO runtests.py | Running http tests: end. status: 0
+ 0:12.95 INFO Stopping web server
+ 0:12.95 INFO Server shut down.
+ 0:12.95 INFO Web server killed.
+ 0:12.95 INFO Stopping web socket server
+ 0:12.95 INFO Stopping ssltunnel
+ 0:12.96 WARNING leakcheck | refcount logging is off, so leaks can't be detected!
+ 0:12.96 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 0
+	Failed: 0
+	Todo: 0
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:12.96 INFO Buffered messages finished
+ 0:12.96 SUITE_END
+ 0:12.96 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 0 checks ()
+Expected results: 0
+Unexpected results: 0
+OK

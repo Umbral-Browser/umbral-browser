@@ -1,0 +1,426 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_182359.json
+ 0:00.16 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.17 INFO     a11y_checks: False
+ 0:00.17 INFO     android: False
+ 0:00.17 INFO     apple_catalina: False
+ 0:00.17 INFO     apple_silicon: False
+ 0:00.17 INFO     appname: zen
+ 0:00.17 INFO     arch: x86_64
+ 0:00.17 INFO     artifact: False
+ 0:00.17 INFO     asan: False
+ 0:00.17 INFO     automation: False
+ 0:00.17 INFO     bin_suffix: 
+ 0:00.17 INFO     bits: 64
+ 0:00.17 INFO     buildapp: browser
+ 0:00.17 INFO     buildtype: opt
+ 0:00.17 INFO     buildtype_guess: opt
+ 0:00.17 INFO     cc_type: clang
+ 0:00.17 INFO     ccov: False
+ 0:00.17 INFO     condprof: False
+ 0:00.17 INFO     coverage: False
+ 0:00.17 INFO     crashreporter: True
+ 0:00.17 INFO     datareporting: True
+ 0:00.17 INFO     dbus_enabled: True
+ 0:00.17 INFO     debug: False
+ 0:00.17 INFO     devedition: False
+ 0:00.17 INFO     display: wayland
+ 0:00.17 INFO     e10s: True
+ 0:00.17 INFO     early_beta_or_earlier: False
+ 0:00.17 INFO     enterprise: False
+ 0:00.17 INFO     fission: True
+ 0:00.17 INFO     has_sandbox: True
+ 0:00.17 INFO     headless: True
+ 0:00.17 INFO     healthreport: True
+ 0:00.17 INFO     http2: False
+ 0:00.17 INFO     http3: False
+ 0:00.17 INFO     inc_origin_init: False
+ 0:00.17 INFO     is_emulator: False
+ 0:00.17 INFO     is_ubuntu: False
+ 0:00.17 INFO     isolated_process: False
+ 0:00.17 INFO     linux_distro: Cachyos Linux
+ 0:00.17 INFO     macos_vm: False
+ 0:00.17 INFO     mda_gpu: False
+ 0:00.17 INFO     mingw: False
+ 0:00.17 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.17 INFO     msix: False
+ 0:00.17 INFO     nightly_build: False
+ 0:00.17 INFO     nogpu: False
+ 0:00.17 INFO     normandy: True
+ 0:00.17 INFO     nova: True
+ 0:00.17 INFO     official: False
+ 0:00.17 INFO     opt: True
+ 0:00.17 INFO     os: linux
+ 0:00.17 INFO     os_version: Rolling
+ 0:00.17 INFO     pgo: False
+ 0:00.17 INFO     platform_guess: linux64
+ 0:00.17 INFO     processor: x86_64
+ 0:00.17 INFO     release_or_beta: True
+ 0:00.17 INFO     require_signing: False
+ 0:00.17 INFO     sessionHistoryInParent: True
+ 0:00.17 INFO     socketprocess_e10s: False
+ 0:00.17 INFO     socketprocess_networking: False
+ 0:00.17 INFO     standalone: False
+ 0:00.17 INFO     stylo: True
+ 0:00.17 INFO     swgl: False
+ 0:00.17 INFO     sync: True
+ 0:00.17 INFO     telemetry: False
+ 0:00.17 INFO     tests_enabled: True
+ 0:00.17 INFO     toolkit: gtk
+ 0:00.17 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.17 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.17 INFO     tsan: False
+ 0:00.17 INFO     ubsan: False
+ 0:00.17 INFO     updater: True
+ 0:00.17 INFO     verify: False
+ 0:00.17 INFO     verify_fission: False
+ 0:00.17 INFO     version: Cachyos Linux Rolling
+ 0:00.17 INFO     vertical_tab: False
+ 0:00.17 INFO     win10_2009: False
+ 0:00.17 INFO     win11_2009: False
+ 0:00.17 INFO     wmfme: 0
+ 0:00.17 INFO     xorigin: False
+ 0:00.17 INFO Checking for ssltunnel processes...
+ 0:00.19 INFO Checking for xpcshell processes...
+ 0:00.20 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.20 INFO Running manifest: toolkit/components/antitracking/test/browser/browser.toml
+ 0:00.20 INFO The following extra prefs will be set:
+  dom.storage_access.prompt.testing=true
+  dom.storage_access.prompt.testing.allow=true
+  dom.storage_access.frame_only=true
+  privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction=true
+  network.cookie.sameSite.laxByDefault=false
+  dom.security.https_first=false
+  dom.storage_access.dont_grant_insecure_contexts=true
+  network.lna.block_trackers=false
+ 0:00.23 pid:46304 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmp8q0mc0zr.mozrunner/.crtdbpw -d /tmp/tmp8q0mc0zr.mozrunner
+pid:46304 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.28 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmp8q0mc0zr.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.28 INFO runtests.py | Server pid: 46314
+ 0:00.28 INFO runtests.py | Websocket server pid: 46315
+ 0:00.28 INFO runtests.py | SSL tunnel pid: 46316
+ 0:00.33 INFO use http3 server: False
+ 0:00.33 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.33 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.33 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.38 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 34901,43505
+
+ 0:00.38 INFO moz-http2 server started on ports 34901, 43505
+ 0:00.39 INFO node moz-http2 [stderr] (node:46358) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.39 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.39 INFO runtests.py | Running with scheme: http
+ 0:00.39 INFO runtests.py | Running with e10s: True
+ 0:00.39 INFO runtests.py | Running with fission: True
+ 0:00.39 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.39 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.39 INFO runtests.py | Running http tests: start.
+
+ 0:00.40 INFO Application command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmp8q0mc0zr.mozrunner
+ 0:00.41 INFO runtests.py | Application pid: 46367
+ 0:00.41 Started process `GECKO(46367)`
+ 0:00.43 GECKO(46367) *** You are running in headless mode.
+ 0:00.47 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_socket_pid46405.log
+ 0:00.64 GECKO(46367) 1795022639680	Marionette	INFO	Marionette enabled
+ 0:00.64 GECKO(46367) 1795022639681	Marionette	TRACE	Received observer notification final-ui-startup
+ 0:00.64 GECKO(46367) 1795022639681	Marionette	DEBUG	Initializing Marionette
+ 0:00.70 GECKO(46367) console.error: "Warning: unrecognized command line flag" "-foreground"
+ 0:00.70 GECKO(46367) JavaScript warning: moz-src:///browser/components/aiwindow/ui/modules/AIWindow.sys.mjs, line 414: unreachable code after return statement
+ 0:00.72 GECKO(46367) 1795022639754	Marionette	INFO	Listening on port 2828
+ 0:00.72 GECKO(46367) 1795022639758	Marionette	DEBUG	Marionette is listening
+ 0:00.73 GECKO(46367) 1795022639770	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:44776
+ 0:00.75 GECKO(46367) 1795022639788	Marionette	DEBUG	Closed connection 0
+ 0:00.75 GECKO(46367) 1795022639788	Marionette	DEBUG	Accepted connection 1 from 127.0.0.1:44778
+ 0:00.81 GECKO(46367) 1795022639843	Marionette	DEBUG	1 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+ 0:00.81 GECKO(46367) 1795022639848	Marionette	DEBUG	Waiting for initial application window
+ 0:00.82 GECKO(46367) console.debug: "ZenSessionManager:" "Initializing session manager"
+ 0:00.82 GECKO(46367) console.debug: "ZenSessionManager:" "Session file path:" "/tmp/tmp8q0mc0zr.mozrunner/zen-sessions.jsonlz4"
+ 0:00.82 GECKO(46367) console.debug: "ZenSessionManager:" "Reading Zen session file from disk"
+ 0:00.85 GECKO(46367) JavaScript warning: chrome://browser/content/tabbrowser/drag-and-drop.js, line 1587: unreachable code after return statement
+ 0:00.87 GECKO(46367) JavaScript warning: chrome://browser/content/tabbrowser/tabs.mjs, line 1042: unreachable code after return statement
+ 0:00.90 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46462.log
+ 0:00.90 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46462.log
+ 0:00.90 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_rdd_pid46471.log
+ 0:00.90 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_rdd_pid46471.log
+ 0:00.97 GECKO(46367) console.error: "Failed to read backup file /tmp/tmp8q0mc0zr.mozrunner/zen-sessions-backup/clean.jsonlz4" (new NotFoundError("Could not open `/tmp/tmp8q0mc0zr.mozrunner/zen-sessions-backup/clean.jsonlz4': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:00.97 GECKO(46367) console.debug: "ZenSessionManager:" "No spaces data found in session file, running migration" [object Object]
+ 0:00.97 GECKO(46367) console.error: "Failed to read spaces data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_workspaces", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:00.98 GECKO(46367) console.error: "Failed to read pins data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_pins", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:00.99 GECKO(46367) console.debug: "ZenSessionManager:" "Restoring tabs from Places DB after migration" null (void 0) [object Object]
+ 0:00.99 GECKO(46367) console.debug: "ZenSessionManager:" "Build ID has changed since last session, not restoring only pinned tabs" ({buildId:"20261104111407", lastBuildId:""})
+ 0:00.99 GECKO(46367) console.debug: "ZenSessionManager:" "Saving windata state after migration"
+ 0:01.00 GECKO(46367) console.debug: "ZenSessionManager:" "Saving Zen session data with 0 tabs"
+ 0:01.03 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+ 0:01.05 GECKO(46367) JavaScript warning: moz-src:///browser/components/urlbar/UrlbarMuxerStandard.sys.mjs, line 936: unreachable code after return statement
+ 0:01.08 GECKO(46367) console.error: (new TypeError("can't access property \"tabContainer\", gBrowser is undefined", "resource:///modules/zen/ZenVerticalTabsManager.mjs", 394))
+ 0:01.09 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+ 0:01.09 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+ 0:01.17 GECKO(46367) JavaScript warning: moz-src:///browser/components/tabbrowser/Tabbrowser.sys.mjs, line 498: unreachable code after return statement
+ 0:01.17 GECKO(46367) console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:01.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46515.log
+ 0:01.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46515.log
+ 0:01.20 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+ 0:01.20 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+ 0:01.20 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+ 0:01.20 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+ 0:01.22 GECKO(46367) console.warn: "Error loading shortcuts file" (new NotFoundError("Could not open `/tmp/tmp8q0mc0zr.mozrunner/zen-keyboard-shortcuts.json': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:01.22 GECKO(46367) console.warn: "Zen CKS: Migrating shortcuts from version" 0 "to" 21
+ 0:01.24 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.24 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.24 GECKO(46367) JavaScript error: resource:///modules/ZenSiteDataPanel.sys.mjs, line 173: TypeError: can't access property "addProgressListener", this.window.gBrowser is undefined
+ 0:01.24 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.32 GECKO(46367) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+ 0:01.44 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46542.log
+ 0:01.44 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46542.log
+ 0:01.44 GECKO(46367) console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+ 0:01.51 GECKO(46367) console.debug: "[gZenWorkspaces]:" "Changing workspace to" "{5d10e72d-f27a-42e7-80fb-11c672017a4d}"
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+ 0:01.51 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+ 0:01.73 GECKO(46367) console.error: services.settings:
+ 0:01.73 GECKO(46367)   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+ 0:01.73 GECKO(46367)   Stack:
+ 0:01.73 GECKO(46367)     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+ 0:01.73 GECKO(46367) list@resource://services-settings/Database.sys.mjs:96:13
+ 0:01.73 GECKO(46367) async*get@resource://services-settings/RemoteSettingsClient.sys.mjs:570:28
+ 0:01.73 GECKO(46367) async*getRecipesFromCollection/recipes<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:793:16
+ 0:01.73 GECKO(46367) #raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:749:34
+ 0:01.73 GECKO(46367) getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:792:41
+ 0:01.73 GECKO(46367) getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+ 0:01.73 GECKO(46367) #updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+ 0:01.73 GECKO(46367) async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+ 0:01.73 GECKO(46367) LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+ 0:01.73 GECKO(46367) updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+ 0:01.73 GECKO(46367) enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+ 0:01.73 GECKO(46367) #init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+ 0:01.73 GECKO(46367) async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+ 0:01.73 GECKO(46367) finishInit@resource://normandy/Normandy.sys.mjs:108:30
+ 0:01.73 GECKO(46367) async*init@resource://normandy/Normandy.sys.mjs:79:16
+ 0:01.73 GECKO(46367) async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+ 0:01.73 GECKO(46367) callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+ 0:01.73 GECKO(46367) callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+ 0:01.73 GECKO(46367) BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+ 0:01.73 GECKO(46367) BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+ 0:01.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_utility_pid46594.log
+ 0:01.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_utility_pid46594.log
+ 0:01.91 GECKO(46367) 1795022640951	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+ 0:02.06 GECKO(46367) 1795022641097	RemoteAgent	TRACE	[10] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+ 0:02.06 GECKO(46367) 1795022641097	RemoteAgent	TRACE	[10] ProgressListener Setting unload timer (5000ms)
+ 0:02.06 GECKO(46367) 1795022641098	RemoteAgent	TRACE	[10] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+ 0:02.06 GECKO(46367) 1795022641098	RemoteAgent	TRACE	[10] Document already finished loading: about:blank
+ 0:02.06 GECKO(46367) 1795022641098	RemoteAgent	TRACE	[10] ProgressListener Stop: has error=false url=about:blank
+ 0:02.06 GECKO(46367) 1795022641101	Marionette	DEBUG	1 <- [1,1,null,{"sessionId":"fc62f66a-d30d-4878-beb6-3c3074380365","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":46367,"moz:profile":"/tmp/tmp8q0mc0zr.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+ 0:02.07 GECKO(46367) 1795022641107	Marionette	DEBUG	1 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmpdh2qp0oj.zip"}]
+ 0:02.10 GECKO(46367) 1795022641134	Marionette	DEBUG	1 <- [1,2,null,{"value":"special-powers@mozilla.org"}]
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46616.log
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46616.log
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46620.log
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46620.log
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46626.log
+ 0:02.10 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46626.log
+ 0:02.11 GECKO(46367) 1795022641147	Marionette	DEBUG	1 -> [0,3,"Addon:Install",{"temporary":false,"path":"/tmp/tmp9casi7sh.zip"}]
+ 0:02.12 GECKO(46367) 1795022641159	Marionette	DEBUG	1 <- [1,3,null,{"value":"mochikit@mozilla.org"}]
+ 0:02.12 GECKO(46367) 1795022641160	Marionette	DEBUG	1 -> [0,4,"Marionette:GetContext",{}]
+ 0:02.12 GECKO(46367) 1795022641160	Marionette	DEBUG	1 <- [1,4,null,{"value":"content"}]
+ 0:02.12 GECKO(46367) 1795022641160	Marionette	DEBUG	1 -> [0,5,"Marionette:SetContext",{"value":"chrome"}]
+ 0:02.12 GECKO(46367) 1795022641161	Marionette	DEBUG	1 <- [1,5,null,{"value":null}]
+ 0:02.12 GECKO(46367) 1795022641162	Marionette	DEBUG	1 -> [0,6,"WebDriver:ExecuteScript",{"script":"/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distr ... \n// the flavor and url to load.\nlet ev = new CustomEvent(\"mochitest-load\", { detail: [flavor, url] });\nwin.dispatchEvent(ev);","args":[{"flavor":"browser-chrome","testUrl":"about:blank"}],"newSandbox":true,"sandbox":"default","line":2377,"filename":"_tests/testing/mochitest/runtests.py"}]
+ 0:02.13 GECKO(46367) 1795022641165	RemoteAgent	TRACE	WebDriverProcessData actor created for PID 46367
+ 0:02.13 GECKO(46367) 1795022641166	Marionette	TRACE	[1] MarionetteCommands actor created for window id 2
+ 0:02.14 GECKO(46367) 1795022641180	Marionette	TRACE	Remoteness change detected. Set new top-level browsing context to 10
+ 0:02.14 GECKO(46367) 1795022641182	Marionette	DEBUG	1 <- [1,6,null,{"value":null}]
+ 0:02.15 GECKO(46367) 1795022641184	Marionette	DEBUG	1 -> [0,7,"Marionette:SetContext",{"value":"content"}]
+ 0:02.15 GECKO(46367) 1795022641184	Marionette	DEBUG	1 <- [1,7,null,{"value":null}]
+ 0:02.16 GECKO(46367) 1795022641195	Marionette	DEBUG	1 -> [0,8,"WebDriver:DeleteSession",{}]
+ 0:02.16 GECKO(46367) 1795022641195	Marionette	TRACE	[1] MarionetteCommands actor destroyed for window id 2
+ 0:02.16 GECKO(46367) 1795022641196	Marionette	DEBUG	1 <- [1,8,null,{"value":null}]
+ 0:02.16 GECKO(46367) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.17 INFO runtests.py | Waiting for browser...
+ 0:02.17 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.17 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.17 GECKO(46367) 1795022641209	Marionette	DEBUG	Closed connection 1
+ 0:02.21 INFO *** Start BrowserChrome Test Results ***
+ 0:02.21 INFO checking for open sidebars
+ 0:02.21 INFO checking window state
+ 0:02.31 TEST_START: toolkit/components/antitracking/test/browser/browser_flushOnQuery.js
+ 0:02.31 INFO Entering setup bound 
+ 0:02.32 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46714.log
+ 0:02.32 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46714.log
+ 0:02.33 INFO Leaving setup bound 
+ 0:02.33 INFO Entering test flush_on_query_reflects_live_tab
+ 0:02.33 PASS flush_on_query_reflects_live_tab - DB is empty at test start
+ 0:02.38 INFO Console message: [JavaScript Warning: "This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:02.43 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.5451767335019009” was blocked because Enhanced Tracking Protection is enabled." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:02.43 PASS flush_on_query_reflects_live_tab - ContentBlockingLog recorded one origin
+ 0:02.43 PASS flush_on_query_reflects_live_tab - Open-tab events appear in DB via flush-on-query
+ 0:02.43 PASS flush_on_query_reflects_live_tab - Repeat query does not double-count the same events (cursor works)
+ 0:02.44 PASS flush_on_query_reflects_live_tab - Teardown flush is idempotent with a prior query-time flush
+ 0:02.44 INFO Leaving test flush_on_query_reflects_live_tab
+ 0:02.44 INFO Entering test private_window_events_are_not_persisted
+ 0:02.50 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+ 0:02.50 GECKO(46367) console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+ 0:02.52 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+ 0:02.52 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+ 0:02.58 GECKO(46367) console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.60 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+ 0:02.60 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+ 0:02.60 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+ 0:02.60 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+ 0:02.63 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:02.63 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:02.63 GECKO(46367) JavaScript error: , line 0: uncaught exception: undefined
+ 0:02.63 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:02.63 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:02.63 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:02.73 GECKO(46367) console.debug:
+ 0:02.73 GECKO(46367)   [gZenWorkspaces]:
+ 0:02.73 GECKO(46367)   Changing workspace to
+ 0:02.73 GECKO(46367)   {94136b8d-b6ba-46cd-9ed0-342c184bb73d}
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+ 0:02.74 GECKO(46367) [Parent 46367: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+ 0:02.79 GECKO(46367) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.80 INFO Console message: [JavaScript Warning: "HTTPS-First Mode: Upgrading insecure speculative TCP connection “http://example.net/browser/toolkit/components/antitracking/test/browser/page.html” to use “https”."]
+ 0:02.81 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.81 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.81 INFO Console message: [JavaScript Warning: "HTTPS-First Mode: Upgrading insecure request “http://example.net/browser/toolkit/components/antitracking/test/browser/page.html” to use “https”."]
+ 0:02.83 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46752.log
+ 0:02.83 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46752.log
+ 0:02.85 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46767.log
+ 0:02.85 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46767.log
+ 0:02.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46791.log
+ 0:02.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46791.log
+ 0:02.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46800.log
+ 0:02.88 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46800.log
+ 0:02.89 INFO Console message: [JavaScript Warning: "This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”." {file: "https://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:02.94 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?private=0.3766172112503118” was blocked because Enhanced Tracking Protection is enabled." {file: "https://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:02.94 PASS private_window_events_are_not_persisted - Private tab records a blocked tracker in memory
+ 0:02.96 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.97 PASS private_window_events_are_not_persisted - Private-window content-blocking events are not added to persistent ETP counts
+ 0:02.61 FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+ 0:02.61 FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+ 0:02.63 FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+ 0:02.97 INFO Leaving test private_window_events_are_not_persisted
+ 0:02.97 INFO Entering test flush_on_query_handles_aggregated_repeat_count
+ 0:03.00 INFO Console message: [JavaScript Warning: "This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.04 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?first=0.6643980331011394” was blocked because Enhanced Tracking Protection is enabled." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.04 PASS flush_on_query_handles_aggregated_repeat_count - Tracker origin recorded after first load
+ 0:03.05 PASS flush_on_query_handles_aggregated_repeat_count - First load reaches the DB via flush - 1 > 0
+ 0:03.05 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?second=0.39065798795138873” was blocked because Enhanced Tracking Protection is enabled." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.05 PASS flush_on_query_handles_aggregated_repeat_count - Second load aggregated onto an existing LogEntry (mRepeatCount >= 2) - 2 >= 2
+ 0:03.05 PASS flush_on_query_handles_aggregated_repeat_count - Second flush reports exactly one additional aggregated event
+ 0:03.06 INFO Leaving test flush_on_query_handles_aggregated_repeat_count
+ 0:03.06 INFO Entering test concurrent_reads_see_flushed_event
+ 0:03.07 GECKO(46367) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.10 GECKO(46367) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.11 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.11 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.12 INFO Console message: [JavaScript Warning: "This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.14 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.8769605937198546” was blocked because Enhanced Tracking Protection is enabled." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.14 PASS concurrent_reads_see_flushed_event - ContentBlockingLog recorded one origin
+ 0:03.14 PASS concurrent_reads_see_flushed_event - First concurrent read sees the live-log event
+ 0:03.14 PASS concurrent_reads_see_flushed_event - Second concurrent read sees the same data (no stale read)
+ 0:03.15 GECKO(46367) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.15 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.15 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.15 INFO Leaving test concurrent_reads_see_flushed_event
+ 0:03.15 INFO Entering test flush_disabled_pref_is_respected
+ 0:03.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46886.log
+ 0:03.18 INFO Console message: [JavaScript Warning: "This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46886.log
+ 0:03.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46892.log
+ 0:03.18 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46892.log
+ 0:03.19 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46897.log
+ 0:03.19 GECKO(46367) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp8q0mc0zr.mozrunner/runtests_leaks_tab_pid46897.log
+ 0:03.23 INFO Console message: [JavaScript Warning: "The resource at “https://tracking.example.com/browser/toolkit/components/antitracking/test/browser/raptor.jpg?0.7564518655639886” was blocked because Enhanced Tracking Protection is enabled." {file: "http://example.net/browser/toolkit/components/antitracking/test/browser/page.html" line: 0}]
+ 0:03.23 PASS flush_disabled_pref_is_respected - Flush-on-query is gated by the pref
+ 0:03.24 INFO Leaving test flush_disabled_pref_is_respected
+ 0:03.25 INFO checking for open popups
+ 0:03.57 FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - test left unexpected property on window: Debugger
+ 0:03.60 EXPECTED-FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - changed preference: zen.ui.migration.compact-mode-button-added
+ 0:03.60 GECKO(46367) MEMORY STAT vsizeMaxContiguous not supported in this build configuration.
+ 0:03.60 GECKO(46367) MEMORY STAT | vsize 11497MB | residentFast 442MB | heapAllocated 323MB
+ 0:03.60 INFO checking for open sidebars
+ 0:03.60 INFO checking window state
+ 0:03.60 TEST_END: Test FAIL, expected PASS. Subtests passed 15/20. Unexpected 4
+ 0:04.61 GECKO(46367) Completed ShutdownLeaks collections in process 46542
+ 0:04.62 GECKO(46367) Completed ShutdownLeaks collections in process 46616
+ 0:04.64 GECKO(46367) Completed ShutdownLeaks collections in process 46462
+ 0:04.64 GECKO(46367) Completed ShutdownLeaks collections in process 46515
+ 0:04.96 GECKO(46367) Completed ShutdownLeaks collections in process 46367
+ 0:04.96 INFO TEST-START | Shutdown
+ 0:04.96 INFO Browser Chrome Test Summary
+ 0:04.96 INFO Passed:  15
+ 0:04.96 INFO Failed:  4
+ 0:04.96 INFO Todo:    1
+ 0:04.96 INFO Mode:    e10s
+ 0:04.96 INFO *** End BrowserChrome Test Results ***
+ 0:05.14 GECKO(46367) console.debug: "ZenSessionManager:" "Skipping blank tab data" ({entries:[{url:"about:blank", title:"about:blank", cacheKey:0, ID:12, docshellUUID:"{a5a8afed-8198-4bb5-bb3e-c83b0cb0a0f0}", resultPrincipalURI:null, principalToInherit_base64:"{\"0\":{\"0\":\"moz-nullprincipal:{70f5ec3b-d770-4c5c-87d2-ef8a078607f4}\"}}", hasUserInteraction:false, triggeringPrincipal_base64:"{\"3\":{}}", docIdentifier:13, transient:false, navigationKey:"{adcc6e94-3640-4918-9d3c-cf4de943855d}", navigationId:"{1b8e2ea1-6620-4b7b-bd74-748ec70b0f37}"}], lastAccessed:1795022643999, hidden:false, zenWorkspace:"{5d10e72d-f27a-42e7-80fb-11c672017a4d}", zenSyncId:"1795022640548-6b049357-d6fd-4e23-aa1d-0f6822243e40", zenEssential:false, pinned:false, zenDefaultUserContextId:null, zenPinnedIcon:null, zenIsEmpty:false, zenStaticLabel:(void 0), zenHasStaticIcon:false, zenGlanceId:null, zenIsGlance:false, _zenPinnedInitialState:(void 0), _zenIsActiveTab:true, zenLiveFolderItemId:null, searchMode:null, userContextId:0, attributes:{}, index:1, requestedIndex:0, image:null})
+ 0:05.14 GECKO(46367) console.debug: "ZenSessionManager:" "Saving Zen session data with 1 tabs"
+ 0:05.14 GECKO(46367) 1795022644174	Marionette	TRACE	Received observer notification quit-application
+ 0:05.14 GECKO(46367) 1795022644174	Marionette	TRACE	Application is shutting down with reason: "shutdown"
+ 0:05.14 GECKO(46367) 1795022644174	Marionette	INFO	Stopped listening on port 2828
+ 0:05.15 GECKO(46367) 1795022644192	Marionette	DEBUG	Marionette stopped listening
+ 0:05.16 GECKO(46367) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:05.23 GECKO(46367) 1795022644266	Marionette	TRACE	Received observer notification xpcom-shutdown
+ 0:05.24 GECKO(46367) 1795022644279	Marionette	TRACE	Received observer notification xpcom-shutdown-threads
+ 0:05.27 Main app process: exit 0
+ 0:05.27 INFO runtests.py | Main app process exited normally
+ 0:05.27 INFO runtests.py | Application ran for: 0:00:04.872020
+ 0:05.27 INFO zombiecheck | Reading PID log: /tmp/tmp9r7wrp4npidlog
+ 0:05.27 INFO ==> process 46367 launched child process 46405
+ 0:05.27 INFO ==> process 46367 launched child process 46458
+ 0:05.27 INFO zombiecheck | Checking for orphan process with PID: 46458
+ 0:05.27 INFO zombiecheck | Checking for orphan process with PID: 46405
+ 0:05.27 INFO runtests.py | Running http tests: end. status: 0
+ 0:05.27 INFO Stopping web server
+ 0:05.28 INFO Server shut down.
+ 0:05.28 INFO Web server killed.
+ 0:05.28 INFO Stopping web socket server
+ 0:05.28 INFO Stopping ssltunnel
+ 0:05.28 WARNING leakcheck | refcount logging is off, so leaks can't be detected!
+ 0:05.29 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 15
+	Failed: 4
+	Todo: 1
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:05.29 INFO Buffered messages finished
+ 0:05.29 SUITE_END
+ 0:05.29 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 21 checks (20 subtests, 1 tests)
+Expected results: 16
+Unexpected results: 5
+  test: 1 (1 fail)
+  subtest: 4 (4 fail)
+
+Error Summary
+-------------
+toolkit/components/antitracking/test/browser/browser_flushOnQuery.js
+  FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+  FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+  FAIL private_window_events_are_not_persisted - uncaught rejection: undefined
+(No stack available.)
+  FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - test left unexpected property on window: Debugger
+  FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - finished in 1288ms

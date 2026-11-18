@@ -1,9 +1,9 @@
 diff --git a/browser/components/newtab/test/browser/browser_umbral_privacy_stats.js b/browser/components/newtab/test/browser/browser_umbral_privacy_stats.js
 new file mode 100644
-index 0000000000..ff2889ec46
+index 0000000000..acf01efdd5
 --- /dev/null
 +++ b/browser/components/newtab/test/browser/browser_umbral_privacy_stats.js
-@@ -0,0 +1,162 @@
+@@ -0,0 +1,188 @@
 +/* Any copyright is dedicated to the Public Domain.
 + * http://creativecommons.org/publicdomain/zero/1.0/ */
 +
@@ -67,8 +67,8 @@ index 0000000000..ff2889ec46
 +    Assert.equal(page.cookies, "3");
 +    Assert.equal(page.trackerLabel, "Trackers · ETP");
 +    Assert.equal(page.cookieLabel, "Tracking cookies · ETP");
-+    Assert.equal(page.trackerPeriod, "Last 7 days");
-+    Assert.equal(page.cookiePeriod, "Last 7 days");
++    Assert.equal(page.trackerPeriod, "All time · Registered profiles and current profile; other open profiles may update later");
++    Assert.equal(page.cookiePeriod, "All time · Registered profiles and current profile; other open profiles may update later");
 +    Assert.ok(page.trackerTooltip.includes("not ads"));
 +    Assert.ok(page.trackerTooltip.includes("network requests"));
 +    Assert.ok(page.trackerTooltip.includes("uBlock Origin"));
@@ -164,5 +164,31 @@ index 0000000000..ff2889ec46
 +    await BrowserTestUtils.removeTab(tab);
 +  } finally {
 +    await SpecialPowers.popPrefEnv();
++  }
++});
++
++add_task(async function test_private_homepage_displays_saved_totals() {
++  const original = PrivacyMetricsService.getHomepageStats;
++  PrivacyMetricsService.getHomepageStats = async () => ({
++    trackers: 12,
++    cookies: 3,
++  });
++  const win = await BrowserTestUtils.openNewBrowserWindow({ private: true });
++  try {
++    const tab = await BrowserTestUtils.openNewForegroundTab(
++      win.gBrowser,
++      "about:home"
++    );
++    await TestUtils.waitForCondition(async () => {
++      return (await readHomepage(tab.linkedBrowser)).trackers === "12";
++    }, "Private homepage displays saved totals");
++    const page = await readHomepage(tab.linkedBrowser);
++    Assert.equal(page.cookies, "3");
++    Assert.ok(page.trackerPeriod.includes("Registered profiles"));
++    Assert.ok(page.trackerPeriod.includes("may update later"));
++    await BrowserTestUtils.removeTab(tab);
++  } finally {
++    await BrowserTestUtils.closeWindow(win);
++    PrivacyMetricsService.getHomepageStats = original;
 +  }
 +});

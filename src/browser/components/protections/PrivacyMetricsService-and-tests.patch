@@ -1,8 +1,7 @@
 diff --git a/browser/components/protections/PrivacyMetricsService.sys.mjs b/browser/components/protections/PrivacyMetricsService.sys.mjs
-index 555dfce306..7830f540c0 100644
 --- a/browser/components/protections/PrivacyMetricsService.sys.mjs
 +++ b/browser/components/protections/PrivacyMetricsService.sys.mjs
-@@ -44,19 +44,39 @@ export const PrivacyMetricsService = {
+@@ -44,19 +44,78 @@
     * @returns {Promise<PrivacyMetricsStats>}
     */
    async getWeeklyStats() {
@@ -37,21 +36,79 @@ index 555dfce306..7830f540c0 100644
 +      return null;
 +    }
 +
-+    const stats = await this.getWeeklyStats();
-+    return {
-+      trackers: stats.trackers,
-+      cookies: stats.cookies,
-+    };
++    const eventRows = await lazy.TrackingDBService.getEventsByDateRange(
++      0,
++      Date.now()
++    );
++    const stats = this._aggregateStats(eventRows);
++    const result = { trackers: stats.trackers, cookies: stats.cookies };
++    const service = Cc["@mozilla.org/toolkit/profile-service;1"].getService(
++      Ci.nsIToolkitProfileService
++    );
++    if (service.isListOutdated) {
++      throw new Error("Profile list changed; restart to refresh privacy totals");
++    }
++    const current = Services.dirsvc.get("ProfD", Ci.nsIFile);
++    const seen = [current];
++    const { Sqlite } = ChromeUtils.importESModule(
++      "resource://gre/modules/Sqlite.sys.mjs"
++    );
++    for (const profile of service.profiles) {
++      const dir = profile.rootDir;
++      if (seen.some(item => item.equals(dir))) {
++        continue;
++      }
++      seen.push(dir);
++      const path = PathUtils.join(dir.path, "protections.sqlite");
++      if (!(await IOUtils.exists(path))) {
++        continue;
++      }
++      const db = await Sqlite.openConnection({ path, readOnly: true });
++      try {
++        const rows = await db.execute(
++          "SELECT type, SUM(count) AS count FROM events WHERE type IN (:trackers, :cookies) GROUP BY type",
++          {
++            trackers: Ci.nsITrackingDBService.TRACKERS_ID,
++            cookies: Ci.nsITrackingDBService.TRACKING_COOKIES_ID,
++          }
++        );
++        const other = this._aggregateStats(rows);
++        result.trackers += other.trackers;
++        result.cookies += other.cookies;
++      } finally {
++        await db.close();
++      }
++    }
++    return result;
 +  },
 +
    /**
     * Get today's tracking protection statistics.
     *
 diff --git a/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js b/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js
-index 7469fe0125..71ce23eb2e 100644
 --- a/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js
 +++ b/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js
-@@ -61,6 +61,36 @@ add_task(async function test_getWeeklyStats_empty() {
+@@ -34,6 +34,17 @@
+-
++
+ // Setup profile and enable tracking database
+ do_get_profile();
++const testAppData = do_get_profile().clone();
++testAppData.append("isolated-profile-registry");
++testAppData.create(Ci.nsIFile.DIRECTORY_TYPE, 0o700);
++const provider = Cc["@mozilla.org/xre/directory-provider;1"].getService(
++  Ci.nsIXREDirProvider
++);
++provider.setUserDataDirectory(testAppData, false);
++provider.setUserDataDirectory(testAppData, true);
++Services.dirsvc.set("UAppData", testAppData);
++Services.dirsvc.set("DefProfRt", testAppData);
++Services.dirsvc.set("DefProfLRt", testAppData);
+ Services.prefs.setBoolPref("browser.contentblocking.database.enabled", true);
+-
++
+ add_setup(async function () {
+@@ -61,6 +72,39 @@
    Assert.greater(stats.lastUpdated, 0, "Should have a timestamp");
  });
  
@@ -71,8 +128,11 @@ index 7469fe0125..71ce23eb2e 100644
 +});
 +
 +add_task(async function test_getHomepageStats_propagates_query_failure() {
-+  const getWeeklyStats = PrivacyMetricsService.getWeeklyStats;
-+  PrivacyMetricsService.getWeeklyStats = async () => {
++  const { TrackingDBService: TrackingDBServiceImplementation } =
++    ChromeUtils.importESModule("resource://gre/modules/TrackingDBService.sys.mjs");
++  const prototype = TrackingDBServiceImplementation.prototype;
++  const getEventsByDateRange = prototype.getEventsByDateRange;
++  prototype.getEventsByDateRange = async () => {
 +    throw new Error("controlled database failure");
 +  };
 +  try {
@@ -81,14 +141,14 @@ index 7469fe0125..71ce23eb2e 100644
 +      /controlled database failure/
 +    );
 +  } finally {
-+    PrivacyMetricsService.getWeeklyStats = getWeeklyStats;
++    prototype.getEventsByDateRange = getEventsByDateRange;
 +  }
 +});
 +
  add_task(async function test_getWeeklyStats_aggregation() {
    info("Test that getWeeklyStats correctly aggregates by category");
  
-@@ -223,26 +253,35 @@ add_task(async function test_getTodayStats_excludes_other_days() {
+@@ -223,26 +267,35 @@
    await TrackingDBService.clearAll();
  });
  
@@ -133,7 +193,7 @@ index 7469fe0125..71ce23eb2e 100644
    });
  
    await db.close();
-@@ -252,8 +291,32 @@ add_task(async function test_exactly_7_days_boundary() {
+@@ -252,8 +305,92 @@
    Assert.equal(
      stats.trackers,
      25,
@@ -142,28 +202,89 @@ index 7469fe0125..71ce23eb2e 100644
    );
 +  Assert.equal(stats.cookies, 4, "Includes today's UTC date");
 +  Assert.equal(stats.total, 29, "Sums only records in the seven-date range");
+-
 +
-+  await TrackingDBService.clearAll();
-+});
+   await TrackingDBService.clearAll();
+ });
 +
-+add_task(async function test_getHomepageStats_reads_persisted_categories() {
++add_task(async function test_getHomepageStats_includes_records_older_than_a_week() {
 +  const db = await Sqlite.openConnection({ path: DB_PATH });
++  const now = new Date();
++  const lastMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 +  await db.execute(SQL.insertCustomTimeEvent, {
 +    type: TrackingDBService.TRACKERS_ID,
 +    count: 6,
-+    timestamp: new Date().toISOString(),
++    timestamp: now.toISOString(),
++  });
++  await db.execute(SQL.insertCustomTimeEvent, {
++    type: TrackingDBService.TRACKERS_ID,
++    count: 11,
++    timestamp: lastMonth.toISOString(),
 +  });
 +  await db.execute(SQL.insertCustomTimeEvent, {
 +    type: TrackingDBService.TRACKING_COOKIES_ID,
 +    count: 2,
-+    timestamp: new Date().toISOString(),
++    timestamp: lastMonth.toISOString(),
++  });
++  await db.execute(SQL.insertCustomTimeEvent, {
++    type: TrackingDBService.CRYPTOMINERS_ID,
++    count: 8,
++    timestamp: lastMonth.toISOString(),
 +  });
 +  await db.close();
 +
 +  Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), {
-+    trackers: 6,
++    trackers: 17,
 +    cookies: 2,
 +  });
- 
-   await TrackingDBService.clearAll();
- });
++
++  await TrackingDBService.clearAll();
++  Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), {
++    trackers: 0,
++    cookies: 0,
++  });
++});
++
++add_task(async function test_registered_profiles_totals() {
++  const service = Cc["@mozilla.org/toolkit/profile-service;1"].getService(
++    Ci.nsIToolkitProfileService
++  );
++  const dirs = [];
++  const profiles = [];
++  const writers = [];
++  try {
++    for (let i = 0; i < 2; i++) {
++      const dir = testAppData.clone();
++      dir.append(`test-profile-${i}`);
++      dir.create(Ci.nsIFile.DIRECTORY_TYPE, 0o700);
++      dirs.push(dir);
++      profiles.push(service.createProfile(dir, `test-profile-${i}`, "tests"));
++      const db = await Sqlite.openConnection({
++        path: PathUtils.join(dir.path, "protections.sqlite"),
++      });
++      writers.push(db);
++      await db.execute("CREATE TABLE events (id INTEGER PRIMARY KEY, type INTEGER NOT NULL, count INTEGER NOT NULL, timestamp DATE)");
++      await db.execute(SQL.insertCustomTimeEvent, {
++        type: TrackingDBService.TRACKERS_ID, count: 10 + i, timestamp: "2020-01-01",
++      });
++      await db.execute(SQL.insertCustomTimeEvent, {
++        type: TrackingDBService.TRACKING_COOKIES_ID, count: 3 + i, timestamp: new Date().toISOString(),
++      });
++    }
++    Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), { trackers: 21, cookies: 7 });
++    await writers[1].execute("UPDATE events SET count = count + 5 WHERE type = :type", { type: TrackingDBService.TRACKERS_ID });
++    Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), { trackers: 26, cookies: 7 });
++    for (const db of writers.splice(0)) { await db.close(); }
++    Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), { trackers: 26, cookies: 7 });
++    const db = await Sqlite.openConnection({ path: PathUtils.join(dirs[0].path, "protections.sqlite") });
++    await db.execute("DELETE FROM events");
++    await db.close();
++    Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), { trackers: 16, cookies: 4 });
++    profiles[1].remove(false);
++    profiles.pop();
++    Assert.deepEqual(await PrivacyMetricsService.getHomepageStats(), { trackers: 0, cookies: 0 });
++  } finally {
++    for (const db of writers) { await db.close(); }
++    for (const profile of profiles) { profile.remove(false); }
++  }
++});

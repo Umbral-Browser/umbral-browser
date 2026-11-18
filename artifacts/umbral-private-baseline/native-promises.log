@@ -1,0 +1,281 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_184327.json
+ 0:00.18 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.18 INFO     a11y_checks: False
+ 0:00.18 INFO     android: False
+ 0:00.18 INFO     apple_catalina: False
+ 0:00.18 INFO     apple_silicon: False
+ 0:00.18 INFO     appname: zen
+ 0:00.18 INFO     arch: x86_64
+ 0:00.18 INFO     artifact: False
+ 0:00.18 INFO     asan: False
+ 0:00.18 INFO     automation: False
+ 0:00.18 INFO     bin_suffix: 
+ 0:00.18 INFO     bits: 64
+ 0:00.18 INFO     buildapp: browser
+ 0:00.18 INFO     buildtype: opt
+ 0:00.18 INFO     buildtype_guess: opt
+ 0:00.18 INFO     cc_type: clang
+ 0:00.18 INFO     ccov: False
+ 0:00.18 INFO     condprof: False
+ 0:00.18 INFO     coverage: False
+ 0:00.18 INFO     crashreporter: True
+ 0:00.18 INFO     datareporting: True
+ 0:00.18 INFO     dbus_enabled: True
+ 0:00.18 INFO     debug: False
+ 0:00.18 INFO     devedition: False
+ 0:00.18 INFO     display: wayland
+ 0:00.18 INFO     e10s: True
+ 0:00.18 INFO     early_beta_or_earlier: False
+ 0:00.18 INFO     enterprise: False
+ 0:00.18 INFO     fission: True
+ 0:00.18 INFO     has_sandbox: True
+ 0:00.18 INFO     headless: True
+ 0:00.18 INFO     healthreport: True
+ 0:00.18 INFO     http2: False
+ 0:00.18 INFO     http3: False
+ 0:00.18 INFO     inc_origin_init: False
+ 0:00.18 INFO     is_emulator: False
+ 0:00.18 INFO     is_ubuntu: False
+ 0:00.18 INFO     isolated_process: False
+ 0:00.18 INFO     linux_distro: Cachyos Linux
+ 0:00.18 INFO     macos_vm: False
+ 0:00.18 INFO     mda_gpu: False
+ 0:00.18 INFO     mingw: False
+ 0:00.18 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.18 INFO     msix: False
+ 0:00.18 INFO     nightly_build: False
+ 0:00.18 INFO     nogpu: False
+ 0:00.18 INFO     normandy: True
+ 0:00.18 INFO     nova: True
+ 0:00.18 INFO     official: False
+ 0:00.18 INFO     opt: True
+ 0:00.18 INFO     os: linux
+ 0:00.18 INFO     os_version: Rolling
+ 0:00.18 INFO     pgo: False
+ 0:00.18 INFO     platform_guess: linux64
+ 0:00.18 INFO     processor: x86_64
+ 0:00.18 INFO     release_or_beta: True
+ 0:00.18 INFO     require_signing: False
+ 0:00.18 INFO     sessionHistoryInParent: True
+ 0:00.18 INFO     socketprocess_e10s: False
+ 0:00.18 INFO     socketprocess_networking: False
+ 0:00.18 INFO     standalone: False
+ 0:00.18 INFO     stylo: True
+ 0:00.18 INFO     swgl: False
+ 0:00.18 INFO     sync: True
+ 0:00.18 INFO     telemetry: False
+ 0:00.18 INFO     tests_enabled: True
+ 0:00.18 INFO     toolkit: gtk
+ 0:00.18 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.18 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.18 INFO     tsan: False
+ 0:00.18 INFO     ubsan: False
+ 0:00.18 INFO     updater: True
+ 0:00.18 INFO     verify: False
+ 0:00.18 INFO     verify_fission: False
+ 0:00.18 INFO     version: Cachyos Linux Rolling
+ 0:00.18 INFO     vertical_tab: False
+ 0:00.18 INFO     win10_2009: False
+ 0:00.18 INFO     win11_2009: False
+ 0:00.18 INFO     wmfme: 0
+ 0:00.18 INFO     xorigin: False
+ 0:00.18 INFO Checking for ssltunnel processes...
+ 0:00.21 INFO Checking for xpcshell processes...
+ 0:00.22 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.22 INFO Running manifest: toolkit/components/antitracking/test/browser/browser.toml
+ 0:00.22 INFO The following extra prefs will be set:
+  dom.storage_access.prompt.testing=true
+  dom.storage_access.prompt.testing.allow=true
+  dom.storage_access.frame_only=true
+  privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction=true
+  network.cookie.sameSite.laxByDefault=false
+  dom.security.https_first=false
+  dom.storage_access.dont_grant_insecure_contexts=true
+  network.lna.block_trackers=false
+ 0:00.26 pid:50098 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmp51rckc8z.mozrunner/.crtdbpw -d /tmp/tmp51rckc8z.mozrunner
+pid:50098 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.31 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmp51rckc8z.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.31 INFO runtests.py | Server pid: 50108
+ 0:00.31 INFO runtests.py | Websocket server pid: 50109
+ 0:00.31 INFO runtests.py | SSL tunnel pid: 50110
+ 0:00.36 INFO use http3 server: False
+ 0:00.36 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.36 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.36 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.42 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 40341,41801
+
+ 0:00.42 INFO moz-http2 server started on ports 40341, 41801
+ 0:00.42 INFO node moz-http2 [stderr] (node:50153) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.42 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.42 INFO runtests.py | Running with scheme: http
+ 0:00.42 INFO runtests.py | Running with e10s: True
+ 0:00.42 INFO runtests.py | Running with fission: True
+ 0:00.42 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.42 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.42 INFO runtests.py | Running http tests: start.
+
+ 0:00.43 INFO Application command: /usr/bin/gdb -batch -x /tmp/umbral-promises.gdb --args -q --args /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmp51rckc8z.mozrunner
+ 0:00.44 INFO runtests.py | Application pid: 50163
+ 0:00.44 Started process `GECKO(50163)`
+-q: No such file or directory.
+No symbol table is loaded.  Use the "file" command.
+Breakpoint 1 (mozilla::dom::Promise::MaybeRejectWithUndefined()) pending.
+/tmp/umbral-promises.gdb:11: Error in sourced command file:
+No executable file specified.
+Use the "file" or "exec-file" command.
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/multiprocessing/process.py", line 320, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.14/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/mozbase/mozsystemmonitor/mozsystemmonitor/resourcemonitor.py", line 309, in _collect
+    while not _poll(pipe, poll_interval=sleep_interval):
+              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/mozbase/mozsystemmonitor/mozsystemmonitor/resourcemonitor.py", line 238, in _poll
+    return pipe.poll(poll_interval)
+           ~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/connection.py", line 268, in poll
+    return self._poll(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/connection.py", line 462, in _poll
+    r = wait([self], timeout)
+  File "/usr/lib/python3.14/multiprocessing/connection.py", line 1191, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.14/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/mozbase/mozsystemmonitor/mozsystemmonitor/resourcemonitor.py:752: UserWarning: failed to receive data: 
+  warnings.warn("failed to receive data: %s" % e)
+ 0:36.94 INFO runtests.py | Waiting for browser...
+ 0:36.94 Main app process: exit 1
+ 0:36.94 INFO Buffered messages finished
+ 0:36.94 INFO runtests.py | Application ran for: 0:00:36.507691
+ 0:36.94 INFO zombiecheck | Reading PID log: /tmp/tmpvg5t7khrpidlog
+Traceback (most recent call last):
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 4196, in doTests
+    ret, _ = self.runApp(
+             ~~~~~~~~~~~^
+        testURL,
+        ^^^^^^^^
+    ...<19 lines>...
+        currentManifest=manifestToFilter,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 3299, in runApp
+    raise marionette_exception
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 3140, in runApp
+    addons.install(temp_addon_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/addons.py", line 63, in install
+    return self._mn._send_message("Addon:Install", body, key="value")
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/decorators.py", line 34, in _
+    m._handle_socket_failure()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/marionette.py", line 824, in _handle_socket_failure
+    raise exc.with_traceback(tb)
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/decorators.py", line 24, in _
+    return func(*args, **kwargs)
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/marionette.py", line 773, in _send_message
+    msg = self.client.request(name, params)
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/transport.py", line 368, in request
+    return self.receive()
+           ~~~~~~~~~~~~^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/transport.py", line 223, in receive
+    raise OSError("No data received over socket")
+OSError: No data received over socket
+ 0:36.95 ERROR Automation Error: Received unexpected exception while running application
+
+ 0:36.95 INFO Stopping web server
+ 0:36.95 INFO Failed to stop web server on http://127.0.0.1:8888/server/shutdown
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/urllib/request.py", line 1333, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              encode_chunked=req.has_header('Transfer-encoding'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/http/client.py", line 1141, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/usr/lib/python3.14/http/client.py", line 1085, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/http/client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ~~~~~~~~~~~~~~~~~~~~~~~^
+        (self.host,self.port), self.timeout, self.source_address)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/socket.py", line 874, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.14/socket.py", line 859, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 703, in stop
+    with closing(urlopen(self.shutdownURL)) as c:
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 487, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.14/urllib/request.py", line 504, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 1362, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 1336, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+ 0:36.95 INFO Web server killed.
+ 0:36.95 INFO Stopping web socket server
+ 0:36.95 INFO Stopping ssltunnel
+ 0:36.95 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 0
+	Failed: 0
+	Todo: 0
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:36.95 INFO Buffered messages finished
+ 0:36.95 SUITE_END
+ 0:36.95 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 0 checks ()
+Expected results: 0
+Unexpected results: 0
+
+Error Summary
+-------------
+ERROR Automation Error: Received unexpected exception while running application
+

@@ -1,0 +1,682 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_180942.json
+ 0:00.17 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.17 INFO     a11y_checks: False
+ 0:00.17 INFO     android: False
+ 0:00.17 INFO     apple_catalina: False
+ 0:00.17 INFO     apple_silicon: False
+ 0:00.17 INFO     appname: zen
+ 0:00.17 INFO     arch: x86_64
+ 0:00.17 INFO     artifact: False
+ 0:00.17 INFO     asan: False
+ 0:00.17 INFO     automation: False
+ 0:00.17 INFO     bin_suffix: 
+ 0:00.17 INFO     bits: 64
+ 0:00.17 INFO     buildapp: browser
+ 0:00.17 INFO     buildtype: opt
+ 0:00.17 INFO     buildtype_guess: opt
+ 0:00.17 INFO     cc_type: clang
+ 0:00.17 INFO     ccov: False
+ 0:00.17 INFO     condprof: False
+ 0:00.17 INFO     coverage: False
+ 0:00.17 INFO     crashreporter: True
+ 0:00.17 INFO     datareporting: True
+ 0:00.17 INFO     dbus_enabled: True
+ 0:00.17 INFO     debug: False
+ 0:00.17 INFO     devedition: False
+ 0:00.17 INFO     display: wayland
+ 0:00.17 INFO     e10s: True
+ 0:00.17 INFO     early_beta_or_earlier: False
+ 0:00.17 INFO     enterprise: False
+ 0:00.17 INFO     fission: True
+ 0:00.17 INFO     has_sandbox: True
+ 0:00.17 INFO     headless: True
+ 0:00.17 INFO     healthreport: True
+ 0:00.17 INFO     http2: False
+ 0:00.17 INFO     http3: False
+ 0:00.17 INFO     inc_origin_init: False
+ 0:00.17 INFO     is_emulator: False
+ 0:00.17 INFO     is_ubuntu: False
+ 0:00.17 INFO     isolated_process: False
+ 0:00.17 INFO     linux_distro: Cachyos Linux
+ 0:00.17 INFO     macos_vm: False
+ 0:00.17 INFO     mda_gpu: False
+ 0:00.17 INFO     mingw: False
+ 0:00.17 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.17 INFO     msix: False
+ 0:00.17 INFO     nightly_build: False
+ 0:00.17 INFO     nogpu: False
+ 0:00.17 INFO     normandy: True
+ 0:00.17 INFO     nova: True
+ 0:00.17 INFO     official: False
+ 0:00.17 INFO     opt: True
+ 0:00.17 INFO     os: linux
+ 0:00.17 INFO     os_version: Rolling
+ 0:00.17 INFO     pgo: False
+ 0:00.17 INFO     platform_guess: linux64
+ 0:00.17 INFO     processor: x86_64
+ 0:00.17 INFO     release_or_beta: True
+ 0:00.17 INFO     require_signing: False
+ 0:00.17 INFO     sessionHistoryInParent: True
+ 0:00.17 INFO     socketprocess_e10s: False
+ 0:00.17 INFO     socketprocess_networking: False
+ 0:00.17 INFO     standalone: False
+ 0:00.17 INFO     stylo: True
+ 0:00.17 INFO     swgl: False
+ 0:00.17 INFO     sync: True
+ 0:00.17 INFO     telemetry: False
+ 0:00.17 INFO     tests_enabled: True
+ 0:00.17 INFO     toolkit: gtk
+ 0:00.17 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.17 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.17 INFO     tsan: False
+ 0:00.17 INFO     ubsan: False
+ 0:00.17 INFO     updater: True
+ 0:00.17 INFO     verify: False
+ 0:00.17 INFO     verify_fission: False
+ 0:00.17 INFO     version: Cachyos Linux Rolling
+ 0:00.17 INFO     vertical_tab: False
+ 0:00.17 INFO     win10_2009: False
+ 0:00.17 INFO     win11_2009: False
+ 0:00.17 INFO     wmfme: 0
+ 0:00.17 INFO     xorigin: False
+ 0:00.17 INFO Checking for ssltunnel processes...
+ 0:00.20 INFO Checking for xpcshell processes...
+ 0:00.21 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.21 INFO Running manifest: toolkit/components/antitracking/test/browser/browser.toml
+ 0:00.21 INFO The following extra prefs will be set:
+  dom.storage_access.prompt.testing=true
+  dom.storage_access.prompt.testing.allow=true
+  dom.storage_access.frame_only=true
+  privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction=true
+  network.cookie.sameSite.laxByDefault=false
+  dom.security.https_first=false
+  dom.storage_access.dont_grant_insecure_contexts=true
+  network.lna.block_trackers=false
+ 0:00.25 pid:43232 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmpv3flvdoc.mozrunner/.crtdbpw -d /tmp/tmpv3flvdoc.mozrunner
+pid:43232 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.30 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmpv3flvdoc.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.30 INFO runtests.py | Server pid: 43242
+ 0:00.30 INFO runtests.py | Websocket server pid: 43243
+ 0:00.30 INFO runtests.py | SSL tunnel pid: 43244
+ 0:00.35 INFO use http3 server: False
+ 0:00.35 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.36 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.36 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.41 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 42685,34659
+
+ 0:00.41 INFO moz-http2 server started on ports 42685, 34659
+ 0:00.41 INFO node moz-http2 [stderr] (node:43285) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.41 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.41 INFO runtests.py | Running with scheme: http
+ 0:00.41 INFO runtests.py | Running with e10s: True
+ 0:00.41 INFO runtests.py | Running with fission: True
+ 0:00.41 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.41 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.41 INFO runtests.py | Running http tests: start.
+
+ 0:00.42 INFO Application command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmpv3flvdoc.mozrunner
+ 0:00.43 INFO runtests.py | Application pid: 43294
+ 0:00.43 Started process `GECKO(43294)`
+ 0:00.45 GECKO(43294) *** You are running in headless mode.
+ 0:00.50 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_socket_pid43332.log
+ 0:00.80 GECKO(43294) 1795021783127	Marionette	INFO	Marionette enabled
+ 0:00.80 GECKO(43294) 1795021783128	Marionette	TRACE	Received observer notification final-ui-startup
+ 0:00.80 GECKO(43294) 1795021783128	Marionette	DEBUG	Initializing Marionette
+ 0:00.86 GECKO(43294) console.error: "Warning: unrecognized command line flag" "-foreground"
+ 0:00.87 GECKO(43294) JavaScript warning: moz-src:///browser/components/aiwindow/ui/modules/AIWindow.sys.mjs, line 414: unreachable code after return statement
+ 0:00.88 GECKO(43294) 1795021783204	Marionette	INFO	Listening on port 2828
+ 0:00.88 GECKO(43294) 1795021783206	Marionette	DEBUG	Marionette is listening
+ 0:00.89 GECKO(43294) 1795021783219	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:41254
+ 0:00.91 GECKO(43294) 1795021783241	Marionette	DEBUG	Closed connection 0
+ 0:00.91 GECKO(43294) 1795021783241	Marionette	DEBUG	Accepted connection 1 from 127.0.0.1:41262
+ 0:00.98 GECKO(43294) 1795021783304	Marionette	DEBUG	1 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+ 0:00.98 GECKO(43294) 1795021783309	Marionette	DEBUG	Waiting for initial application window
+ 0:00.99 GECKO(43294) console.debug: "ZenSessionManager:" "Initializing session manager"
+ 0:00.99 GECKO(43294) console.debug: "ZenSessionManager:" "Session file path:" "/tmp/tmpv3flvdoc.mozrunner/zen-sessions.jsonlz4"
+ 0:00.99 GECKO(43294) console.debug: "ZenSessionManager:" "Reading Zen session file from disk"
+ 0:01.02 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43401.log
+ 0:01.02 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43401.log
+ 0:01.03 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_rdd_pid43410.log
+ 0:01.03 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_rdd_pid43410.log
+ 0:01.04 GECKO(43294) JavaScript warning: chrome://browser/content/tabbrowser/drag-and-drop.js, line 1587: unreachable code after return statement
+ 0:01.06 GECKO(43294) JavaScript warning: chrome://browser/content/tabbrowser/tabs.mjs, line 1042: unreachable code after return statement
+ 0:01.13 GECKO(43294) console.error: "Failed to read backup file /tmp/tmpv3flvdoc.mozrunner/zen-sessions-backup/clean.jsonlz4" (new NotFoundError("Could not open `/tmp/tmpv3flvdoc.mozrunner/zen-sessions-backup/clean.jsonlz4': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:01.13 GECKO(43294) console.debug: "ZenSessionManager:" "No spaces data found in session file, running migration" [object Object]
+ 0:01.14 GECKO(43294) console.error: "Failed to read spaces data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_workspaces", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:01.15 GECKO(43294) console.error: "Failed to read pins data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_pins", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+ 0:01.16 GECKO(43294) console.debug: "ZenSessionManager:" "Restoring tabs from Places DB after migration" null (void 0) [object Object]
+ 0:01.16 GECKO(43294) console.debug: "ZenSessionManager:" "Build ID has changed since last session, not restoring only pinned tabs" ({buildId:"20261104111407", lastBuildId:""})
+ 0:01.16 GECKO(43294) console.debug: "ZenSessionManager:" "Saving windata state after migration"
+ 0:01.16 GECKO(43294) console.debug: "ZenSessionManager:" "Saving Zen session data with 0 tabs"
+ 0:01.19 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+ 0:01.21 GECKO(43294) JavaScript warning: moz-src:///browser/components/urlbar/UrlbarMuxerStandard.sys.mjs, line 936: unreachable code after return statement
+ 0:01.24 GECKO(43294) console.error: (new TypeError("can't access property \"tabContainer\", gBrowser is undefined", "resource:///modules/zen/ZenVerticalTabsManager.mjs", 394))
+ 0:01.25 GECKO(43294) console.error: (new TypeError("can't access property \"selectedTab\", node.documentGlobal.gBrowser is undefined", "chrome://browser/content/parent/ext-browserAction.js", 855))
+ 0:01.25 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+ 0:01.25 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+ 0:01.33 GECKO(43294) JavaScript warning: moz-src:///browser/components/tabbrowser/Tabbrowser.sys.mjs, line 498: unreachable code after return statement
+ 0:01.34 GECKO(43294) console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:01.35 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43453.log
+ 0:01.35 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43453.log
+ 0:01.37 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+ 0:01.37 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+ 0:01.37 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+ 0:01.37 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+ 0:01.39 GECKO(43294) console.warn: "Error loading shortcuts file" (new NotFoundError("Could not open `/tmp/tmpv3flvdoc.mozrunner/zen-keyboard-shortcuts.json': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+ 0:01.39 GECKO(43294) console.warn: "Zen CKS: Migrating shortcuts from version" 0 "to" 21
+ 0:01.42 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.42 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.42 GECKO(43294) JavaScript error: resource:///modules/ZenSiteDataPanel.sys.mjs, line 173: TypeError: can't access property "addProgressListener", this.window.gBrowser is undefined
+ 0:01.43 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:01.49 GECKO(43294) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+ 0:01.62 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43483.log
+ 0:01.62 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43483.log
+ 0:01.62 GECKO(43294) console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+ 0:01.70 GECKO(43294) console.debug: "[gZenWorkspaces]:" "Changing workspace to" "{f11e55dd-74aa-4f7d-8ed1-7695bc5c2c6c}"
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+ 0:01.70 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+ 0:01.97 GECKO(43294) console.error: services.settings:
+ 0:01.97 GECKO(43294)   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+ 0:01.97 GECKO(43294)   Stack:
+ 0:01.97 GECKO(43294)     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+ 0:01.97 GECKO(43294) list@resource://services-settings/Database.sys.mjs:96:13
+ 0:01.97 GECKO(43294) async*get@resource://services-settings/RemoteSettingsClient.sys.mjs:570:28
+ 0:01.97 GECKO(43294) async*getRecipesFromCollection/recipes<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:793:16
+ 0:01.97 GECKO(43294) #raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:749:34
+ 0:01.97 GECKO(43294) getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:792:41
+ 0:01.97 GECKO(43294) getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+ 0:01.97 GECKO(43294) #updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+ 0:01.97 GECKO(43294) async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+ 0:01.97 GECKO(43294) LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+ 0:01.97 GECKO(43294) updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+ 0:01.97 GECKO(43294) enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+ 0:01.97 GECKO(43294) #init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+ 0:01.97 GECKO(43294) async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+ 0:01.97 GECKO(43294) finishInit@resource://normandy/Normandy.sys.mjs:108:30
+ 0:01.97 GECKO(43294) async*init@resource://normandy/Normandy.sys.mjs:79:16
+ 0:01.97 GECKO(43294) async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+ 0:01.97 GECKO(43294) callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+ 0:01.97 GECKO(43294) callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+ 0:01.97 GECKO(43294) BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+ 0:01.97 GECKO(43294) BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+ 0:02.11 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_utility_pid43543.log
+ 0:02.11 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_utility_pid43543.log
+ 0:02.14 GECKO(43294) 1795021784468	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+ 0:02.29 GECKO(43294) 1795021784623	RemoteAgent	TRACE	[11] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+ 0:02.29 GECKO(43294) 1795021784623	RemoteAgent	TRACE	[11] ProgressListener Setting unload timer (5000ms)
+ 0:02.29 GECKO(43294) 1795021784624	RemoteAgent	TRACE	[11] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+ 0:02.29 GECKO(43294) 1795021784624	RemoteAgent	TRACE	[11] Document already finished loading: about:blank
+ 0:02.30 GECKO(43294) 1795021784624	RemoteAgent	TRACE	[11] ProgressListener Stop: has error=false url=about:blank
+ 0:02.30 GECKO(43294) 1795021784629	Marionette	DEBUG	1 <- [1,1,null,{"sessionId":"4ca26db0-86e0-4606-b79f-294cab079e46","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":43294,"moz:profile":"/tmp/tmpv3flvdoc.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+ 0:02.31 GECKO(43294) 1795021784636	Marionette	DEBUG	1 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmp21z6yy_p.zip"}]
+ 0:02.31 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43563.log
+ 0:02.31 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43563.log
+ 0:02.32 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43569.log
+ 0:02.32 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43569.log
+ 0:02.33 GECKO(43294) 1795021784654	Marionette	DEBUG	1 <- [1,2,null,{"value":"special-powers@mozilla.org"}]
+ 0:02.33 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43578.log
+ 0:02.33 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43578.log
+ 0:02.34 GECKO(43294) 1795021784667	Marionette	DEBUG	1 -> [0,3,"Addon:Install",{"temporary":false,"path":"/tmp/tmp_707gqt6.zip"}]
+ 0:02.35 GECKO(43294) 1795021784678	Marionette	DEBUG	1 <- [1,3,null,{"value":"mochikit@mozilla.org"}]
+ 0:02.35 GECKO(43294) 1795021784679	Marionette	DEBUG	1 -> [0,4,"Marionette:GetContext",{}]
+ 0:02.35 GECKO(43294) 1795021784680	Marionette	DEBUG	1 <- [1,4,null,{"value":"content"}]
+ 0:02.35 GECKO(43294) 1795021784680	Marionette	DEBUG	1 -> [0,5,"Marionette:SetContext",{"value":"chrome"}]
+ 0:02.35 GECKO(43294) 1795021784680	Marionette	DEBUG	1 <- [1,5,null,{"value":null}]
+ 0:02.35 GECKO(43294) 1795021784682	Marionette	DEBUG	1 -> [0,6,"WebDriver:ExecuteScript",{"script":"/* This Source Code Form is subject to the terms of the Mozilla Public\n * License, v. 2.0. If a copy of the MPL was not distr ... \n// the flavor and url to load.\nlet ev = new CustomEvent(\"mochitest-load\", { detail: [flavor, url] });\nwin.dispatchEvent(ev);","args":[{"flavor":"browser-chrome","testUrl":"about:blank"}],"newSandbox":true,"sandbox":"default","line":2377,"filename":"_tests/testing/mochitest/runtests.py"}]
+ 0:02.36 GECKO(43294) 1795021784686	RemoteAgent	TRACE	WebDriverProcessData actor created for PID 43294
+ 0:02.36 GECKO(43294) 1795021784686	Marionette	TRACE	[1] MarionetteCommands actor created for window id 2
+ 0:02.37 GECKO(43294) 1795021784702	Marionette	TRACE	Remoteness change detected. Set new top-level browsing context to 11
+ 0:02.38 GECKO(43294) 1795021784703	Marionette	DEBUG	1 <- [1,6,null,{"value":null}]
+ 0:02.39 GECKO(43294) 1795021784715	Marionette	DEBUG	1 -> [0,7,"Marionette:SetContext",{"value":"content"}]
+ 0:02.39 GECKO(43294) 1795021784715	Marionette	DEBUG	1 <- [1,7,null,{"value":null}]
+ 0:02.39 GECKO(43294) console.warn: "Key element" <key id="key_togglePictureInPicture" group="pageOperations" modifiers="accel,shift" command="View:PictureInPicture" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.40 GECKO(43294) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.40 GECKO(43294) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:02.40 GECKO(43294) 1795021784730	Marionette	DEBUG	1 -> [0,8,"WebDriver:DeleteSession",{}]
+ 0:02.40 GECKO(43294) 1795021784731	Marionette	TRACE	[1] MarionetteCommands actor destroyed for window id 2
+ 0:02.40 GECKO(43294) 1795021784732	Marionette	DEBUG	1 <- [1,8,null,{"value":null}]
+ 0:02.40 INFO runtests.py | Waiting for browser...
+ 0:02.40 GECKO(43294) 1795021784734	Marionette	DEBUG	Closed connection 1
+ 0:02.45 INFO *** Start BrowserChrome Test Results ***
+ 0:02.45 INFO checking for open sidebars
+ 0:02.45 INFO checking window state
+ 0:02.56 TEST_START: toolkit/components/antitracking/test/browser/browser_flushOnQuery.js
+ 0:02.57 INFO Entering setup bound 
+ 0:02.61 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43664.log
+ 0:02.61 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43664.log
+ 0:02.67 INFO Console message: [JavaScript Error: "WebExtension context not found!" {file: "resource://gre/modules/ExtensionParent.sys.mjs" line: 1446}]
+getContext@resource://gre/modules/ExtensionParent.sys.mjs:1446:13
+recvAPICall@resource://gre/modules/ExtensionParent.sys.mjs:1269:24
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+query@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:351:38
+onFocusChangedHandler@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:623:19
+vAPI.Tabs</<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:302:22
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+fire@resource://gre/modules/ExtensionChild.sys.mjs:873:37
+recvRunListener@resource://gre/modules/ExtensionChild.sys.mjs:877:13
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:62:20
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+listener@resource://gre/modules/ExtensionParent.sys.mjs:1359:45
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:684:26
+applySafe@resource://gre/modules/ExtensionParent.sys.mjs:767:17
+addListener/async/<@resource://gre/modules/ExtensionCommon.sys.mjs:2799:39
+promise callback*async@resource://gre/modules/ExtensionCommon.sys.mjs:2796:34
+this.windows</onFocusChanged/listener/<@chrome://browser/content/parent/ext-windows.js:132:18
+promise callback*listener@chrome://browser/content/parent/ext-windows.js:117:27
+newSession@chrome://remote/content/marionette/driver.sys.mjs:2734:43
+async*dispatch@chrome://remote/content/marionette/server.sys.mjs:317:49
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20
+
+ 0:03.45 INFO Console message: [JavaScript Error: "WebExtension context not found!" {file: "resource://gre/modules/ExtensionParent.sys.mjs" line: 1446}]
+getContext@resource://gre/modules/ExtensionParent.sys.mjs:1446:13
+recvAPICall@resource://gre/modules/ExtensionParent.sys.mjs:1269:24
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+create@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:1781:23
+destroy@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:1368:21
+onDone@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:929:26
+µb.loadFilterLists/loadingPromise<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:1015:13
+promise callback*µb.loadFilterLists@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:1014:12
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:456:18
+async*@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:546:3
+
+ 0:03.47 INFO Console message: [JavaScript Error: "WebExtension context not found!" {file: "resource://gre/modules/ExtensionParent.sys.mjs" line: 1446}]
+getContext@resource://gre/modules/ExtensionParent.sys.mjs:1446:13
+recvAPICall@resource://gre/modules/ExtensionParent.sys.mjs:1269:24
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+query@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:351:38
+initializeTabs@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:99:38
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:474:7
+async*@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:546:3
+
+ 0:03.48 INFO Console message: [JavaScript Error: "WebExtension context not found!" {file: "resource://gre/modules/ExtensionParent.sys.mjs" line: 1446}]
+getContext@resource://gre/modules/ExtensionParent.sys.mjs:1446:13
+recvAPICall@resource://gre/modules/ExtensionParent.sys.mjs:1269:24
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+executeScript@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:316:40
+injectNow@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/scriptlet-filtering.js:362:23
+onNavigation@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/tab.js:930:38
+onCommittedHandler@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:599:14
+vAPI.Tabs</<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:290:18
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+fire@resource://gre/modules/ExtensionChild.sys.mjs:873:37
+recvRunListener@resource://gre/modules/ExtensionChild.sys.mjs:877:13
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:62:20
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+listener@resource://gre/modules/ExtensionParent.sys.mjs:1359:45
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:684:26
+applySafe@resource://gre/modules/ExtensionParent.sys.mjs:767:17
+addListener/async/<@resource://gre/modules/ExtensionCommon.sys.mjs:2799:39
+promise callback*async@resource://gre/modules/ExtensionCommon.sys.mjs:2796:34
+listener@chrome://extensions/content/parent/ext-webNavigation.js:185:14
+fire@resource://gre/modules/WebNavigation.sys.mjs:387:15
+onDocumentChange@resource://gre/modules/WebNavigation.sys.mjs:316:10
+
+ 0:03.48 INFO Console message: [JavaScript Error: "WebExtension context not found!" {file: "resource://gre/modules/ExtensionParent.sys.mjs" line: 1446}]
+getContext@resource://gre/modules/ExtensionParent.sys.mjs:1446:13
+recvAPICall@resource://gre/modules/ExtensionParent.sys.mjs:1269:24
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+query@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:351:38
+onFocusChangedHandler@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:623:19
+vAPI.Tabs</<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:302:22
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+fire@resource://gre/modules/ExtensionChild.sys.mjs:873:37
+recvRunListener@resource://gre/modules/ExtensionChild.sys.mjs:877:13
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:62:20
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+listener@resource://gre/modules/ExtensionParent.sys.mjs:1359:45
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:684:26
+applySafe@resource://gre/modules/ExtensionParent.sys.mjs:767:17
+addListener/async/<@resource://gre/modules/ExtensionCommon.sys.mjs:2799:39
+waitForFocus@chrome://mochikit/content/browser-harness.xhtml:285:11
+createTester/<@chrome://mochikit/content/browser-harness.xhtml:263:21
+
+ 0:03.48 INFO Leaving setup bound 
+ 0:03.48 INFO Entering test test_private_window_baseline
+ 0:03.49 GECKO(43294) JavaScript error: resource://gre/modules/ConduitsChild.sys.mjs, line 64: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+ 0:03.49 GECKO(43294) JavaScript error: resource://gre/modules/ConduitsChild.sys.mjs, line 64: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+ 0:03.49 GECKO(43294) JavaScript error: resource://gre/modules/ConduitsChild.sys.mjs, line 64: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Warning: "An IndexedDB transaction that was not yet complete has been aborted due to page navigation." {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 617}]
+ 0:03.49 INFO Console message: [JavaScript Error: "InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment" {file: "resource://gre/modules/ConduitsChild.sys.mjs" line: 64}]
+_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+insertCSS@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:344:33
+CosmeticFilteringEngine.prototype.retrieveSpecificSelectors@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cosmetic-filtering.js:893:23
+retrieveContentScriptParameters@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:687:33
+onMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:747:16
+onPortMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:1113:33
+onPortConnect/<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:956:18
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:2832:39
+promise callback*asyncWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:2829:34
+emit/<@resource://gre/modules/ExtensionChild.sys.mjs:153:45
+emit@resource://gre/modules/ExtensionChild.sys.mjs:153:28
+recvPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:271:20
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+_cast/promises<@resource://gre/modules/ConduitsParent.sys.mjs:402:42
+_cast@resource://gre/modules/ConduitsParent.sys.mjs:402:28
+sendPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:459:18
+recvPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:440:10
+async*_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+sendPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:284:27
+send@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-client.js:214:14
+vAPI.bootstrap@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1320:24
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1331:6
+#injectIntoIsolatedWorld@resource://gre/modules/ExtensionContent.sys.mjs:715:23
+inject@resource://gre/modules/ExtensionContent.sys.mjs:700:43
+async*injectInto@resource://gre/modules/ExtensionContent.sys.mjs:550:19
+loadContentScript@resource://gre/modules/ExtensionProcessScript.sys.mjs:428:8
+
+ 0:03.49 INFO Console message: [JavaScript Error: "InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment" {file: "resource://gre/modules/ConduitsChild.sys.mjs" line: 64}]
+_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+callParentAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:948:18
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:668:33
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+executeScript@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:316:40
+injectNow@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/scriptlet-filtering.js:362:23
+retrieveContentScriptParameters@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:718:34
+onMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:747:16
+onPortMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:1113:33
+onPortConnect/<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:956:18
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:2832:39
+promise callback*asyncWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:2829:34
+emit/<@resource://gre/modules/ExtensionChild.sys.mjs:153:45
+emit@resource://gre/modules/ExtensionChild.sys.mjs:153:28
+recvPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:271:20
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+_cast/promises<@resource://gre/modules/ConduitsParent.sys.mjs:402:42
+_cast@resource://gre/modules/ConduitsParent.sys.mjs:402:28
+sendPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:459:18
+recvPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:440:10
+async*_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+sendPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:284:27
+send@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-client.js:214:14
+vAPI.bootstrap@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1320:24
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1331:6
+#injectIntoIsolatedWorld@resource://gre/modules/ExtensionContent.sys.mjs:715:23
+inject@resource://gre/modules/ExtensionContent.sys.mjs:700:43
+async*injectInto@resource://gre/modules/ExtensionContent.sys.mjs:550:19
+loadContentScript@resource://gre/modules/ExtensionProcessScript.sys.mjs:428:8
+
+ 0:03.49 INFO Console message: [JavaScript Error: "InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment" {file: "resource://gre/modules/ConduitsChild.sys.mjs" line: 64}]
+_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+sendPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:284:27
+proxy@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:1068:27
+onMessage/<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:751:21
+promise callback*onMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/messaging.js:750:11
+onPortMessage@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:1113:33
+onPortConnect/<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:956:18
+applySafeWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:689:19
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:688:28
+addListener/asyncWithoutClone/<@resource://gre/modules/ExtensionCommon.sys.mjs:2832:39
+promise callback*asyncWithoutClone@resource://gre/modules/ExtensionCommon.sys.mjs:2829:34
+emit/<@resource://gre/modules/ExtensionChild.sys.mjs:153:45
+emit@resource://gre/modules/ExtensionChild.sys.mjs:153:28
+recvPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:271:20
+_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsChild.sys.mjs:204:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsParent.sys.mjs:352:18
+_cast/promises<@resource://gre/modules/ConduitsParent.sys.mjs:402:42
+_cast@resource://gre/modules/ConduitsParent.sys.mjs:402:28
+sendPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:459:18
+recvPortMessage@resource://gre/modules/ExtensionParent.sys.mjs:440:10
+async*_recv@resource://gre/modules/ConduitsChild.sys.mjs:90:20
+receiveMessage@resource://gre/modules/ConduitsParent.sys.mjs:488:20
+JSActor query*_doSend@resource://gre/modules/ConduitsChild.sys.mjs:64:11
+_send@resource://gre/modules/ConduitsChild.sys.mjs:128:18
+sendPortMessage@resource://gre/modules/ExtensionChild.sys.mjs:284:27
+send@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-client.js:214:14
+vAPI.bootstrap@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1320:24
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/contentscript.js:1331:6
+#injectIntoIsolatedWorld@resource://gre/modules/ExtensionContent.sys.mjs:715:23
+inject@resource://gre/modules/ExtensionContent.sys.mjs:700:43
+async*injectInto@resource://gre/modules/ExtensionContent.sys.mjs:550:19
+loadContentScript@resource://gre/modules/ExtensionProcessScript.sys.mjs:428:8
+
+ 0:03.49 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.50 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.54 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+ 0:03.55 GECKO(43294) console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+ 0:03.56 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+ 0:03.56 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+ 0:03.62 GECKO(43294) console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.64 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+ 0:03.64 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+ 0:03.64 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+ 0:03.64 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:03.70 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise resolved after context unloaded
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js" line: 161}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/cachestorage.js:161:38
+
+ 0:03.70 INFO Console message: [JavaScript Error: "can't access dead object" {file: "resource://gre/modules/IndexedDB.sys.mjs" line: 93}]
+wrapMethods/cls.prototype[method]@resource://gre/modules/IndexedDB.sys.mjs:93:46
+set@resource://gre/modules/ExtensionStorageIDB.sys.mjs:356:27
+async*getLocalIDBBackend/set/<@chrome://extensions/content/child/ext-storage.js:123:38
+async*measureOp@chrome://extensions/content/child/ext-storage.js:18:24
+set@chrome://extensions/content/child/ext-storage.js:118:16
+getAPI/local[method]@chrome://extensions/content/child/ext-storage.js:314:55
+callAsyncFunction@resource://gre/modules/ExtensionCommon.sys.mjs:1153:40
+callAsyncFunction/<@resource://gre/modules/ExtensionChild.sys.mjs:774:19
+callAndLog@resource://gre/modules/ExtensionChild.sys.mjs:754:14
+callAsyncFunction@resource://gre/modules/ExtensionChild.sys.mjs:773:17
+stub@resource://gre/modules/Schemas.sys.mjs:3096:30
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:139:37
+onDone@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:920:22
+µb.loadFilterLists/loadingPromise<@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:1015:13
+promise callback*µb.loadFilterLists@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/storage.js:1014:12
+@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:456:18
+async*@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/start.js:546:3
+
+ 0:03.70 INFO Console message: [JavaScript Error: "Promise rejected after context unloaded: An unexpected error occurred
+" {file: "moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js" line: 139}]
+set@moz-extension://a68e197b-5140-4605-afe8-f581090d5907/js/vapi-background.js:139:37
+
+ 0:03.71 GECKO(43294) JavaScript error: , line 0: uncaught exception: undefined
+ 0:03.70 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:03.70 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:03.70 INFO Console message: [JavaScript Error: "uncaught exception: undefined"]
+ 0:03.78 GECKO(43294) console.debug:
+ 0:03.78 GECKO(43294)   [gZenWorkspaces]:
+ 0:03.78 GECKO(43294)   Changing workspace to
+ 0:03.78 GECKO(43294)   {b40d3d98-10e3-44a1-b447-5174f52ea71e}
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+ 0:03.79 GECKO(43294) [Parent 43294: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+ 0:03.83 PASS test_private_window_baseline - Window is private
+ 0:03.84 GECKO(43294) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:03.86 INFO Console message: [JavaScript Warning: "Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content." {file: "about:privatebrowsing" line: 0}]
+ 0:03.67 FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+ 0:03.67 FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+ 0:03.70 FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+ 0:03.86 INFO Leaving test test_private_window_baseline
+ 0:03.86 INFO checking for open popups
+ 0:04.30 EXPECTED-FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - changed preference: network.dns.disablePrefetch
+ 0:04.30 EXPECTED-FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - changed preference: zen.ui.migration.compact-mode-button-added
+ 0:04.30 EXPECTED-FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - changed preference: network.prefetch-next
+ 0:04.30 GECKO(43294) MEMORY STAT vsizeMaxContiguous not supported in this build configuration.
+ 0:04.30 GECKO(43294) MEMORY STAT | vsize 11507MB | residentFast 424MB | heapAllocated 298MB
+ 0:04.30 INFO checking for open sidebars
+ 0:04.30 INFO checking window state
+ 0:04.30 TEST_END: Test FAIL, expected PASS. Subtests passed 1/7. Unexpected 3
+ 0:04.80 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43705.log
+ 0:04.80 GECKO(43294) ### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmpv3flvdoc.mozrunner/runtests_leaks_tab_pid43705.log
+ 0:05.32 GECKO(43294) Completed ShutdownLeaks collections in process 43483
+ 0:05.33 GECKO(43294) Completed ShutdownLeaks collections in process 43563
+ 0:05.34 GECKO(43294) Completed ShutdownLeaks collections in process 43453
+ 0:05.41 GECKO(43294) Completed ShutdownLeaks collections in process 43401
+ 0:05.75 GECKO(43294) Completed ShutdownLeaks collections in process 43294
+ 0:05.75 INFO TEST-START | Shutdown
+ 0:05.75 INFO Browser Chrome Test Summary
+ 0:05.75 INFO Passed:  1
+ 0:05.75 INFO Failed:  3
+ 0:05.75 INFO Todo:    3
+ 0:05.75 INFO Mode:    e10s
+ 0:05.75 INFO *** End BrowserChrome Test Results ***
+ 0:05.91 GECKO(43294) console.debug: "ZenSessionManager:" "Skipping blank tab data" ({entries:[{url:"about:blank", title:"about:blank", cacheKey:0, ID:13, docshellUUID:"{1e847a7a-a584-4ec2-94cc-fd5e987500cc}", resultPrincipalURI:null, principalToInherit_base64:"{\"0\":{\"0\":\"moz-nullprincipal:{bfb76db3-90b6-46bc-9ba3-f98d770e6f2e}\"}}", hasUserInteraction:false, triggeringPrincipal_base64:"{\"3\":{}}", docIdentifier:14, transient:false, navigationKey:"{3ff99f30-877f-4267-95e2-3f70707d8ed6}", navigationId:"{db39441e-7174-4f42-8b99-206f2308455e}"}], lastAccessed:1795021788081, hidden:false, zenWorkspace:"{f11e55dd-74aa-4f7d-8ed1-7695bc5c2c6c}", zenSyncId:"1795021784030-2cbb5a08-4834-4230-94be-2a1853043782", zenEssential:false, pinned:false, zenDefaultUserContextId:null, zenPinnedIcon:null, zenIsEmpty:false, zenStaticLabel:(void 0), zenHasStaticIcon:false, zenGlanceId:null, zenIsGlance:false, _zenPinnedInitialState:(void 0), _zenIsActiveTab:true, zenLiveFolderItemId:null, searchMode:null, userContextId:0, attributes:{}, index:1, requestedIndex:0, image:null})
+ 0:05.91 GECKO(43294) console.debug: "ZenSessionManager:" "Saving Zen session data with 1 tabs"
+ 0:05.91 GECKO(43294) 1795021788242	Marionette	TRACE	Received observer notification quit-application
+ 0:05.91 GECKO(43294) 1795021788243	Marionette	TRACE	Application is shutting down with reason: "shutdown"
+ 0:05.91 GECKO(43294) 1795021788243	Marionette	INFO	Stopped listening on port 2828
+ 0:05.93 GECKO(43294) 1795021788259	Marionette	DEBUG	Marionette stopped listening
+ 0:05.94 GECKO(43294) console.warn: "Key element" <key id="addBookmarkAsKb" group="historyAndBookmarks" modifiers="accel" command="Browser:AddBookmarkAs" zen-keybind="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+ 0:06.01 GECKO(43294) 1795021788339	Marionette	TRACE	Received observer notification xpcom-shutdown
+ 0:06.02 GECKO(43294) 1795021788350	Marionette	TRACE	Received observer notification xpcom-shutdown-threads
+ 0:06.05 Main app process: exit 0
+ 0:06.05 INFO runtests.py | Main app process exited normally
+ 0:06.05 INFO runtests.py | Application ran for: 0:00:05.625500
+ 0:06.05 INFO zombiecheck | Reading PID log: /tmp/tmpbbge6hg9pidlog
+ 0:06.05 INFO ==> process 43294 launched child process 43332
+ 0:06.05 INFO ==> process 43294 launched child process 43398
+ 0:06.05 INFO zombiecheck | Checking for orphan process with PID: 43332
+ 0:06.05 INFO zombiecheck | Checking for orphan process with PID: 43398
+ 0:06.05 INFO runtests.py | Running http tests: end. status: 0
+ 0:06.05 INFO Stopping web server
+ 0:06.06 INFO Server shut down.
+ 0:06.06 INFO Web server killed.
+ 0:06.06 INFO Stopping web socket server
+ 0:06.06 INFO Stopping ssltunnel
+ 0:06.06 WARNING leakcheck | refcount logging is off, so leaks can't be detected!
+ 0:06.07 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 1
+	Failed: 3
+	Todo: 3
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:06.07 INFO Buffered messages finished
+ 0:06.07 SUITE_END
+ 0:06.07 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 8 checks (7 subtests, 1 tests)
+Expected results: 4
+Unexpected results: 4
+  test: 1 (1 fail)
+  subtest: 3 (3 fail)
+
+Error Summary
+-------------
+toolkit/components/antitracking/test/browser/browser_flushOnQuery.js
+  FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+  FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+  FAIL test_private_window_baseline - uncaught rejection: undefined
+(No stack available.)
+  FAIL toolkit/components/antitracking/test/browser/browser_flushOnQuery.js - finished in 1735ms

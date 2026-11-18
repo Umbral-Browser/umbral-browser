@@ -1,0 +1,206 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_184759.json
+ 0:00.09 INFO Using harness timeout of 30s (base=30s, factor=1.0)
+ 0:00.09 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.09 INFO     appname: zen
+ 0:00.09 INFO     artifact: False
+ 0:00.09 INFO     asan: False
+ 0:00.09 INFO     automation: False
+ 0:00.09 INFO     bin_suffix: 
+ 0:00.09 INFO     bits: 64
+ 0:00.09 INFO     buildapp: browser
+ 0:00.09 INFO     buildtype: opt
+ 0:00.09 INFO     buildtype_guess: opt
+ 0:00.09 INFO     cc_type: clang
+ 0:00.09 INFO     ccov: False
+ 0:00.09 INFO     condprof: False
+ 0:00.09 INFO     crashreporter: True
+ 0:00.09 INFO     datareporting: True
+ 0:00.09 INFO     dbus_enabled: True
+ 0:00.09 INFO     debug: False
+ 0:00.09 INFO     devedition: False
+ 0:00.09 INFO     e10s: False
+ 0:00.09 INFO     early_beta_or_earlier: False
+ 0:00.09 INFO     enterprise: False
+ 0:00.09 INFO     fission: True
+ 0:00.09 INFO     healthreport: True
+ 0:00.09 INFO     inc_origin_init: False
+ 0:00.09 INFO     is_ubuntu: False
+ 0:00.09 INFO     isolated_process: False
+ 0:00.09 INFO     mingw: False
+ 0:00.09 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.09 INFO     msix: False
+ 0:00.09 INFO     nightly_build: False
+ 0:00.09 INFO     normandy: True
+ 0:00.09 INFO     official: False
+ 0:00.09 INFO     opt: True
+ 0:00.09 INFO     os: linux
+ 0:00.09 INFO     pgo: False
+ 0:00.09 INFO     platform_guess: linux64
+ 0:00.09 INFO     privateBrowsing: False
+ 0:00.09 INFO     processor: x86_64
+ 0:00.09 INFO     release_or_beta: True
+ 0:00.09 INFO     require_signing: False
+ 0:00.09 INFO     sessionHistoryInParent: True
+ 0:00.09 INFO     socketprocess_networking: False
+ 0:00.09 INFO     stylo: True
+ 0:00.09 INFO     sync: True
+ 0:00.09 INFO     telemetry: False
+ 0:00.09 INFO     tests_enabled: True
+ 0:00.09 INFO     toolkit: gtk
+ 0:00.09 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.09 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.09 INFO     tsan: False
+ 0:00.09 INFO     ubsan: False
+ 0:00.09 INFO     updater: True
+ 0:00.09 INFO     verify: False
+ 0:00.09 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.09 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/xpcshell/moz-http2/moz-http2.js
+ 0:00.09 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.14 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 36799,37771
+
+ 0:00.14 INFO moz-http2 server started on ports 36799, 37771
+ 0:00.14 INFO node moz-http2 [stderr] (node:57285) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.14 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.14 INFO mozserve | Found Http3Server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/http3server
+ 0:00.14 INFO mozserve | cert db path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/netwerk/test/http3serverDB
+ 0:00.15 INFO mozserve | http3 server msg: HTTP3 server listening on ports 35017, 40052, 53887, 44160, 45401 and 51075. EchConfig is @AE3+DQBJBwAgACBMx1HPXuhd+zpODXlnqCffIEw0X+RP3N9LmbMxjwwMdAAQAAEAAQABAAMAAgABAAIAA0AOcHVibGljLmV4YW1wbGUAAA==@
+
+ 0:00.36 INFO Running tests sequentially.
+ 0:00.36 SUITE_START: xpcshell - running 1 tests
+ 0:00.36 TEST_START: browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js
+ 0:00.36 INFO profile dir is /tmp/firefox/xpcshellprofile
+ 0:00.36 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | full command: ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-a', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-m', '-e', 'const _HEAD_JS_PATH = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/xpcshell/head.js";', '-e', 'const _MOZINFO_JS_PATH = "/tmp/firefox/xpcshellprofile/mozinfo.json";', '-e', 'const _PREFS_FILE = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/temp/user.js";', '-e', 'const _TESTING_MODULES_DIR = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/modules/";', '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/xpcshell/head.js', '-e', 'const _HEAD_FILES = [];', '-e', 'const _JSDEBUGGER_PORT = 0;', '-e', 'const _TEST_FILE = ["/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/xpcshell/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js"];', '-e', 'const _TEST_NAME = "browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js";', '-e', 'const _EXPECTED = "pass";', '-e', '_execute_test(); quit(0);']
+ 0:00.36 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | current directory: '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/xpcshell/browser/components/protections/test/xpcshell'
+ 0:00.36 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | environment: ['MOZ_TEST_TIMEOUT_INTERVAL=30', 'MOZ_DEVELOPER_OBJ_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu', 'XPCSHELL_TEST_PROFILE_DIR=/tmp/firefox/xpcshellprofile', 'MOZ_CRASHREPORTER_NO_REPORT=1', 'MOZ_PROFILER_STARTUP_FEATURES=java,js,screenshots,processcpu,ipcmessages,memory', 'MOZHTTP3_PORT_NO_RESPONSE=45401', 'MOZ_CRASHREPORTER=1', 'MOZ_DISABLE_NONLOCAL_CONNECTIONS=1', 'MOZ_HTTP3_CERT_DB_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/netwerk/test/http3serverDB', 'LD_LIBRARY_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', 'XPCOM_DEBUG_BREAK=stack-and-abort', 'MOZNODE_EXEC_PORT=37771', 'MOZHTTP3_PORT_PROXY=44160', 'MOZHTTP3_PORT_FAILED=40052', 'MOZHTTP3_PORT_ECH=53887', 'MOZHTTP3_PORT=35017', 'MOZ_DISABLE_CONTENT_SANDBOX=1', 'XPCSHELL_TEST_TEMP_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/temp/xpc-other-f7s4dpw1', 'MOZHTTP2_PORT=36799', 'MOZHTTP3_PORT_MASQUE=51075', 'MOZHTTP3_ECH=AE3+DQBJBwAgACBMx1HPXuhd+zpODXlnqCffIEw0X+RP3N9LmbMxjwwMdAAQAAEAAQABAAMAAgABAAIAA0AOcHVibGljLmV4YW1wbGUAAA==', 'MOZ_DEVELOPER_REPO_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine', 'MOZ_PROFILER_STARTUP_INTERVAL=10', 'MOZ_DISABLE_SOCKET_PROCESS=1', 'MOZ_HTTP3_SERVER_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/http3server', 'MOZ_PROFILER_STARTUP=1']
+ 0:00.36 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | as shell command: (cd /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/xpcshell/browser/components/protections/test/xpcshell; MOZ_TEST_TIMEOUT_INTERVAL=30 MOZ_DEVELOPER_OBJ_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu XPCSHELL_TEST_PROFILE_DIR=/tmp/firefox/xpcshellprofile MOZ_CRASHREPORTER_NO_REPORT=1 MOZ_PROFILER_STARTUP_FEATURES=java,js,screenshots,processcpu,ipcmessages,memory MOZHTTP3_PORT_NO_RESPONSE=45401 MOZ_CRASHREPORTER=1 MOZ_DISABLE_NONLOCAL_CONNECTIONS=1 MOZ_HTTP3_CERT_DB_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/netwerk/test/http3serverDB LD_LIBRARY_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin XPCOM_DEBUG_BREAK=stack-and-abort MOZNODE_EXEC_PORT=37771 MOZHTTP3_PORT_PROXY=44160 MOZHTTP3_PORT_FAILED=40052 MOZHTTP3_PORT_ECH=53887 MOZHTTP3_PORT=35017 MOZ_DISABLE_CONTENT_SANDBOX=1 XPCSHELL_TEST_TEMP_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/temp/xpc-other-f7s4dpw1 MOZHTTP2_PORT=36799 MOZHTTP3_PORT_MASQUE=51075 MOZHTTP3_ECH=AE3+DQBJBwAgACBMx1HPXuhd+zpODXlnqCffIEw0X+RP3N9LmbMxjwwMdAAQAAEAAQABAAMAAgABAAIAA0AOcHVibGljLmV4YW1wbGUAAA== MOZ_DEVELOPER_REPO_DIR=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine MOZ_PROFILER_STARTUP_INTERVAL=10 MOZ_DISABLE_SOCKET_PROCESS=1 MOZ_HTTP3_SERVER_PATH=/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/http3server MOZ_PROFILER_STARTUP=1 /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell -g /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin -a /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin -m -e 'const _HEAD_JS_PATH = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/xpcshell/head.js";' -e 'const _MOZINFO_JS_PATH = "/tmp/firefox/xpcshellprofile/mozinfo.json";' -e 'const _PREFS_FILE = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/temp/user.js";' -e 'const _TESTING_MODULES_DIR = "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/modules/";' -f /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/xpcshell/head.js -e 'const _HEAD_FILES = [];' -e 'const _JSDEBUGGER_PORT = 0;' -e 'const _TEST_FILE = ["/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/xpcshell/browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js"];' -e 'const _TEST_NAME = "browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js";' -e 'const _EXPECTED = "pass";' -e '_execute_test(); quit(0);')
+ 0:00.42 INFO (xpcshell/head.js) | test MAIN run_test pending (1)
+ 0:00.42 INFO (xpcshell/head.js) | test run_next_test 0 pending (2)
+ 0:00.42 INFO (xpcshell/head.js) | test MAIN run_test finished (2)
+ 0:00.42 INFO running event loop
+ 0:00.42 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting setup 
+ 0:00.42 INFO (xpcshell/head.js) | test pending (2)
+ 0:00.42 INFO (xpcshell/head.js) | test run_next_test 0 finished (2)
+ 0:00.42 INFO "CONSOLE_MESSAGE: (info) No chrome package registered for chrome://branding/locale/brand.properties"
+ 0:00.42 INFO (xpcshell/head.js) | test run_next_test 1 pending (2)
+ 0:00.42 INFO (xpcshell/head.js) | test finished (2)
+ 0:00.42 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getWeeklyStats_empty
+ 0:00.42 INFO (xpcshell/head.js) | test test_getWeeklyStats_empty pending (2)
+ 0:00.42 INFO "Test that getWeeklyStats returns empty stats for new users"
+ 0:00.42 INFO (xpcshell/head.js) | test run_next_test 1 finished (2)
+ 0:00.42 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 66] Total should be 0 for new users - 0 == 0
+ 0:00.42 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 67] Trackers should be 0 - 0 == 0
+ 0:00.42 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 68] Cookies should be 0 - 0 == 0
+ 0:00.42 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 69] Fingerprinters should be 0 - 0 == 0
+ 0:00.42 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 70] Cryptominers should be 0 - 0 == 0
+ 0:00.43 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 71] Social trackers should be 0 - 0 == 0
+ 0:00.43 PASS test_getWeeklyStats_empty - [test_getWeeklyStats_empty : 72] Should have a timestamp - 1795024079823 > 0
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 2 pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test test_getWeeklyStats_empty finished (2)
+ 0:00.43 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getHomepageStats_empty_is_valid_zero
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_empty_is_valid_zero pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 2 finished (2)
+ 0:00.43 PASS test_getHomepageStats_empty_is_valid_zero - [test_getHomepageStats_empty_is_valid_zero : 78] {"trackers":0,"cookies":0} deepEqual {"trackers":0,"cookies":0}
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 3 pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_empty_is_valid_zero finished (2)
+ 0:00.43 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getHomepageStats_disabled_source_is_unavailable
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_disabled_source_is_unavailable pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 3 finished (2)
+ 0:00.43 PASS test_getHomepageStats_disabled_source_is_unavailable - [test_getHomepageStats_disabled_source_is_unavailable : 84] null == null
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 4 pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_disabled_source_is_unavailable finished (2)
+ 0:00.43 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getHomepageStats_propagates_query_failure
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_propagates_query_failure pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 4 finished (2)
+ 0:00.43 PASS test_getHomepageStats_propagates_query_failure - [test_getHomepageStats_propagates_query_failure : 99] 
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 5 pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test test_getHomepageStats_propagates_query_failure finished (2)
+ 0:00.43 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getWeeklyStats_aggregation
+ 0:00.43 INFO (xpcshell/head.js) | test test_getWeeklyStats_aggregation pending (2)
+ 0:00.43 INFO "Test that getWeeklyStats correctly aggregates by category"
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 5 finished (2)
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 145] Total should be sum of all categories - 21 == 21
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 146] Trackers counted correctly - 10 == 10
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 147] Cookies counted correctly - 5 == 5
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 148] Fingerprinters counted correctly - 3 == 3
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 149] Cryptominers counted correctly - 2 == 2
+ 0:00.43 PASS test_getWeeklyStats_aggregation - [test_getWeeklyStats_aggregation : 150] Social trackers counted correctly - 1 == 1
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 6 pending (2)
+ 0:00.43 INFO (xpcshell/head.js) | test test_getWeeklyStats_aggregation finished (2)
+ 0:00.43 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getWeeklyStats_multiple_days
+ 0:00.43 INFO (xpcshell/head.js) | test test_getWeeklyStats_multiple_days pending (2)
+ 0:00.43 INFO "Test aggregation across multiple days"
+ 0:00.43 INFO (xpcshell/head.js) | test run_next_test 6 finished (2)
+ 0:00.44 PASS test_getWeeklyStats_multiple_days - [test_getWeeklyStats_multiple_days : 190] Should sum trackers across all days in the week - 20 == 20
+ 0:00.44 PASS test_getWeeklyStats_multiple_days - [test_getWeeklyStats_multiple_days : 195] Total should equal sum of all categories - 20 == 20
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 7 pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test test_getWeeklyStats_multiple_days finished (2)
+ 0:00.44 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_old_data_ignored
+ 0:00.44 INFO (xpcshell/head.js) | test test_old_data_ignored pending (2)
+ 0:00.44 INFO "Test that data older than 7 days is not included"
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 7 finished (2)
+ 0:00.44 PASS test_old_data_ignored - [test_old_data_ignored : 226] Should only count data from last 7 days - 50 == 50
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 8 pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test test_old_data_ignored finished (2)
+ 0:00.44 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getTodayStats_empty
+ 0:00.44 INFO (xpcshell/head.js) | test test_getTodayStats_empty pending (2)
+ 0:00.44 INFO "Test that getTodayStats returns empty stats for new users"
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 8 finished (2)
+ 0:00.44 PASS test_getTodayStats_empty - [test_getTodayStats_empty : 236] Total should be 0 for new users - 0 == 0
+ 0:00.44 PASS test_getTodayStats_empty - [test_getTodayStats_empty : 237] Trackers should be 0 - 0 == 0
+ 0:00.44 PASS test_getTodayStats_empty - [test_getTodayStats_empty : 238] Should have a timestamp - 1795024079838 > 0
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 9 pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test test_getTodayStats_empty finished (2)
+ 0:00.44 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getTodayStats_excludes_other_days
+ 0:00.44 INFO (xpcshell/head.js) | test test_getTodayStats_excludes_other_days pending (2)
+ 0:00.44 INFO "Test that getTodayStats only counts today's events"
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 9 finished (2)
+ 0:00.44 PASS test_getTodayStats_excludes_other_days - [test_getTodayStats_excludes_other_days : 264] Should only count today's trackers - 8 == 8
+ 0:00.44 PASS test_getTodayStats_excludes_other_days - [test_getTodayStats_excludes_other_days : 265] Total should equal today's events only - 8 == 8
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 10 pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test test_getTodayStats_excludes_other_days finished (2)
+ 0:00.44 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_exactly_7_utc_dates_boundary
+ 0:00.44 INFO (xpcshell/head.js) | test test_exactly_7_utc_dates_boundary pending (2)
+ 0:00.44 INFO "Test that the range includes today and the previous six UTC dates"
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 10 finished (2)
+ 0:00.44 PASS test_exactly_7_utc_dates_boundary - [test_exactly_7_utc_dates_boundary : 305] Includes the first UTC date and excludes the seventh prior date - 25 == 25
+ 0:00.44 PASS test_exactly_7_utc_dates_boundary - [test_exactly_7_utc_dates_boundary : 310] Includes today's UTC date - 4 == 4
+ 0:00.44 PASS test_exactly_7_utc_dates_boundary - [test_exactly_7_utc_dates_boundary : 311] Sums only records in the seven-date range - 29 == 29
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 11 pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test test_exactly_7_utc_dates_boundary finished (2)
+ 0:00.44 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_getHomepageStats_includes_records_older_than_a_week
+ 0:00.44 INFO (xpcshell/head.js) | test test_getHomepageStats_includes_records_older_than_a_week pending (2)
+ 0:00.44 INFO (xpcshell/head.js) | test run_next_test 11 finished (2)
+ 0:00.45 PASS test_getHomepageStats_includes_records_older_than_a_week - [test_getHomepageStats_includes_records_older_than_a_week : 342] {"trackers":17,"cookies":2} deepEqual {"trackers":17,"cookies":2}
+ 0:00.45 PASS test_getHomepageStats_includes_records_older_than_a_week - [test_getHomepageStats_includes_records_older_than_a_week : 348] {"trackers":0,"cookies":0} deepEqual {"trackers":0,"cookies":0}
+ 0:00.45 INFO (xpcshell/head.js) | test run_next_test 12 pending (2)
+ 0:00.45 INFO (xpcshell/head.js) | test test_getHomepageStats_includes_records_older_than_a_week finished (2)
+ 0:00.45 INFO browser/components/protections/test/xpcshell/test_PrivacyMetricsService.js | Starting test_registered_profiles_totals
+ 0:00.45 INFO (xpcshell/head.js) | test test_registered_profiles_totals pending (2)
+ 0:00.45 INFO (xpcshell/head.js) | test run_next_test 12 finished (2)
+ 0:00.45 PASS test_registered_profiles_totals - [test_registered_profiles_totals : 380] {"trackers":21,"cookies":7} deepEqual {"trackers":21,"cookies":7}
+ 0:00.45 PASS test_registered_profiles_totals - [test_registered_profiles_totals : 382] {"trackers":26,"cookies":7} deepEqual {"trackers":26,"cookies":7}
+ 0:00.46 PASS test_registered_profiles_totals - [test_registered_profiles_totals : 384] {"trackers":26,"cookies":7} deepEqual {"trackers":26,"cookies":7}
+ 0:00.46 PASS test_registered_profiles_totals - [test_registered_profiles_totals : 388] {"trackers":16,"cookies":4} deepEqual {"trackers":16,"cookies":4}
+ 0:00.46 PASS test_registered_profiles_totals - [test_registered_profiles_totals : 391] {"trackers":0,"cookies":0} deepEqual {"trackers":0,"cookies":0}
+ 0:00.46 INFO (xpcshell/head.js) | test run_next_test 13 pending (2)
+ 0:00.46 INFO (xpcshell/head.js) | test test_registered_profiles_totals finished (2)
+ 0:00.46 INFO (xpcshell/head.js) | test run_next_test 13 finished (1)
+ 0:00.46 INFO exiting test
+ 0:00.48 TEST_END: Test PASS. Subtests passed 34/34. Unexpected 0
+ 0:00.48 INFO INFO | Result summary:
+ 0:00.48 INFO INFO | Passed: 1
+ 0:00.48 INFO INFO | Failed: 0
+ 0:00.48 INFO INFO | Todo: 0
+ 0:00.48 INFO INFO | Retried: 0
+ 0:00.48 SUITE_END
+
+xpcshell
+~~~~~~~~
+Ran 35 checks (34 subtests, 1 tests)
+Expected results: 35
+Unexpected results: 0
+OK
+ 0:00.48 INFO http3Server server shutting down ...

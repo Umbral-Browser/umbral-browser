@@ -1,0 +1,543 @@
+Skipping test file installation (up to date). Run with --force to force reinstallation.
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/test/profile_log_20261118_184352.json
+ 0:00.17 INFO These variables are available in the mozinfo environment and can be used to skip tests conditionally:
+ 0:00.17 INFO     a11y_checks: False
+ 0:00.17 INFO     android: False
+ 0:00.17 INFO     apple_catalina: False
+ 0:00.17 INFO     apple_silicon: False
+ 0:00.17 INFO     appname: zen
+ 0:00.17 INFO     arch: x86_64
+ 0:00.17 INFO     artifact: False
+ 0:00.17 INFO     asan: False
+ 0:00.17 INFO     automation: False
+ 0:00.17 INFO     bin_suffix: 
+ 0:00.17 INFO     bits: 64
+ 0:00.17 INFO     buildapp: browser
+ 0:00.17 INFO     buildtype: opt
+ 0:00.17 INFO     buildtype_guess: opt
+ 0:00.17 INFO     cc_type: clang
+ 0:00.17 INFO     ccov: False
+ 0:00.17 INFO     condprof: False
+ 0:00.17 INFO     coverage: False
+ 0:00.17 INFO     crashreporter: True
+ 0:00.17 INFO     datareporting: True
+ 0:00.17 INFO     dbus_enabled: True
+ 0:00.17 INFO     debug: False
+ 0:00.17 INFO     devedition: False
+ 0:00.17 INFO     display: wayland
+ 0:00.17 INFO     e10s: True
+ 0:00.17 INFO     early_beta_or_earlier: False
+ 0:00.17 INFO     enterprise: False
+ 0:00.17 INFO     fission: True
+ 0:00.17 INFO     has_sandbox: True
+ 0:00.17 INFO     headless: True
+ 0:00.17 INFO     healthreport: True
+ 0:00.17 INFO     http2: False
+ 0:00.17 INFO     http3: False
+ 0:00.17 INFO     inc_origin_init: False
+ 0:00.17 INFO     is_emulator: False
+ 0:00.17 INFO     is_ubuntu: False
+ 0:00.17 INFO     isolated_process: False
+ 0:00.17 INFO     linux_distro: Cachyos Linux
+ 0:00.17 INFO     macos_vm: False
+ 0:00.17 INFO     mda_gpu: False
+ 0:00.17 INFO     mingw: False
+ 0:00.17 INFO     mozconfig: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/mozconfig
+ 0:00.17 INFO     msix: False
+ 0:00.17 INFO     nightly_build: False
+ 0:00.17 INFO     nogpu: False
+ 0:00.17 INFO     normandy: True
+ 0:00.17 INFO     nova: True
+ 0:00.17 INFO     official: False
+ 0:00.17 INFO     opt: True
+ 0:00.17 INFO     os: linux
+ 0:00.17 INFO     os_version: Rolling
+ 0:00.17 INFO     pgo: False
+ 0:00.17 INFO     platform_guess: linux64
+ 0:00.17 INFO     processor: x86_64
+ 0:00.17 INFO     release_or_beta: True
+ 0:00.17 INFO     require_signing: False
+ 0:00.17 INFO     sessionHistoryInParent: True
+ 0:00.17 INFO     socketprocess_e10s: False
+ 0:00.17 INFO     socketprocess_networking: False
+ 0:00.17 INFO     standalone: False
+ 0:00.17 INFO     stylo: True
+ 0:00.17 INFO     swgl: False
+ 0:00.17 INFO     sync: True
+ 0:00.17 INFO     telemetry: False
+ 0:00.17 INFO     tests_enabled: True
+ 0:00.17 INFO     toolkit: gtk
+ 0:00.17 INFO     topobjdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu
+ 0:00.17 INFO     topsrcdir: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine
+ 0:00.17 INFO     tsan: False
+ 0:00.17 INFO     ubsan: False
+ 0:00.17 INFO     updater: True
+ 0:00.17 INFO     verify: False
+ 0:00.17 INFO     verify_fission: False
+ 0:00.17 INFO     version: Cachyos Linux Rolling
+ 0:00.17 INFO     vertical_tab: False
+ 0:00.17 INFO     win10_2009: False
+ 0:00.17 INFO     win11_2009: False
+ 0:00.17 INFO     wmfme: 0
+ 0:00.17 INFO     xorigin: False
+ 0:00.17 INFO Checking for ssltunnel processes...
+ 0:00.19 INFO NOT killing {'ppid': 50028, 'username': 'martin', 'name': 'ssltunnel', 'pid': 50110} (not an orphan?)
+ 0:00.19 INFO Checking for xpcshell processes...
+ 0:00.20 INFO NOT killing {'ppid': 50028, 'username': 'martin', 'name': 'xpcshell', 'pid': 50108} (not an orphan?)
+ 0:00.20 SUITE_START: mochitest-browser - running 1 tests
+ 0:00.20 INFO Running manifest: toolkit/components/antitracking/test/browser/browser.toml
+ 0:00.20 INFO The following extra prefs will be set:
+  dom.storage_access.prompt.testing=true
+  dom.storage_access.prompt.testing.allow=true
+  dom.storage_access.frame_only=true
+  privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction=true
+  network.cookie.sameSite.laxByDefault=false
+  dom.security.https_first=false
+  dom.storage_access.dont_grant_insecure_contexts=true
+  network.lna.block_trackers=false
+ 0:00.24 pid:50304 Full command: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/pk12util -i /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/build/pgo/certs/mochitest.client -w /tmp/tmp4vp_rn__.mozrunner/.crtdbpw -d /tmp/tmp4vp_rn__.mozrunner
+pid:50304 pk12util: PKCS12 IMPORT SUCCESSFUL
+
+ 0:00.29 INFO WebSocket server port 9988 already in use, falling back to port 39081
+ 0:00.29 INFO MochitestServer : launching ['/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/xpcshell', '-g', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin', '-e', "const _PROFILE_PATH = '/tmp/tmp4vp_rn__.mozrunner'; const _SERVER_PORT = '8888'; const _SERVER_ADDR = '127.0.0.1'; const _TEST_PREFIX = undefined; const _DISPLAY_RESULTS = false; const _HTTPD_PATH = '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/components'; ", '-f', '/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/server.js']
+ 0:00.29 INFO runtests.py | Server pid: 50314
+ 0:00.29 INFO runtests.py | Websocket server pid: 50315
+ 0:00.29 INFO runtests.py | SSL tunnel pid: 50316
+ 0:00.34 INFO use http3 server: False
+ 0:00.34 INFO Use build node at /home/martin/.mozbuild/node/bin/node
+ 0:00.34 INFO mozserve | Found moz-http2 server path: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/xpcshell/moz-http2/moz-http2.js
+ 0:00.34 INFO Found node at /home/martin/.mozbuild/node/bin/node
+ 0:00.39 INFO mozserve | moz-http2 server msg: HTTP2 server listening on ports 46527,45581
+
+ 0:00.39 INFO moz-http2 server started on ports 46527, 45581
+ 0:00.39 INFO node moz-http2 [stderr] (node:50358) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+
+ 0:00.39 INFO node moz-http2 [stderr] (Use `node --trace-deprecation ...` to show where the warning was created)
+
+ 0:00.39 INFO runtests.py | Running with scheme: http
+ 0:00.39 INFO runtests.py | Running with e10s: True
+ 0:00.39 INFO runtests.py | Running with fission: True
+ 0:00.39 INFO runtests.py | Running with cross-origin iframes: False
+ 0:00.39 INFO runtests.py | Running with socketprocess_e10s: False
+ 0:00.39 INFO runtests.py | Running http tests: start.
+
+ 0:00.41 INFO Application command: /usr/bin/gdb -batch -x /tmp/umbral-promises.gdb -q --args /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/zen -marionette -remote-allow-system-access -foreground -profile /tmp/tmp4vp_rn__.mozrunner
+ 0:00.41 INFO runtests.py | Application pid: 50367
+ 0:00.41 Started process `GECKO(50367)`
+Function "mozilla::dom::Promise::MaybeRejectWithUndefined()" not defined.
+Breakpoint 1 (mozilla::dom::Promise::MaybeRejectWithUndefined()) pending.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[New Thread 0x7fffef5ff6c0 (LWP 50395) (id 2)]
+[Thread 0x7fffef5ff6c0 (LWP 50395) (id 2) exited]
+[New Thread 0x7fffef5ff6c0 (LWP 50396) (id 3)]
+warning: Corrupted shared library list: 0x7ffff768a500 != 0x7ffff769d600
+[Detaching after fork from child process 50397]
+warning: Corrupted shared library list: 0x7ffff7698200 != 0x7ffff768a500
+warning: Corrupted shared library list: 0x7ffff7698200 != 0x7ffff768a500
+warning: Corrupted shared library list: 0x7ffff769fa00 != 0x7ffff7698800
+warning: Corrupted shared library list: 0x7ffff769ee00 != 0x7ffff769fa00
+warning: Corrupted shared library list: 0x7ffff7699a00 != 0x7ffff7698e00
+warning: Corrupted shared library list: 0x7ffff7699a00 != 0x7ffff7698e00
+warning: Corrupted shared library list: 0x7ffff769f400 != 0x7ffff7699a00
+warning: Corrupted shared library list: 0x7ffff76e3400 != 0x7ffff769f400
+warning: Corrupted shared library list: 0x7ffff76e3400 != 0x7ffff769f400
+warning: File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/libxul.so-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+	add-auto-load-safe-path /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/libxul.so-gdb.py
+line to your configuration file "/home/martin/.config/gdb/gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/home/martin/.config/gdb/gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+warning: Corrupted shared library list: 0x7ffff76e4d00 != 0x7ffff769b200
+warning: Corrupted shared library list: 0x7ffff76e4d00 != 0x7ffff769b200
+[New Thread 0x7fffdd4b26c0 (LWP 50421) (id 4)]
+[Thread 0x7fffef5ff6c0 (LWP 50396) (id 3) exited]
+[New Thread 0x7fffeaf626c0 (LWP 50422) (id 5)]
+*** You are running in headless mode.
+[New Thread 0x7fffef5ff6c0 (LWP 50423) (id 6)]
+[New Thread 0x7fffdc4b16c0 (LWP 50424) (id 7)]
+[New Thread 0x7fffdb4b06c0 (LWP 50425) (id 8)]
+[New Thread 0x7fffd9dff6c0 (LWP 50426) (id 9)]
+[New Thread 0x7fffd8dfe6c0 (LWP 50427) (id 10)]
+warning: Corrupted shared library list: 0x7fffe8b21200 != 0x7fffe8b1e000
+[New Thread 0x7fffd7ae56c0 (LWP 50428) (id 11)]
+[Detaching after vfork from child process 50429]
+[New Thread 0x7fffd7d536c0 (LWP 50430) (id 12)]
+[New Thread 0x7fffd78e46c0 (LWP 50431) (id 13)]
+[New Thread 0x7fffd78a36c0 (LWP 50432) (id 14)]
+[New Thread 0x7fffd78626c0 (LWP 50433) (id 15)]
+[New Thread 0x7fffd75ff6c0 (LWP 50434) (id 16)]
+[New Thread 0x7fffd75be6c0 (LWP 50435) (id 17)]
+[New Thread 0x7fffd757d6c0 (LWP 50436) (id 18)]
+[New Thread 0x7fffd753c6c0 (LWP 50437) (id 19)]
+[New Thread 0x7fffd74fb6c0 (LWP 50438) (id 20)]
+[New Thread 0x7fffd74ba6c0 (LWP 50439) (id 21)]
+[New Thread 0x7fffd74796c0 (LWP 50440) (id 22)]
+[New Thread 0x7fffd6eff6c0 (LWP 50441) (id 23)]
+[New Thread 0x7fffd5efe6c0 (LWP 50442) (id 24)]
+[New Thread 0x7fffd4efd6c0 (LWP 50443) (id 25)]
+[New Thread 0x7fffd3efc6c0 (LWP 50444) (id 26)]
+[Thread 0x7fffd3efc6c0 (LWP 50444) (id 26) exited]
+[New Thread 0x7fffd780d6c0 (LWP 50445) (id 27)]
+[New Thread 0x7fffd2efb6c0 (LWP 50446) (id 28)]
+[New Thread 0x7fffd2eba6c0 (LWP 50447) (id 29)]
+[New Thread 0x7fffd27ff6c0 (LWP 50448) (id 30)]
+[New Thread 0x7fffd27be6c0 (LWP 50449) (id 31)]
+[Detaching after fork from child process 50450]
+[New Thread 0x7fffd277d6c0 (LWP 50451) (id 32)]
+[New Thread 0x7fffd273c6c0 (LWP 50455) (id 33)]
+[New Thread 0x7fffd24ff6c0 (LWP 50456) (id 34)]
+[New Thread 0x7fffd23006c0 (LWP 50457) (id 35)]
+[New Thread 0x7fffd21016c0 (LWP 50458) (id 36)]
+[New Thread 0x7fffd1f026c0 (LWP 50459) (id 37)]
+[New Thread 0x7fffd1d036c0 (LWP 50460) (id 38)]
+[New Thread 0x7fffd1b046c0 (LWP 50461) (id 39)]
+[New Thread 0x7fffd19056c0 (LWP 50462) (id 40)]
+[New Thread 0x7fffd17066c0 (LWP 50463) (id 41)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_socket_pid50450.log
+[New Thread 0x7fffd26fb6c0 (LWP 50469) (id 42)]
+[New Thread 0x7fffd26ba6c0 (LWP 50470) (id 43)]
+[New Thread 0x7fffd26756c0 (LWP 50471) (id 44)]
+[Thread 0x7fffd2eba6c0 (LWP 50447) (id 29) exited]
+[New Thread 0x7fffd10ff6c0 (LWP 50472) (id 45)]
+[New Thread 0x7fffd10be6c0 (LWP 50474) (id 46)]
+[New Thread 0x7fffd2eba6c0 (LWP 50476) (id 47)]
+[New Thread 0x7fffd107d6c0 (LWP 50477) (id 48)]
+[New Thread 0x7fffd06ff6c0 (LWP 50478) (id 49)]
+warning: Corrupted shared library list: 0x7fffd7609600 != 0x7fffe8b21200
+[New Thread 0x7fffcfc626c0 (LWP 50479) (id 50)]
+[New Thread 0x7fffcfaff6c0 (LWP 50480) (id 51)]
+[New Thread 0x7fffcfabe6c0 (LWP 50481) (id 52)]
+[New Thread 0x7fffcf8bd6c0 (LWP 50482) (id 53)]
+[New Thread 0x7fffcf4ff6c0 (LWP 50483) (id 54)]
+[New Thread 0x7fffcf0ff6c0 (LWP 50484) (id 55)]
+[New Thread 0x7fffcecff6c0 (LWP 50485) (id 56)]
+[New Thread 0x7fffce8ff6c0 (LWP 50486) (id 57)]
+[New Thread 0x7fffce4ff6c0 (LWP 50487) (id 58)]
+[New Thread 0x7fffce0ff6c0 (LWP 50488) (id 59)]
+[New Thread 0x7fffcdcff6c0 (LWP 50489) (id 60)]
+[New Thread 0x7fffcd8ff6c0 (LWP 50490) (id 61)]
+[New Thread 0x7fffcd4ff6c0 (LWP 50491) (id 62)]
+[New Thread 0x7fffcd0ff6c0 (LWP 50492) (id 63)]
+[New Thread 0x7fffcccff6c0 (LWP 50493) (id 64)]
+[New Thread 0x7fffcc8ff6c0 (LWP 50494) (id 65)]
+[New Thread 0x7fffcc6fe6c0 (LWP 50495) (id 66)]
+[New Thread 0x7fffcc4fd6c0 (LWP 50496) (id 67)]
+[New Thread 0x7fffcc2fc6c0 (LWP 50497) (id 68)]
+[New Thread 0x7fffcc0fb6c0 (LWP 50498) (id 69)]
+[New Thread 0x7fffcbefa6c0 (LWP 50499) (id 70)]
+[New Thread 0x7fffcf6bc6c0 (LWP 50500) (id 71)]
+[New Thread 0x7fffd3efc6c0 (LWP 50501) (id 72)]
+[New Thread 0x7fffcf2fe6c0 (LWP 50502) (id 73)]
+1795023840536	Marionette	INFO	Marionette enabled
+1795023840537	Marionette	TRACE	Received observer notification final-ui-startup
+1795023840537	Marionette	DEBUG	Initializing Marionette
+[Detaching after fork from child process 50503]
+console.error: "Warning: unrecognized command line flag" "-foreground"
+JavaScript warning: moz-src:///browser/components/aiwindow/ui/modules/AIWindow.sys.mjs, line 414: unreachable code after return statement
+[New Thread 0x7fffcf2bd6c0 (LWP 50504) (id 74)]
+1795023840609	Marionette	INFO	Listening on port 2828
+1795023840611	Marionette	DEBUG	Marionette is listening
+1795023840625	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:41398
+1795023840633	Marionette	DEBUG	Accepted connection 1 from 127.0.0.1:41406
+[New Thread 0x7fffcabff6c0 (LWP 50505) (id 75)]
+1795023840640	Marionette	DEBUG	Closed connection 0
+1795023840641	Marionette	DEBUG	Accepted connection 2 from 127.0.0.1:41422
+1795023840650	Marionette	DEBUG	Closed connection 1
+1795023840650	Marionette	DEBUG	Accepted connection 3 from 127.0.0.1:41424
+[New Thread 0x7fffcf27c6c0 (LWP 50506) (id 76)]
+1795023840699	Marionette	DEBUG	2 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+1795023840705	Marionette	DEBUG	Waiting for initial application window
+1795023840707	Marionette	DEBUG	3 -> [0,1,"WebDriver:NewSession",{"strictFileInteractability":true}]
+1795023840707	RemoteAgent	WARN	WebDriverProcessData actor is already registered!
+1795023840707	Marionette	DEBUG	Waiting for initial application window
+console.debug: "ZenSessionManager:" "Initializing session manager"
+console.debug: "ZenSessionManager:" "Session file path:" "/tmp/tmp4vp_rn__.mozrunner/zen-sessions.jsonlz4"
+console.debug: "ZenSessionManager:" "Reading Zen session file from disk"
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50507.log
+[New Thread 0x7fffcee746c0 (LWP 50509) (id 77)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50507.log
+[New Thread 0x7fffcea506c0 (LWP 50512) (id 78)]
+[New Thread 0x7fffce6746c0 (LWP 50513) (id 79)]
+[New Thread 0x7fffce2506c0 (LWP 50514) (id 80)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_rdd_pid50516.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_rdd_pid50516.log
+JavaScript warning: chrome://browser/content/tabbrowser/drag-and-drop.js, line 1587: unreachable code after return statement
+JavaScript warning: chrome://browser/content/tabbrowser/tabs.mjs, line 1042: unreachable code after return statement
+[New Thread 0x7fffcdefe6c0 (LWP 50541) (id 81)]
+[New Thread 0x7fffcdebd6c0 (LWP 50542) (id 82)]
+[New Thread 0x7fffcde7c6c0 (LWP 50543) (id 83)]
+[New Thread 0x7fffcdafe6c0 (LWP 50544) (id 84)]
+[New Thread 0x7fffcdabd6c0 (LWP 50546) (id 85)]
+[New Thread 0x7fffcda7c6c0 (LWP 50548) (id 86)]
+[New Thread 0x7fffcd6fe6c0 (LWP 50549) (id 87)]
+console.error: "Failed to read backup file /tmp/tmp4vp_rn__.mozrunner/zen-sessions-backup/clean.jsonlz4" (new NotFoundError("Could not open `/tmp/tmp4vp_rn__.mozrunner/zen-sessions-backup/clean.jsonlz4': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+console.debug: "ZenSessionManager:" "No spaces data found in session file, running migration" [object Object]
+console.error: "Failed to read spaces data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_workspaces", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+console.error: "Failed to read pins data from database during migration" (new Error("Error(s) encountered during statement execution: no such table: zen_pins", "resource://gre/modules/Sqlite.sys.mjs", 1193))
+console.debug: "ZenSessionManager:" "Restoring tabs from Places DB after migration" null (void 0) [object Object]
+console.debug: "ZenSessionManager:" "Build ID has changed since last session, not restoring only pinned tabs" ({buildId:"20261104111407", lastBuildId:""})
+console.debug: "ZenSessionManager:" "Saving windata state after migration"
+console.debug: "ZenSessionManager:" "Saving Zen session data with 0 tabs"
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/tabbrowser/tabs.mjs:46:10
+JavaScript warning: moz-src:///browser/components/urlbar/UrlbarMuxerStandard.sys.mjs, line 936: unreachable code after return statement
+
+UMBRAL_NATIVE_REJECT
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffc86ba5b0) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471b4cb in mozilla::dom::DOMLocalization::TranslateElements (this=this@entry=0x7fffcbabef60, aElements=..., aProto=aProto@entry=0x7fffcba89890, aRv=...) at ./../../../dom/l10n/DOMLocalization.cpp:353
+#2  0x00007fffe471dcc2 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffcbabef60, aRv=...) at ./../../../dom/l10n/DocumentL10n.cpp:254
+#3  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabef60) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#4  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#5  0x00007fffe417387c in mozilla::dom::PrototypeDocumentContentSink::MaybeDoneWalking (this=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:641
+#6  mozilla::dom::PrototypeDocumentContentSink::ResumeWalkInternal (this=this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:628
+#7  0x00007fffe417288e in mozilla::dom::PrototypeDocumentContentSink::ResumeWalk (this=0x7fffc86ba5b0, this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:456
+#8  0x00007fffe4174905 in mozilla::dom::PrototypeDocumentContentSink::OnScriptCompileComplete (this=0x7fffcba96300, aStencil=<optimized out>, aStatus=nsresult::NS_OK) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:951
+#9  0x00007fffe4575054 in NotifyOffThreadScriptCompletedTask::Run (this=<optimized out>) at ./../../../dom/xul/nsXULElement.cpp:1822
+#10 0x00007fffe15244f7 in mozilla::TaskController::RunTask (aTask=0x7fffc9ed9e80) at ./../../../xpcom/threads/TaskController.cpp:244
+#11 mozilla::TaskController::DoExecuteNextTaskOnlyMainThreadInternal (this=this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1367
+#12 0x00007fffe1522777 in mozilla::TaskController::ExecuteNextTaskOnlyMainThreadInternal (this=0x7fffc86ba5b0, this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1190
+#13 0x00007fffe1522958 in mozilla::TaskController::ProcessPendingMTTask (this=0x7fffd7c07430, aMayWait=false) at ./../../../xpcom/threads/TaskController.cpp:657
+#14 0x00007fffe1528f3f in mozilla::TaskController::TaskController()::$_0::operator()() const (this=<optimized out>) at ./../../../xpcom/threads/TaskController.cpp:349
+
+UMBRAL_NATIVE_REJECT
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=this@entry=0x7fffc86ba490) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471de36 in mozilla::dom::DocumentL10n::TranslateDocument (this=this@entry=0x7fffcbabef60, aRv=...) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/dom/Element.h:2769
+#2  0x00007fffe471d6a8 in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabef60) at ./../../../dom/l10n/DocumentL10n.cpp:161
+#3  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#4  0x00007fffe417387c in mozilla::dom::PrototypeDocumentContentSink::MaybeDoneWalking (this=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:641
+#5  mozilla::dom::PrototypeDocumentContentSink::ResumeWalkInternal (this=this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:628
+#6  0x00007fffe417288e in mozilla::dom::PrototypeDocumentContentSink::ResumeWalk (this=0x7fffc86ba490, this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:456
+#7  0x00007fffe4174905 in mozilla::dom::PrototypeDocumentContentSink::OnScriptCompileComplete (this=0x7fffcba96300, aStencil=<optimized out>, aStatus=nsresult::NS_OK) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:951
+#8  0x00007fffe4575054 in NotifyOffThreadScriptCompletedTask::Run (this=<optimized out>) at ./../../../dom/xul/nsXULElement.cpp:1822
+#9  0x00007fffe15244f7 in mozilla::TaskController::RunTask (aTask=0x7fffc9ed9e80) at ./../../../xpcom/threads/TaskController.cpp:244
+#10 mozilla::TaskController::DoExecuteNextTaskOnlyMainThreadInternal (this=this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1367
+#11 0x00007fffe1522777 in mozilla::TaskController::ExecuteNextTaskOnlyMainThreadInternal (this=0x7fffc86ba490, this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1190
+#12 0x00007fffe1522958 in mozilla::TaskController::ProcessPendingMTTask (this=0x7fffd7c07430, aMayWait=false) at ./../../../xpcom/threads/TaskController.cpp:657
+#13 0x00007fffe1528f3f in mozilla::TaskController::TaskController()::$_0::operator()() const (this=<optimized out>) at ./../../../xpcom/threads/TaskController.cpp:349
+#14 mozilla::detail::RunnableFunction<(lambda at ./../../../xpcom/threads/TaskController.cpp:349:7)>::Run(void) (this=<optimized out>) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/xpcom/threads/nsThreadUtils.h:535
+console.error: (new TypeError("can't access property \"tabContainer\", gBrowser is undefined", "resource:///modules/zen/ZenVerticalTabsManager.mjs", 394))
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:43:13
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/UmbralBrowserChrome.mjs:44:13
+JavaScript warning: moz-src:///browser/components/tabbrowser/Tabbrowser.sys.mjs, line 498: unreachable code after return statement
+console.warn: "Key element" <key id="key_newNavigatorTab" data-l10n-id="tab-new-shortcut" modifiers="accel" command="cmd_newNavigatorTabNoEvent" reserved="true"> "is missing \"key\" and \"keycode\" attributes necessary to define a shortcut"
+[New Thread 0x7fffceefe6c0 (LWP 50572) (id 88)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50571.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50571.log
+[New Thread 0x7fffcf23b6c0 (LWP 50576) (id 89)]
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:70:12
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:71:12
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:72:16
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! moz-src:///zen/library/ZenLibraryWidget.sys.mjs:73:16
+
+UMBRAL_NATIVE_REJECT
+#0  mozilla::dom::Promise::MaybeRejectWithUndefined (this=0x7fffca6a1530) at ./../../../dom/promise/Promise.cpp:756
+#1  0x00007fffe471d80d in mozilla::dom::DocumentL10n::TriggerInitialTranslation (this=0x7fffcbabef60) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/include/mozilla/RefPtr.h:314
+#2  0x00007fffe23184ad in mozilla::dom::Document::OnParsingCompleted (this=<optimized out>) at ./../../../dom/base/Document.cpp:4935
+#3  0x00007fffe417387c in mozilla::dom::PrototypeDocumentContentSink::MaybeDoneWalking (this=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:641
+#4  mozilla::dom::PrototypeDocumentContentSink::ResumeWalkInternal (this=this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:628
+#5  0x00007fffe417288e in mozilla::dom::PrototypeDocumentContentSink::ResumeWalk (this=0x7fffca6a1530, this@entry=0x7fffcba96300) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:456
+#6  0x00007fffe4174905 in mozilla::dom::PrototypeDocumentContentSink::OnScriptCompileComplete (this=0x7fffcba96300, aStencil=<optimized out>, aStatus=nsresult::NS_OK) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/dom/prototype/PrototypeDocumentContentSink.cpp:951
+#7  0x00007fffe4575054 in NotifyOffThreadScriptCompletedTask::Run (this=<optimized out>) at ./../../../dom/xul/nsXULElement.cpp:1822
+#8  0x00007fffe15244f7 in mozilla::TaskController::RunTask (aTask=0x7fffc9ed9e80) at ./../../../xpcom/threads/TaskController.cpp:244
+#9  mozilla::TaskController::DoExecuteNextTaskOnlyMainThreadInternal (this=this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1367
+#10 0x00007fffe1522777 in mozilla::TaskController::ExecuteNextTaskOnlyMainThreadInternal (this=0x7fffca6a1530, this@entry=0x7fffd7c07430, aProofOfLock=...) at ./../../../xpcom/threads/TaskController.cpp:1190
+#11 0x00007fffe1522958 in mozilla::TaskController::ProcessPendingMTTask (this=0x7fffd7c07430, aMayWait=false) at ./../../../xpcom/threads/TaskController.cpp:657
+#12 0x00007fffe1528f3f in mozilla::TaskController::TaskController()::$_0::operator()() const (this=<optimized out>) at ./../../../xpcom/threads/TaskController.cpp:349
+#13 mozilla::detail::RunnableFunction<(lambda at ./../../../xpcom/threads/TaskController.cpp:349:7)>::Run(void) (this=<optimized out>) at /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/xpcom/threads/nsThreadUtils.h:535
+#14 0x00007fffe1537cd1 in nsThread::ProcessNextEvent (this=0x7ffff76f8d00, aMayWait=<optimized out>, aResult=0x7fffffffb377) at ./../../../xpcom/threads/nsThread.cpp:1319
+console.warn: "Error loading shortcuts file" (new NotFoundError("Could not open `/tmp/tmp4vp_rn__.mozrunner/zen-keyboard-shortcuts.json': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+[Thread 0x7fffd26ba6c0 (LWP 50470) (id 43) exited]
+console.warn: "Zen CKS: Migrating shortcuts from version" 0 "to" 21
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: resource:///modules/ZenSiteDataPanel.sys.mjs, line 173: TypeError: can't access property "addProgressListener", this.window.gBrowser is undefined
+JavaScript error: , line 0: uncaught exception: undefined
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=11.4474) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+[New Thread 0x7fffd26ba6c0 (LWP 50597) (id 90)]
+[New Thread 0x7fffbf5ff6c0 (LWP 50598) (id 91)]
+[New Thread 0x7fffceebd6c0 (LWP 50602) (id 92)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50600.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50600.log
+console.warn: "[ZenMods]: Mods disabled by user or in safe mode."
+[New Thread 0x7fffcd6bd6c0 (LWP 50615) (id 93)]
+console.debug: "[gZenWorkspaces]:" "Changing workspace to" "{9dd35af8-93c0-478b-b4b1-ee34cac7daf7}"
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:730:13
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:858:14
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:862:30
+[Parent 50392: Main Thread]: I/SlowChromeEvent Please do not use mouseenter/leave events in chrome. They are slower than mouseover/out! chrome://browser/content/zen-components/ZenCompactMode.mjs:919:13
+[New Thread 0x7fffcd67c6c0 (LWP 50626) (id 94)]
+[New Thread 0x7fffcd2666c0 (LWP 50627) (id 95)]
+[New Thread 0x7fffcce666c0 (LWP 50628) (id 96)]
+[New Thread 0x7fffcca666c0 (LWP 50629) (id 97)]
+[New Thread 0x7fffcbb616c0 (LWP 50649) (id 98)]
+[New Thread 0x7fffbd24b6c0 (LWP 50650) (id 99)]
+[New Thread 0x7fffbcc376c0 (LWP 50651) (id 100)]
+console.error: services.settings: 
+  Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+  Stack:
+    EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+list@resource://services-settings/Database.sys.mjs:96:13
+async*get@resource://services-settings/RemoteSettingsClient.sys.mjs:570:28
+async*getRecipesFromCollection/recipes<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:793:16
+#raceShutdown@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:749:34
+getRecipesFromCollection@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:792:41
+getRecipesFromAllCollections@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:648:39
+#updateImpl@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:518:33
+async*updateRecipes/<@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:55
+LockGrantedCallback*withUpdateLock@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:371:26
+updateRecipes@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:435:18
+enable@resource://nimbus/lib/RemoteSettingsExperimentLoader.sys.mjs:323:16
+#init@resource://nimbus/ExperimentAPI.sys.mjs:325:28
+async*init@resource://nimbus/ExperimentAPI.sys.mjs:264:49
+finishInit@resource://normandy/Normandy.sys.mjs:108:30
+async*init@resource://normandy/Normandy.sys.mjs:79:16
+async*fn@resource://gre/modules/BrowserUtils.sys.mjs:83:33
+callSingleListener@resource://gre/modules/BrowserUtils.sys.mjs:768:15
+callModulesFromCategory@resource://gre/modules/BrowserUtils.sys.mjs:819:23
+BG__beforeUIStartup@resource:///modules/BrowserGlue.sys.mjs:422:23
+BG_observe@resource:///modules/BrowserGlue.sys.mjs:204:14
+
+[New Thread 0x7fffbca386c0 (LWP 50652) (id 101)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50653.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50653.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50656.log
+[New Thread 0x7fffbc9f76c0 (LWP 50661) (id 102)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50656.log
+[New Thread 0x7fffbc9b66c0 (LWP 50664) (id 103)]
+[New Thread 0x7fffbc9756c0 (LWP 50665) (id 104)]
+warning: Corrupted shared library list: 0x7fffbe3f0a00 != 0x7fffd29ccb00
+warning: Corrupted shared library list: 0x7fffbe3f1600 != 0x7fffbe3f0a00
+[New Thread 0x7fffbc7a36c0 (LWP 50700) (id 105)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_utility_pid50717.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_utility_pid50717.log
+[New Thread 0x7fffbc7626c0 (LWP 50724) (id 106)]
+1795023844654	Marionette	TRACE	Received observer notification browser-idle-startup-tasks-finished
+[New Thread 0x7fffbbbff6c0 (LWP 50726) (id 107)]
+[New Thread 0x7fffbbbbe6c0 (LWP 50727) (id 108)]
+[New Thread 0x7fffbbb7d6c0 (LWP 50728) (id 109)]
+[New Thread 0x7fffbb9ff6c0 (LWP 50729) (id 110)]
+[New Thread 0x7fffbb9be6c0 (LWP 50730) (id 111)]
+1795023844803	RemoteAgent	TRACE	[10] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+1795023844803	RemoteAgent	TRACE	[10] ProgressListener Setting unload timer (5000ms)
+1795023844804	RemoteAgent	TRACE	[10] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+1795023844804	RemoteAgent	TRACE	[10] Document already finished loading: about:blank
+1795023844804	RemoteAgent	TRACE	[10] ProgressListener Stop: has error=false url=about:blank
+1795023844804	RemoteAgent	TRACE	[10] ProgressListener Start: expectNavigation=false resolveWhenStarted=false unloadTimeout=5000 waitForExplicitStart=false
+1795023844804	RemoteAgent	TRACE	[10] ProgressListener Setting unload timer (5000ms)
+1795023844804	RemoteAgent	TRACE	[10] Wait for initial navigation: isUncommittedInitial=false, isLoadingDocument=false
+1795023844804	RemoteAgent	TRACE	[10] Document already finished loading: about:blank
+1795023844804	RemoteAgent	TRACE	[10] ProgressListener Stop: has error=false url=about:blank
+1795023844807	Marionette	WARN	MarionetteCommands actor is already registered!
+1795023844808	Marionette	DEBUG	2 <- [1,1,null,{"sessionId":"47ee89b3-8848-47f3-ab70-6e348622b8c9","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":50392,"moz:profile":"/tmp/tmp4vp_rn__.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+1795023844808	Marionette	DEBUG	3 <- [1,1,null,{"sessionId":"2a210620-1ea3-47ce-a03a-06f99ab2a7f8","capabilities":{"acceptInsecureCerts":false,"browserName":"zen","browserVersion":"1.0.0","platformName":"linux","setWindowRect":true,"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:158.0) Gecko/20100101 Firefox/158.0","moz:buildID":"20261104120844","moz:headless":true,"moz:platformVersion":"7.3.3-1-cachyos","moz:processID":50392,"moz:profile":"/tmp/tmp4vp_rn__.mozrunner","moz:shutdownTimeout":60000,"pageLoadStrategy":"normal","timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"strictFileInteractability":true,"moz:accessibilityChecks":false,"moz:webdriverClick":true,"moz:windowless":false,"proxy":{}}}]
+[New Thread 0x7fffbb97d6c0 (LWP 50731) (id 112)]
+[New Thread 0x7fffbb77c6c0 (LWP 50732) (id 113)]
+[Thread 0x7fffbb77c6c0 (LWP 50732) (id 113) exited]
+[New Thread 0x7fffbb77c6c0 (LWP 50734) (id 114)]
+[New Thread 0x7fffbb57b6c0 (LWP 50735) (id 115)]
+[Thread 0x7fffbb57b6c0 (LWP 50735) (id 115) exited]
+[New Thread 0x7fffbb37a6c0 (LWP 50737) (id 116)]
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50733.log
+### XPCOM_MEM_BLOAT_LOG defined -- logging bloat/leaks to /tmp/tmp4vp_rn__.mozrunner/runtests_leaks_tab_pid50733.log
+[New Thread 0x7fffbb3396c0 (LWP 50739) (id 117)]
+[Thread 0x7fffbb3396c0 (LWP 50739) (id 117) exited]
+1795023844816	Marionette	DEBUG	2 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmpcqf6jnzp.zip"}]
+1795023844818	Marionette	DEBUG	3 -> [0,2,"Addon:Install",{"temporary":false,"path":"/tmp/tmpsq4mr7q3.zip"}]
+[New Thread 0x7fffbb57b6c0 (LWP 50744) (id 118)]
+[Thread 0x7fffbb57b6c0 (LWP 50744) (id 118) exited]
+[New Thread 0x7fffbb3396c0 (LWP 50754) (id 119)]
+[Thread 0x7fffbb3396c0 (LWP 50754) (id 119) exited]
+[New Thread 0x7fffbb57b6c0 (LWP 50755) (id 120)]
+[Thread 0x7fffbb57b6c0 (LWP 50755) (id 120) exited]
+[New Thread 0x7fffbb3396c0 (LWP 50757) (id 121)]
+[Thread 0x7fffbb97d6c0 (LWP 50731) (id 112) exited]
+[Thread 0x7fffbb3396c0 (LWP 50757) (id 121) exited]
+1795023844841	Marionette	DEBUG	3 <- [1,2,{"error":"invalid web extension","message":"Could not install Add-on: ERROR_FILE_ACCESS: There was an error accessing the filesystem.","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8\nWebDriverError@chrome://remote/content/shared/webdriver/E ... ote/content/marionette/server.sys.mjs:263:9\n_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20\n"},null]
+Traceback (most recent call last):
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 4196, in doTests
+    ret, _ = self.runApp(
+             ~~~~~~~~~~~^
+        testURL,
+        ^^^^^^^^
+    ...<19 lines>...
+        currentManifest=manifestToFilter,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/_tests/testing/mochitest/runtests.py", line 3140, in runApp
+    addons.install(temp_addon_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/addons.py", line 63, in install
+    return self._mn._send_message("Addon:Install", body, key="value")
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/decorators.py", line 24, in _
+    return func(*args, **kwargs)
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/marionette.py", line 780, in _send_message
+    self._handle_error(err)
+    ~~~~~~~~~~~~~~~~~~^^^^^
+  File "/run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/testing/marionette/client/marionette_driver/marionette.py", line 792, in _handle_error
+    raise errors.lookup(error)(message, stacktrace=stacktrace)
+marionette_driver.errors.MarionetteException: Could not install Add-on: ERROR_FILE_ACCESS: There was an error accessing the filesystem.
+stacktrace:
+	RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+	WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+	InvalidWebExtensionError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:455:5
+	installAddon@chrome://remote/content/shared/Addon.sys.mjs:71:11
+	async*installWithPath@chrome://remote/content/shared/Addon.sys.mjs:235:25
+	installAddon@chrome://remote/content/marionette/driver.sys.mjs:2289:25
+	dispatch@chrome://remote/content/marionette/server.sys.mjs:317:49
+	execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+	onPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20
+	onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+	_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:493:20
+
+ 0:12.76 ERROR Automation Error: Received unexpected exception while running application
+
+ 0:12.76 INFO Stopping web server
+ 0:12.76 INFO Server shut down.
+ 0:12.76 INFO Web server killed.
+ 0:12.76 INFO Stopping web socket server
+ 0:12.76 INFO Stopping ssltunnel
+ 0:12.77 INFO Buffered messages finished
+TEST-INFO | checking window state
+Browser Chrome Test Summary
+	Passed: 0
+	Failed: 0
+	Todo: 0
+	Retried: 0
+	Mode: e10s
+*** End BrowserChrome Test Results ***
+ 0:12.77 INFO Buffered messages finished
+ 0:12.77 SUITE_END
+ 0:12.77 
+Overall Summary
+===============
+
+mochitest-browser
+~~~~~~~~~~~~~~~~~
+Ran 0 checks ()
+Expected results: 0
+Unexpected results: 0
+
+Error Summary
+-------------
+ERROR Automation Error: Received unexpected exception while running application
+
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

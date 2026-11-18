@@ -1,6 +1,6 @@
 diff --git a/browser/extensions/newtab/prerendered/umbral-home.html b/browser/extensions/newtab/prerendered/umbral-home.html
 new file mode 100644
-index 0000000000..c87e09e37c
+index 0000000000..ea3e2626e1
 --- /dev/null
 +++ b/browser/extensions/newtab/prerendered/umbral-home.html
 @@ -0,0 +1,118 @@
@@ -88,7 +88,7 @@ index 0000000000..c87e09e37c
 +            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
 +          </span>
 +        </div>
-+        <p class="period" id="umbral-home-trackers-period" data-l10n-id="umbral-home-period-seven-days">Last 7 days</p>
++        <p class="period" id="umbral-home-trackers-period" data-l10n-id="umbral-home-period-all-time">All time · Registered profiles and current profile; other open profiles may update later</p>
 +        <p class="metric" id="umbral-home-trackers-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
 +      </article>
 +      <article class="card">
@@ -112,7 +112,7 @@ index 0000000000..c87e09e37c
 +            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
 +          </span>
 +        </div>
-+        <p class="period" id="umbral-home-cookies-period" data-l10n-id="umbral-home-period-seven-days">Last 7 days</p>
++        <p class="period" id="umbral-home-cookies-period" data-l10n-id="umbral-home-period-all-time">All time · Registered profiles and current profile; other open profiles may update later</p>
 +        <p class="metric" id="umbral-home-cookies-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
 +      </article>
 +      <article class="card">

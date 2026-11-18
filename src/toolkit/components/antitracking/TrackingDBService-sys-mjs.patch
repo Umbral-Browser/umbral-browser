@@ -1,0 +1,15 @@
+diff --git a/toolkit/components/antitracking/TrackingDBService.sys.mjs b/toolkit/components/antitracking/TrackingDBService.sys.mjs
+--- a/toolkit/components/antitracking/TrackingDBService.sys.mjs
++++ b/toolkit/components/antitracking/TrackingDBService.sys.mjs
+@@ -236,7 +236,10 @@ TrackingDBService.prototype = {
+       return;
+     }
+ 
+-    let db = await Sqlite.openConnection({ path: lazy.DB_PATH });
++    let db = await Sqlite.openConnection({
++      path: lazy.DB_PATH,
++      openNotExclusive: true,
++    });
+ 
+     try {
+       // Check to see if we need to perform any migrations.
