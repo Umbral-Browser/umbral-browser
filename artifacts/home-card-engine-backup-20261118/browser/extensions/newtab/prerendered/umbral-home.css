@@ -1,0 +1,434 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+:root {
+  color-scheme: light dark;
+  --umbral-page: light-dark(#f6f3ec, #121212);
+  --umbral-ink: light-dark(#241f1a, #f4efe6);
+  --umbral-muted: light-dark(#6a6258, #b7b0a4);
+  --umbral-card: light-dark(rgb(28 24 18 / 4%), rgb(255 255 255 / 5%));
+  --umbral-line: light-dark(rgb(28 24 18 / 14%), rgb(255 255 255 / 14%));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--umbral-page);
+  color: var(--umbral-ink);
+  font: 13px/1.4 system-ui, sans-serif;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px 24px;
+}
+
+#umbral-shortcuts {
+  --shortcut-surface: light-dark(#fff, #202022);
+  --shortcut-hover: light-dark(#f0f0f2, #2a2a2d);
+  --shortcut-ink: light-dark(#242428, #eeeeef);
+  --shortcut-muted: light-dark(#626269, #b8b8bf);
+  --shortcut-border: light-dark(#d7d7dc, #3b3b40);
+  --shortcut-accent: light-dark(#654578, #b99acb);
+  width: min(580px, calc(100% - 40px));
+  margin: 12px auto 32px;
+  color: var(--shortcut-ink);
+  text-align: center;
+}
+
+#umbral-shortcuts h1 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--shortcut-muted);
+}
+
+#umbral-shortcuts-empty {
+  max-width: 340px;
+  margin: 0 auto 20px;
+  color: var(--shortcut-muted);
+}
+
+#umbral-shortcuts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(104px, 120px));
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.shortcut {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--shortcut-border);
+  border-radius: 14px;
+  background: var(--shortcut-surface);
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.shortcut:has(.shortcut-link:hover),
+.shortcut:focus-within {
+  background: var(--shortcut-hover);
+  border-color: var(--shortcut-accent);
+}
+
+.shortcut-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 120px;
+  padding: 18px 10px 12px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.shortcut-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid var(--shortcut-border);
+  border-radius: 11px;
+  color: var(--shortcut-muted);
+  background: var(--shortcut-hover);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.shortcut-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  min-height: 2.8em;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.shortcut-add-item {
+  border-style: dashed;
+  background: transparent;
+}
+
+.shortcut-add-item .shortcut-icon {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--shortcut-accent);
+}
+
+.shortcut-menu {
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-end: 3px;
+  text-align: start;
+}
+
+.shortcut-menu[open] {
+  z-index: 4;
+}
+
+.shortcut-menu summary {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  color: var(--shortcut-muted);
+  font-size: 20px;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+}
+
+.shortcut-menu summary:hover {
+  background: var(--shortcut-hover);
+}
+
+.shortcut-menu-actions {
+  position: absolute;
+  inset-block-start: 32px;
+  inset-inline-end: 0;
+  display: grid;
+  width: 172px;
+  padding: 5px;
+  border: 1px solid var(--shortcut-border);
+  border-radius: 10px;
+  background: var(--shortcut-surface);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+}
+
+.shortcut-menu-actions button,
+.shortcut-actions button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: transparent;
+  color: var(--shortcut-ink);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.shortcut-menu-actions button:hover:not(:disabled) {
+  background: var(--shortcut-hover);
+}
+
+#umbral-shortcut-dialog {
+  width: min(380px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 24px;
+  border: 1px solid var(--shortcut-border);
+  border-radius: 16px;
+  background: var(--shortcut-surface);
+  color: var(--shortcut-ink);
+  text-align: start;
+  box-shadow: 0 16px 64px rgb(0 0 0 / 25%);
+}
+
+#umbral-shortcut-dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+#umbral-shortcut-form {
+  display: grid;
+  gap: 8px;
+}
+
+#umbral-shortcut-form h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#umbral-shortcut-form label {
+  margin-block-start: 8px;
+  font-size: 12px;
+}
+
+#umbral-shortcut-form input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--shortcut-border);
+  border-radius: 8px;
+  background: var(--shortcut-hover);
+  color: inherit;
+  font: inherit;
+}
+
+#umbral-shortcut-form input[aria-invalid="true"] {
+  border-color: light-dark(#b42318, #ff9c94);
+}
+
+#umbral-shortcuts :focus-visible {
+  outline: 2px solid var(--shortcut-accent);
+  outline-offset: 3px;
+}
+
+#umbral-shortcut-error,
+#umbral-shortcut-form .field-error {
+  margin: 0;
+  font-size: 12px;
+  color: light-dark(#b42318, #ff9c94);
+}
+
+#umbral-shortcut-error:empty,
+#umbral-shortcut-form .field-error:empty {
+  display: none;
+}
+
+.shortcut-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-block-start: 16px;
+}
+
+.shortcut-actions button {
+  border: 1px solid var(--shortcut-border);
+}
+
+.shortcut-actions button[type="submit"] {
+  background: var(--shortcut-hover);
+}
+
+.shortcut-menu-actions button:disabled,
+#umbral-shortcuts-add:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shortcut,
+  .card-tooltip {
+    transition: none;
+  }
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.logo-light {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .logo-dark {
+    display: none;
+  }
+
+  .logo-light {
+    display: block;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+  padding: 0 24px 28px;
+}
+
+.card {
+  position: relative;
+  width: 148px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--umbral-line);
+  border-radius: 10px;
+  background: var(--umbral-card);
+}
+
+.card-heading {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.01em;
+  color: var(--umbral-muted);
+}
+
+.tooltip-trigger {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--umbral-muted);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--umbral-ink);
+  font: inherit;
+  font-size: 11px;
+  cursor: help;
+}
+
+.tooltip-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.card-tooltip {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 210px;
+  padding: 8px 10px;
+  border: 1px solid var(--umbral-line);
+  border-radius: 8px;
+  background: var(--umbral-page);
+  color: var(--umbral-ink);
+  font-size: 12px;
+  font-weight: 400;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 16%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 120ms ease;
+  pointer-events: none;
+}
+
+.tooltip-trigger:hover + .card-tooltip,
+.tooltip-trigger:focus-visible + .card-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card p.period {
+  margin: 4px 0 0;
+  color: var(--umbral-muted);
+  font-size: 10px;
+}
+
+.card p.metric {
+  margin: 3px 0 0;
+}
+
+.card p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .shortcut-menu-actions {
+    position: fixed;
+    inset-inline: 16px;
+    inset-block: auto 16px;
+    width: auto;
+  }
+}
+
+@media (pointer: coarse) {
+  .shortcut-menu summary {
+    width: 40px;
+    height: 40px;
+  }
+}

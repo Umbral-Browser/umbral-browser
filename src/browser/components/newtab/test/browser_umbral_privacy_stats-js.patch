@@ -20,14 +20,14 @@ index 0000000000..acf01efdd5
 +    return {
 +      visibility: content.document.visibilityState,
 +      trackers: text("umbral-home-trackers-count"),
-+      cookies: text("umbral-home-cookies-count"),
++      cookies: text("umbral-home-ads-count"),
 +      status: text("umbral-home-ublock-status"),
 +      trackerLabel: text("umbral-home-trackers-etp-label"),
-+      cookieLabel: text("umbral-home-cookies-etp-label"),
++      cookieLabel: content.document.querySelector('[data-l10n-id="umbral-home-ads-blocked"]')?.textContent.trim(),
 +      trackerPeriod: text("umbral-home-trackers-period"),
 +      cookiePeriod: text("umbral-home-cookies-period"),
 +      trackerTooltip: text("umbral-home-trackers-tooltip"),
-+      cookieTooltip: text("umbral-home-cookies-tooltip"),
++      cookieTooltip: text("umbral-home-ads-tooltip"),
 +      trackerDescription: content.document
 +        .getElementById("umbral-home-trackers-info")
 +        ?.getAttribute("aria-describedby"),
@@ -64,17 +64,17 @@ index 0000000000..acf01efdd5
 +    const page = await readHomepage(tab.linkedBrowser);
 +
 +    Assert.equal(page.trackers, "12");
-+    Assert.equal(page.cookies, "3");
-+    Assert.equal(page.trackerLabel, "Trackers · ETP");
-+    Assert.equal(page.cookieLabel, "Tracking cookies · ETP");
-+    Assert.equal(page.trackerPeriod, "All time · Registered profiles and current profile; other open profiles may update later");
-+    Assert.equal(page.cookiePeriod, "All time · Registered profiles and current profile; other open profiles may update later");
-+    Assert.ok(page.trackerTooltip.includes("not ads"));
-+    Assert.ok(page.trackerTooltip.includes("network requests"));
-+    Assert.ok(page.trackerTooltip.includes("uBlock Origin"));
-+    Assert.ok(page.cookieTooltip.includes("uBlock Origin"));
++    Assert.equal(page.cookies, "No data");
++    Assert.equal(page.trackerLabel, "Trackers blocked");
++    Assert.equal(page.cookieLabel, "Ads blocked");
++    Assert.equal(page.trackerPeriod, null);
++    Assert.equal(page.cookiePeriod, null);
++    Assert.ok(page.trackerTooltip.includes("excluding private browsing"));
++    Assert.ok(page.trackerTooltip.includes("registered profiles"));
++    Assert.ok(page.trackerTooltip.includes("update later"));
++    Assert.ok(page.cookieTooltip.includes("not available"));
 +    Assert.equal(page.trackerDescription, "umbral-home-trackers-tooltip");
-+    Assert.equal(page.cookieDescription, "umbral-home-cookies-tooltip");
++    Assert.equal(page.cookieDescription, undefined);
 +    Assert.notEqual(page.trackerValueLabel, "umbral-home-no-data");
 +
 +    await BrowserTestUtils.removeTab(tab);
@@ -93,7 +93,7 @@ index 0000000000..acf01efdd5
 +    const tab = await openHomepage();
 +    const page = await readHomepage(tab.linkedBrowser);
 +    Assert.equal(page.trackers, "0");
-+    Assert.equal(page.cookies, "0");
++    Assert.equal(page.cookies, "No data");
 +    await BrowserTestUtils.removeTab(tab);
 +  } finally {
 +    PrivacyMetricsService.getHomepageStats = original;
@@ -183,9 +183,9 @@ index 0000000000..acf01efdd5
 +      return (await readHomepage(tab.linkedBrowser)).trackers === "12";
 +    }, "Private homepage displays saved totals");
 +    const page = await readHomepage(tab.linkedBrowser);
-+    Assert.equal(page.cookies, "3");
-+    Assert.ok(page.trackerPeriod.includes("Registered profiles"));
-+    Assert.ok(page.trackerPeriod.includes("may update later"));
++    Assert.equal(page.cookies, "No data");
++    Assert.ok(page.trackerTooltip.includes("registered profiles"));
++    Assert.ok(page.trackerTooltip.includes("update later"));
 +    await BrowserTestUtils.removeTab(tab);
 +  } finally {
 +    await BrowserTestUtils.closeWindow(win);

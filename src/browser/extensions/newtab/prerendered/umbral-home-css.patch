@@ -3,7 +3,7 @@ new file mode 100644
 index 0000000000..7c17ca8334
 --- /dev/null
 +++ b/browser/extensions/newtab/prerendered/umbral-home.css
-@@ -0,0 +1,434 @@
+@@ -0,0 +1,428 @@
 +/* This Source Code Form is subject to the terms of the Mozilla Public
 + * License, v. 2.0. If a copy of the MPL was not distributed with this
 + * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -397,12 +397,6 @@ index 0000000000..7c17ca8334
 +.tooltip-trigger:focus-visible + .card-tooltip {
 +  visibility: visible;
 +  opacity: 1;
-+}
-+
-+.card p.period {
-+  margin: 4px 0 0;
-+  color: var(--umbral-muted);
-+  font-size: 10px;
 +}
 +
 +.card p.metric {

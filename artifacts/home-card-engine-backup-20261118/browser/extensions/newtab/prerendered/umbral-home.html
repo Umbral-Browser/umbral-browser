@@ -1,0 +1,118 @@
+<!doctype html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src chrome:; style-src resource:; script-src 'none'; object-src 'none';"
+    />
+    <title data-l10n-id="umbral-home-title">Umbral</title>
+    <link rel="localization" href="browser/umbralHome.ftl" />
+    <link rel="icon" type="image/png" sizes="32x32" href="chrome://branding/content/icon32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="chrome://branding/content/icon64.png" />
+    <link rel="stylesheet" href="resource://newtab/prerendered/umbral-home.css" />
+  </head>
+  <body>
+    <main>
+      <img
+        class="logo logo-light"
+        src="chrome://branding/content/umbral-logo-light.png"
+        data-l10n-id="umbral-home-logo"
+        alt="Umbral"
+      />
+      <img
+        class="logo logo-dark"
+        src="chrome://branding/content/umbral-logo-dark.png"
+        data-l10n-id="umbral-home-logo"
+        alt="Umbral"
+      />
+    </main>
+    <section id="umbral-shortcuts" aria-labelledby="umbral-shortcuts-title">
+      <h1 id="umbral-shortcuts-title" data-l10n-id="umbral-home-shortcuts">Shortcuts</h1>
+      <p id="umbral-shortcuts-empty" data-l10n-id="umbral-home-shortcuts-empty">Your space for the links you choose. Add your first shortcut.</p>
+      <ul id="umbral-shortcuts-list">
+        <li id="umbral-shortcuts-add-item" class="shortcut shortcut-add-item">
+          <button id="umbral-shortcuts-add" class="shortcut-link" type="button">
+            <span class="shortcut-icon" aria-hidden="true">+</span>
+            <span class="shortcut-name" data-l10n-id="umbral-home-shortcut-add">Add shortcut</span>
+          </button>
+        </li>
+      </ul>
+      <dialog id="umbral-shortcut-dialog" aria-labelledby="umbral-shortcut-dialog-title">
+        <form id="umbral-shortcut-form" novalidate="novalidate">
+          <h2 id="umbral-shortcut-dialog-title" data-l10n-id="umbral-home-shortcut-add">Add shortcut</h2>
+          <label for="umbral-shortcut-name" data-l10n-id="umbral-home-shortcut-name">Name</label>
+          <input id="umbral-shortcut-name" name="name" maxlength="48" aria-describedby="umbral-shortcut-name-error" required />
+          <p id="umbral-shortcut-name-error" class="field-error" aria-live="polite"></p>
+          <label for="umbral-shortcut-url" data-l10n-id="umbral-home-shortcut-url">URL</label>
+          <input id="umbral-shortcut-url" name="url" type="url" maxlength="2048" aria-describedby="umbral-shortcut-url-error" required />
+          <p id="umbral-shortcut-url-error" class="field-error" aria-live="polite"></p>
+          <p id="umbral-shortcut-error" role="status" aria-live="polite"></p>
+          <div class="shortcut-actions">
+            <button id="umbral-shortcut-cancel" type="button" data-l10n-id="umbral-home-shortcut-cancel">Cancel</button>
+            <button type="submit" data-l10n-id="umbral-home-shortcut-save">Save</button>
+          </div>
+        </form>
+      </dialog>
+    </section>
+    <section class="cards" data-l10n-id="umbral-home-cards">
+      <article class="card">
+        <div class="card-heading">
+          <h2 id="umbral-home-trackers-etp-label" data-l10n-id="umbral-home-trackers-etp">Trackers · ETP</h2>
+          <button
+            class="tooltip-trigger"
+            id="umbral-home-trackers-info"
+            type="button"
+            data-l10n-id="umbral-home-etp-info"
+            aria-describedby="umbral-home-trackers-tooltip"
+          >
+            <span aria-hidden="true">i</span>
+          </button>
+          <span
+            class="card-tooltip"
+            id="umbral-home-trackers-tooltip"
+            role="tooltip"
+            data-l10n-id="umbral-home-etp-tooltip"
+          >
+            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
+          </span>
+        </div>
+        <p class="period" id="umbral-home-trackers-period" data-l10n-id="umbral-home-period-seven-days">Last 7 days</p>
+        <p class="metric" id="umbral-home-trackers-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
+      </article>
+      <article class="card">
+        <div class="card-heading">
+          <h2 id="umbral-home-cookies-etp-label" data-l10n-id="umbral-home-cookies-etp">Tracking cookies · ETP</h2>
+          <button
+            class="tooltip-trigger"
+            id="umbral-home-cookies-info"
+            type="button"
+            data-l10n-id="umbral-home-etp-info"
+            aria-describedby="umbral-home-cookies-tooltip"
+          >
+            <span aria-hidden="true">i</span>
+          </button>
+          <span
+            class="card-tooltip"
+            id="umbral-home-cookies-tooltip"
+            role="tooltip"
+            data-l10n-id="umbral-home-etp-tooltip"
+          >
+            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
+          </span>
+        </div>
+        <p class="period" id="umbral-home-cookies-period" data-l10n-id="umbral-home-period-seven-days">Last 7 days</p>
+        <p class="metric" id="umbral-home-cookies-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
+      </article>
+      <article class="card">
+        <h2 data-l10n-id="umbral-home-protection">uBlock Origin status</h2>
+        <p id="umbral-home-ublock-status" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
+      </article>
+    </section>
+  </body>
+</html>

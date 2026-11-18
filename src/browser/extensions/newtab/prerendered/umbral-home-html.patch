@@ -3,7 +3,7 @@ new file mode 100644
 index 0000000000..ea3e2626e1
 --- /dev/null
 +++ b/browser/extensions/newtab/prerendered/umbral-home.html
-@@ -0,0 +1,118 @@
+@@ -0,0 +1,86 @@
 +<!doctype html>
 +<!-- This Source Code Form is subject to the terms of the Mozilla Public
 +   - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -69,51 +69,19 @@ index 0000000000..ea3e2626e1
 +    <section class="cards" data-l10n-id="umbral-home-cards">
 +      <article class="card">
 +        <div class="card-heading">
-+          <h2 id="umbral-home-trackers-etp-label" data-l10n-id="umbral-home-trackers-etp">Trackers · ETP</h2>
-+          <button
-+            class="tooltip-trigger"
-+            id="umbral-home-trackers-info"
-+            type="button"
-+            data-l10n-id="umbral-home-etp-info"
-+            aria-describedby="umbral-home-trackers-tooltip"
-+          >
-+            <span aria-hidden="true">i</span>
-+          </button>
-+          <span
-+            class="card-tooltip"
-+            id="umbral-home-trackers-tooltip"
-+            role="tooltip"
-+            data-l10n-id="umbral-home-etp-tooltip"
-+          >
-+            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
-+          </span>
++          <h2 data-l10n-id="umbral-home-ads-blocked">Ads blocked</h2>
++          <button class="tooltip-trigger" type="button" data-l10n-id="umbral-home-ads-info" aria-describedby="umbral-home-ads-tooltip"><span aria-hidden="true">i</span></button>
++          <span class="card-tooltip" id="umbral-home-ads-tooltip" role="tooltip" data-l10n-id="umbral-home-ads-tooltip">A reliable count of blocked ads is not available.</span>
 +        </div>
-+        <p class="period" id="umbral-home-trackers-period" data-l10n-id="umbral-home-period-all-time">All time · Registered profiles and current profile; other open profiles may update later</p>
-+        <p class="metric" id="umbral-home-trackers-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
++        <p class="metric" id="umbral-home-ads-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
 +      </article>
 +      <article class="card">
 +        <div class="card-heading">
-+          <h2 id="umbral-home-cookies-etp-label" data-l10n-id="umbral-home-cookies-etp">Tracking cookies · ETP</h2>
-+          <button
-+            class="tooltip-trigger"
-+            id="umbral-home-cookies-info"
-+            type="button"
-+            data-l10n-id="umbral-home-etp-info"
-+            aria-describedby="umbral-home-cookies-tooltip"
-+          >
-+            <span aria-hidden="true">i</span>
-+          </button>
-+          <span
-+            class="card-tooltip"
-+            id="umbral-home-cookies-tooltip"
-+            role="tooltip"
-+            data-l10n-id="umbral-home-etp-tooltip"
-+          >
-+            Counts records classified by Firefox Enhanced Tracking Protection, not ads, network requests, or uBlock Origin blocks.
-+          </span>
++          <h2 id="umbral-home-trackers-etp-label" data-l10n-id="umbral-home-trackers-blocked">Trackers blocked</h2>
++          <button class="tooltip-trigger" id="umbral-home-trackers-info" type="button" data-l10n-id="umbral-home-etp-info" aria-describedby="umbral-home-trackers-tooltip"><span aria-hidden="true">i</span></button>
++          <span class="card-tooltip" id="umbral-home-trackers-tooltip" role="tooltip" data-l10n-id="umbral-home-tracker-tooltip">All-time Firefox tracking protection records from registered profiles and the current profile, excluding private browsing. Other open profiles may update later.</span>
 +        </div>
-+        <p class="period" id="umbral-home-cookies-period" data-l10n-id="umbral-home-period-all-time">All time · Registered profiles and current profile; other open profiles may update later</p>
-+        <p class="metric" id="umbral-home-cookies-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
++        <p class="metric" id="umbral-home-trackers-count" aria-live="polite" data-l10n-id="umbral-home-no-data">No data</p>
 +      </article>
 +      <article class="card">
 +        <h2 data-l10n-id="umbral-home-protection">uBlock Origin status</h2>

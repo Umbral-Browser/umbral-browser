@@ -1,0 +1,13 @@
+ 0:00.28 W Warnings in third-party code are being suppressed from the terminal output. Use --show-all-warnings or --verbose to see them.
+ 0:00.28 W All warnings will still be dumped to /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/build/warnings_*.json at the end of the build.
+ 0:00.40 Clobber not needed.
+ 0:00.45 Parallelism determined by memory: using 16 jobs for 16 cores based on 31.2 GiB RAM and estimated job size of 1.0 GiB
+ 0:00.45 /usr/bin/make -C faster -j16 -s
+ 0:00.69 Elapsed: 0.04s; From /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/gmp-clearkey/0.1: Kept 0 existing; Added/updated 1; Removed 0 files and 0 directories.
+ 0:02.37 Elapsed: 0.24s; From /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin: Kept 2033 existing; Added/updated 24; Removed 0 files and 0 directories.
+ 0:02.53 Elapsed: 0.40s; From /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/dist/bin/browser: Kept 5099 existing; Added/updated 290; Removed 0 files and 0 directories.
+ 0:02.66 W 0 compiler warnings present.
+ 0:02.67 W Overall system resources - Wall time: 2s; CPU: 74%; Read bytes: 23060480; Write bytes: 73670656; Read time: 419; Write time: 6768
+ 0:02.67 To view a profile of the build, run |mach resource-usage|.
+ 0:02.67 Your build was successful!
+Streaming resource usage profile to: /run/media/martin/Disco_Secundario/Projects/umbral-browser-stable/engine/obj-x86_64-pc-linux-gnu/.mozbuild/logs/build/profile_log_20261118_232520.json

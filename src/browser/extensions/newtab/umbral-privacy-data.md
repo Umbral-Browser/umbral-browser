@@ -1,7 +1,11 @@
 # Umbral homepage privacy data
 
-The two count cards read the Firefox `TrackingDBService` aggregates for
-`TRACKERS_ID` and `TRACKING_COOKIES_ID`. Each stored unit is a classified
+The tracker card reads the Firefox `TrackingDBService` aggregate for
+`TRACKERS_ID`. The ads card shows “No data”: tracking cookies are not ads,
+and uBlock Origin’s blocked request total also includes non-ad requests and
+does not establish the required private-browsing exclusion. A reliable
+ads-only source is not currently available. The service still reads
+`TRACKING_COOKIES_ID` for its existing consumers. Each stored unit is a classified
 third-party-origin entry from a content-blocking log, not an ad, network
 request, or unique domain. The database stores only category, count, and UTC
 date; the homepage receives only the two aggregate numbers.
