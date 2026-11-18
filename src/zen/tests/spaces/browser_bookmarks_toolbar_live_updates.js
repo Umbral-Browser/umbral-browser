@@ -18,11 +18,18 @@ async function waitForToolbarItem(guid, expected) {
 
 add_task(async function test_toolbar_tracks_places_changes_live() {
   await gZenWorkspaces.promiseInitialized;
+  await SpecialPowers.pushPrefEnv({
+    set: [
+      ["browser.toolbars.bookmarks.visibility", "always"],
+      ["umbral.urlbar.autohide", false],
+    ],
+  });
   const toolbar = document.getElementById("PlacesToolbar");
   await toolbar?._placesView?.promiseRebuilt();
 
   const bookmark = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.toolbarGuid,
+    index: 0,
     title: "Live toolbar bookmark",
     url: "https://example.com/",
   });
@@ -32,6 +39,31 @@ add_task(async function test_toolbar_tracks_places_changes_live() {
     }
   });
   await waitForToolbarItem(bookmark.guid, true);
+
+  await BrowserTestUtils.withNewTab(
+    { gBrowser, url: "https://example.com/" },
+    async () => {
+      await TestUtils.waitForCondition(() => {
+        const item = toolbarItemForGuid(bookmark.guid);
+        if (
+          !item?.checkVisibility({
+            checkOpacity: true,
+            checkVisibilityCSS: true,
+          })
+        ) {
+          return false;
+        }
+        const { x, y, width, height } = item.getBoundingClientRect();
+        return (
+          width > 0 &&
+          height > 0 &&
+          item.contains(
+            document.elementFromPoint(x + width / 2, y + height / 2)
+          )
+        );
+      }, "The bookmark is visible and reachable on a normal page");
+    }
+  );
 
   // Compete a workspace refresh with normal Places notifications. The refresh
   // must settle before the native view is considered current.

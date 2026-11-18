@@ -40,11 +40,6 @@ class UmbralBrowserChrome {
     }
 
     const bookmarks = document.getElementById("PersonalToolbar");
-    if (bookmarks) {
-      bookmarks.removeAttribute("collapsed");
-      bookmarks.hidden = false;
-    }
-
     wrapper.addEventListener("mouseenter", () => this.#open());
     wrapper.addEventListener("mouseleave", () => this.#scheduleHide());
     wrapper.addEventListener("focusin", () => this.#open());
@@ -354,16 +349,6 @@ class UmbralBrowserChrome {
     const windowButtons = container?.querySelector(":scope > .titlebar-buttonbox-container");
     if (windowButtons && nav) {
       nav.appendChild(windowButtons);
-    }
-    if (bookmarks) {
-      bookmarks.collapsed = false;
-      bookmarks.hidden = false;
-      if (
-        window.PlacesToolbarHelper &&
-        !document.getElementById("PlacesToolbar")?._placesView
-      ) {
-        PlacesToolbarHelper._realInit();
-      }
     }
     this.#installControls();
     this.#syncMode();

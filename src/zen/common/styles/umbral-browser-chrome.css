@@ -159,21 +159,7 @@
     display: none !important;
   }
 
-  & #PersonalToolbar {
-    min-height: 0 !important;
-    max-height: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    opacity: 0;
-    overflow: hidden;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  &[umbral-on-home] #PersonalToolbar,
-  &[umbral-urlbar-autohide]:not([umbral-on-home])
-    #zen-appcontent-navbar-wrapper[umbral-chrome-open]
-    #PersonalToolbar {
+  & #PersonalToolbar:not([collapsed]) {
     height: auto !important;
     max-height: none !important;
     box-sizing: border-box;
@@ -184,6 +170,19 @@
     overflow: visible;
     visibility: visible;
     pointer-events: auto;
+  }
+
+  &[umbral-urlbar-autohide]:not([umbral-on-home])
+    #zen-appcontent-navbar-wrapper:not([umbral-chrome-open])
+    #PersonalToolbar {
+    min-height: 0 !important;
+    max-height: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   &[umbral-urlbar-autohide]:not([umbral-on-home]) #nav-bar {
