@@ -602,6 +602,22 @@
   padding-block-start: 1rem;
 }
 
+.zen-welcome-support {
+  margin-inline-end: auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--umbral-line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--umbral-ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.zen-welcome-support:hover {
+  background: var(--umbral-tile);
+}
+
+.zen-welcome-support:focus-visible,
 .zen-welcome-primary:focus-visible,
 .zen-big-accent-button:focus-visible,
 #zen-welcome-back:focus-visible,

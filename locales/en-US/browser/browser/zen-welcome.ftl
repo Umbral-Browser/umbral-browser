@@ -50,3 +50,5 @@ zen-welcome-searxng-http-local-confirm = This local instance uses HTTP. Traffic 
 zen-welcome-searxng-error = The instance could not be added. Check its URL and OpenSearch support, then try again.
 zen-welcome-searxng-suggestions-error = This OpenSearch descriptor offers remote suggestions, which Umbral does not enable.
 zen-welcome-searxng-edit-in-settings = An instance is already configured. Edit it in Search settings to avoid duplicates.
+
+zen-welcome-support = Support Umbral

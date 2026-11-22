@@ -256,84 +256,120 @@
 }
 
 .umbral-ai-sidebar {
+  --ai-muted: color-mix(in srgb, currentColor 58%, transparent);
   box-sizing: border-box;
   min-width: 280px;
   max-width: 640px;
-  border-inline-start: 1px solid var(--zen-colors-border, ThreeDShadow);
+  border-inline-start: 1px solid color-mix(in srgb, currentColor 12%, transparent);
   background: var(--zen-main-browser-background, -moz-Dialog);
   color: var(--zen-primary-text, -moz-DialogText);
 }
 
 .umbral-ai-sidebar-header {
-  min-height: 40px;
-  padding-inline: 10px 6px;
-  border-bottom: 1px solid var(--zen-colors-border, ThreeDShadow);
+  min-height: 48px;
+  gap: 4px;
+  padding: 6px 10px 6px 16px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
 }
-
-.umbral-ai-sidebar-unconfigured {
-  gap: 16px;
+#umbral-ai-sidebar-title { margin: 0; font-size: 14px; font-weight: 600; }
+.umbral-ai-sidebar-header toolbarbutton { padding: 8px !important; border-radius: 6px; }
+.umbral-ai-sidebar-header .toolbarbutton-text { display: none; }
+#umbral-ai-sidebar-clear { list-style-image: url("chrome://global/skin/icons/delete.svg"); }
+#umbral-ai-sidebar-close { list-style-image: url("chrome://global/skin/icons/close.svg"); }
+.umbral-ai-sidebar-header toolbarbutton:focus-visible,
+.umbral-ai-sidebar-unconfigured button:focus-visible,
+.umbral-ai-sidebar-form :is(textarea, button):focus-visible {
+  outline: 2px solid var(--focus-outline-color, #a889f5); outline-offset: 2px;
+}
+.umbral-ai-sidebar [hidden] { display: none !important; }
+.umbral-ai-sidebar-content { min-height: 0; }
+.umbral-ai-sidebar-empty, .umbral-ai-sidebar-unconfigured {
+  gap: 12px;
   padding: 24px;
   text-align: center;
-  color: var(--zen-primary-text, -moz-DialogText);
 }
-
-.umbral-ai-sidebar-unconfigured description {
-  max-width: 38ch;
-  line-height: 1.5;
+.umbral-ai-sidebar :is(.umbral-ai-sidebar-empty, .umbral-ai-sidebar-unconfigured) h2 {
+  margin: 0; font-size: 15px; font-weight: 600;
 }
-
-.umbral-ai-sidebar-unconfigured button {
-  min-height: 34px;
-  padding-inline: 14px;
+.umbral-ai-sidebar :is(.umbral-ai-sidebar-empty, .umbral-ai-sidebar-unconfigured) description {
+  max-width: 32ch; margin: 0; color: var(--ai-muted); line-height: 1.55;
 }
-
+#umbral-ai-sidebar-configure {
+  appearance: none;
+  min-height: 36px;
+  margin: 8px 0 0;
+  padding: 8px 16px !important;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, currentColor 9%, transparent);
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+#umbral-ai-sidebar-configure:hover {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+#umbral-ai-sidebar-configure:active {
+  background: color-mix(in srgb, currentColor 19%, transparent);
+}
 .umbral-ai-sidebar-conversation {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
+  min-height: 0;
   overflow: auto;
-  padding: 12px;
+  padding: 20px 16px;
 }
-
 .umbral-ai-message {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  padding: 9px 11px;
-  border-radius: 8px;
-  background: color-mix(in srgb, currentColor 7%, transparent);
+  line-height: 1.55;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
 }
-
 .umbral-ai-user-message {
   align-self: end;
-  max-width: 90%;
+  max-width: 88%;
+  background: color-mix(in srgb, currentColor 12%, transparent);
 }
-
 .umbral-ai-assistant-message {
-  align-self: stretch;
-}
+  align-self: start;
+  max-width: 100%;
+  background: color-mix(in srgb, currentColor 6%, transparent);
 
-.umbral-ai-sidebar-form {
-  display: grid;
-  gap: 8px;
-  padding: 10px;
-  border-top: 1px solid var(--zen-colors-border, ThreeDShadow);
 }
-
+.umbral-ai-sidebar-form { display: grid; gap: 8px; padding: 12px 16px 16px; }
+.umbral-ai-sidebar-form label { font-size: 11px; font-weight: 600; color: var(--ai-muted); }
 .umbral-ai-sidebar-form textarea {
   box-sizing: border-box;
   width: 100%;
+  min-height: 64px;
+  max-height: 180px;
   resize: vertical;
   color: inherit;
-  background: var(--zen-colors-secondary, Field);
-  border: 1px solid var(--zen-colors-border, ThreeDShadow);
-  border-radius: 6px;
-  padding: 8px;
+  background: color-mix(in srgb, currentColor 5%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  line-height: 1.45;
 }
-
 .umbral-ai-sidebar-form button {
-  min-height: 32px;
-  margin-inline-end: 6px;
+  min-height: 34px;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 6px;
+  color: inherit;
+  background: var(--button-background-color, color-mix(in srgb, currentColor 12%, transparent));
+  font-weight: 600;
+  cursor: pointer;
 }
+.umbral-ai-sidebar-form button:disabled { opacity: .45; cursor: default; }
+#umbral-ai-sidebar-form button:not(:disabled):hover { background: var(--button-background-color-hover, color-mix(in srgb, currentColor 18%, transparent)); }
+#umbral-ai-sidebar-status { margin: 0; color: var(--ai-muted); line-height: 1.45; font-size: 12px; }
+#umbral-ai-sidebar-status:empty { display: none; }
 
 /* The query styles the bar, which sits inside the container, so a narrow
    content column can tighten the inset without a fixed window width. */

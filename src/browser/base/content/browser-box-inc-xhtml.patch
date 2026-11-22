@@ -26,7 +26,7 @@ index 599313b..ee64cc9 100644
    <vbox id="sidebar-box" hidden="true" class="chromeclass-extrachrome">
      <box id="sidebar-header" align="center">
        <toolbarbutton id="sidebar-switcher-target" class="tabbable" aria-expanded="false">
-@@ -25,12 +36,38 @@
+@@ -25,12 +36,45 @@
      </stack>
    </vbox>
    <splitter id="sidebar-splitter" class="chromeclass-extrachrome sidebar-splitter" resizebefore="sibling" resizeafter="none" hidden="true" role="separator" aria-controls="sidebar-box" data-l10n-id="sidebar-resize-splitter"/>
@@ -42,14 +42,21 @@ index 599313b..ee64cc9 100644
 +      <toolbarbutton id="umbral-ai-sidebar-close" class="toolbarbutton-1" data-l10n-id="umbral-ai-sidebar-close"/>
 +    </hbox>
 +    <vbox id="umbral-ai-sidebar-unconfigured" class="umbral-ai-sidebar-unconfigured" flex="1" align="center" pack="center">
++      <html:h2 data-l10n-id="umbral-ai-sidebar-unconfigured-title"/>
 +      <description data-l10n-id="umbral-ai-sidebar-unconfigured-text"/>
-+      <button id="umbral-ai-sidebar-configure" class="primary" data-l10n-id="umbral-ai-sidebar-configure"/>
++      <button id="umbral-ai-sidebar-configure" data-l10n-id="umbral-ai-sidebar-configure"/>
 +    </vbox>
-+    <vbox id="umbral-ai-sidebar-conversation" class="umbral-ai-sidebar-conversation" role="log" aria-live="polite" aria-relevant="additions text" flex="1"/>
-+    <vbox id="umbral-ai-sidebar-form-container" flex="1">
++    <vbox id="umbral-ai-sidebar-content" flex="1" class="umbral-ai-sidebar-content">
++      <vbox id="umbral-ai-sidebar-empty" class="umbral-ai-sidebar-empty" flex="1" align="center" pack="center">
++        <html:h2 data-l10n-id="umbral-ai-sidebar-empty-title"/>
++        <description data-l10n-id="umbral-ai-sidebar-empty-text"/>
++      </vbox>
++      <vbox id="umbral-ai-sidebar-conversation" class="umbral-ai-sidebar-conversation" role="log" aria-live="polite" aria-relevant="additions text" flex="1"/>
++    </vbox>
++    <vbox id="umbral-ai-sidebar-form-container">
 +    <html:form id="umbral-ai-sidebar-form" class="umbral-ai-sidebar-form">
 +      <html:label for="umbral-ai-sidebar-prompt" data-l10n-id="umbral-ai-prompt-label"/>
-+      <html:textarea id="umbral-ai-sidebar-prompt" rows="4" maxlength="4000" autocomplete="off"/>
++      <html:textarea id="umbral-ai-sidebar-prompt" rows="2" maxlength="4000" autocomplete="off" data-l10n-id="umbral-ai-prompt-placeholder"/>
 +      <hbox>
 +        <html:button id="umbral-ai-sidebar-send" type="submit" data-l10n-id="umbral-ai-send" disabled="disabled"/>
 +        <html:button id="umbral-ai-sidebar-cancel" type="button" data-l10n-id="umbral-ai-cancel" hidden="hidden"/>

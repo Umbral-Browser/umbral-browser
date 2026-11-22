@@ -290,9 +290,11 @@
         if (button.id) {
           element.id = button.id;
         }
-        element.className = button.primary
-          ? "zen-big-accent-button primary"
-          : "zen-big-accent-button";
+        element.className = button.support
+          ? "zen-welcome-support"
+          : button.primary
+            ? "zen-big-accent-button primary"
+            : "zen-big-accent-button";
         document.l10n.setAttributes(element, button.l10n);
         element.addEventListener("click", () => {
           if (button.onclick?.(this) !== false) {
@@ -707,6 +709,20 @@
         title: "zen-welcome-ready-title",
         descriptions: ["zen-welcome-ready-description"],
         buttons: [
+          {
+            id: "zen-welcome-support",
+            l10n: "zen-welcome-support",
+            support: true,
+            onclick: (pages) => {
+              pages.finish().then(() => {
+                window.openTrustedLinkIn(
+                  "https://ko-fi.com/umbralbrowser",
+                  "tab",
+                );
+              });
+              return false;
+            },
+          },
           {
             id: "zen-welcome-set-default-browser",
             l10n: "zen-welcome-set-default-browser",

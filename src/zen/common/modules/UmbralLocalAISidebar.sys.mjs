@@ -28,6 +28,8 @@ function init() {
   document.l10n.translateFragment(panel).catch(console.error);
 
   const log = document.getElementById("umbral-ai-sidebar-conversation");
+  const content = document.getElementById("umbral-ai-sidebar-content");
+  const empty = document.getElementById("umbral-ai-sidebar-empty");
   const form = document.getElementById("umbral-ai-sidebar-form");
   const prompt = document.getElementById("umbral-ai-sidebar-prompt");
   const send = document.getElementById("umbral-ai-sidebar-send");
@@ -47,13 +49,16 @@ function init() {
   function updateConfiguration() {
     const ready = configured();
     unconfigured.hidden = ready;
-    log.hidden = !ready;
+    content.hidden = !ready;
     formContainer.hidden = !ready;
     send.disabled = !ready || !enabled() || !!requestAbort || !prompt.value.trim();
   }
 
   function render() {
     log.replaceChildren();
+    empty.hidden = conversation.length > 0;
+    log.hidden = conversation.length === 0;
+    clear.disabled = conversation.length === 0;
     for (const item of conversation) {
       const entry = document.createElement("div");
       entry.className = `umbral-ai-message umbral-ai-${item.role}-message`;
@@ -115,7 +120,7 @@ function init() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const text = prompt.value.trim();
-      if (!enabled() || !configured() || requestAbort || !text || text.length > 4000) return;
+    if (!enabled() || !configured() || requestAbort || !text || text.length > 4000) return;
 
     conversation.push({ role: "user", content: text });
     render();

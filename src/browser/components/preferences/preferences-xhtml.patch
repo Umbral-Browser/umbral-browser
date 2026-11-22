@@ -50,6 +50,16 @@ diff --git a/browser/components/preferences/preferences.xhtml b/browser/componen
        </html:moz-page-nav-button>
        <html:moz-page-nav-button id="category-home"
          view="paneHome"
+@@ -224,3 +250,9 @@
+         data-l10n-id="help-button-label2">
+       </html:moz-page-nav-button>
++      <html:moz-page-nav-button id="umbralSupportButton"
++        slot="secondary-nav"
++        iconsrc="chrome://global/skin/icons/heart.svg"
++        data-l10n-id="umbral-support-button"
++        href="https://ko-fi.com/umbralbrowser">
++      </html:moz-page-nav-button>
+     </html:moz-page-nav>
 @@ -257,6 +283,22 @@
  #include privacy.inc.xhtml
  #include sync.inc.xhtml

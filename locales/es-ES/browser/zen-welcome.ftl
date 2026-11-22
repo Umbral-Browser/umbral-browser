@@ -50,3 +50,5 @@ zen-welcome-searxng-http-local-confirm = Esta instancia local usa HTTP. El tráf
 zen-welcome-searxng-error = No se pudo añadir la instancia. Compruebe la URL y la compatibilidad con OpenSearch e inténtelo de nuevo.
 zen-welcome-searxng-suggestions-error = Este descriptor OpenSearch ofrece sugerencias remotas, que Umbral no activa.
 zen-welcome-searxng-edit-in-settings = Ya hay una instancia configurada. Modifíquela en Ajustes de búsqueda para evitar duplicados.
+
+zen-welcome-support = Apoya a Umbral
