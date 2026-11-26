@@ -20,6 +20,13 @@ XPCOMUtils.defineLazyPreferenceGetter(
   true
 );
 
+XPCOMUtils.defineLazyPreferenceGetter(
+  lazy,
+  "littleWindowEnabled",
+  "zen.little-window.enabled",
+  false
+);
+
 ChromeUtils.defineLazyGetter(lazy, "l10n", () => {
   return new Localization(["browser/zen-command-palette.ftl"], true);
 });
@@ -36,7 +43,7 @@ function isNotEmptyTab(window) {
 const globalActionsTemplate = [
   {
     l10nId: "zen-action-toggle-compact-mode",
-    command: "cmd_zenCompactModeToggle",
+    command: "cmd_toggleCompactModeIgnoreHover",
     icon: "chrome://browser/skin/zen-icons/sidebar.svg",
   },
   {
@@ -119,6 +126,12 @@ const globalActionsTemplate = [
     l10nId: "zen-action-new-blank-window",
     command: "cmd_zenNewNavigatorUnsynced",
     icon: "chrome://browser/skin/zen-icons/window.svg",
+  },
+  {
+    l10nId: "zen-action-new-little-window",
+    command: "cmd_zenNewLittleWindow",
+    icon: "chrome://browser/skin/zen-icons/window.svg",
+    isAvailable: () => lazy.littleWindowEnabled,
   },
   {
     l10nId: "zen-action-pin-tab",
@@ -216,12 +229,14 @@ const globalActionsTemplate = [
     command: "History:RestoreLastClosedTabOrWindowOrSession",
     icon: "chrome://browser/skin/zen-icons/history.svg",
     isAvailable: window => {
-      return lazy.SessionStore.getClosedTabCount(window) > 0;
+      return !!lazy.SessionStore.getClosedTabCount({
+        sourceWindow: window,
+      }).length;
     },
   },
   {
     l10nId: "zen-action-duplicate-tab",
-    command: "cmd_zenDuplicateTab",
+    command: "Browser:DuplicateTab",
     icon: "chrome://browser/skin/zen-icons/duplicate-tab.svg",
     isAvailable: window => {
       return isNotEmptyTab(window);

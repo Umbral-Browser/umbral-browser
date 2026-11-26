@@ -77,7 +77,7 @@ jobs:
       buildids: ${{ steps.get.outputs.bid }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -131,7 +131,7 @@ jobs:
       build_time: ${{ steps.data.outputs.buildtime }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -140,6 +140,7 @@ jobs:
         uses: useblacksmith/setup-node@v5
         with:
           node-version-file: ".nvmrc"
+          cache: npm
 
       - name: Install dependencies
         run: |
@@ -186,7 +187,7 @@ jobs:
     needs: [build-data]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -195,6 +196,7 @@ jobs:
         uses: useblacksmith/setup-node@v5
         with:
           node-version-file: ".nvmrc"
+          cache: npm
 
       - name: Install dependencies
         run: |
@@ -228,7 +230,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -237,6 +239,7 @@ jobs:
         uses: useblacksmith/setup-node@v5
         with:
           node-version-file: ".nvmrc"
+          cache: npm
 
       - name: Setup Git
         run: |
@@ -285,7 +288,7 @@ jobs:
       windows-cs-hit: ${{ steps.probe.outputs.windows-cs }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Decide whether a cached profile may be reused
         id: gate
@@ -304,9 +307,11 @@ jobs:
         if: ${{ steps.gate.outputs.enabled == 'true' }}
         env:
           INPUTS_HASH: ${{ hashFiles('src/zen/common/sys/ZenPGOTraining.sys.mjs', 'src/build/pgo/profileserver-py.patch', 'src/testing/profiles/profileserver/user-js.patch') }}
+          UPDATE_BRANCH: ${{ inputs.update_branch }}
         run: |
-          ff=$(node -p "require('./surfer.json').version.version")
+          ff=$(node -p "const v = require('./surfer.json').version; (process.env.UPDATE_BRANCH !== 'release' && v.candidate && v.candidate !== v.version) ? v.candidate : v.version")
           echo "prefix=pgo-profdata-v2-ff${ff}-${INPUTS_HASH:0:12}" >> "$GITHUB_OUTPUT"
+          echo "Firefox for the profile key: $ff (branch $UPDATE_BRANCH)"
 
       - name: Look up the macOS x86_64 profile
         id: mac-x86
@@ -387,7 +392,7 @@ jobs:
   windows-step-1:
     name: Windows build step 1 (PGO build)
     uses: ./.github/workflows/windows-release-build.yml
-    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-hit != 'true' && needs.pgo-cache.outputs.windows-cs-hit != 'true' }}
+    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-hit != 'true' && (inputs.update_branch == 'twilight' || needs.pgo-cache.outputs.windows-cs-hit != 'true') }}
     needs: [build-data, buildid, pgo-cache]
     permissions:
       contents: write
@@ -403,7 +408,7 @@ jobs:
   windows-step-2:
     name: Windows build step 2 (Generate profile data)
     uses: ./.github/workflows/windows-profile-build.yml
-    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-hit != 'true' && needs.pgo-cache.outputs.windows-cs-hit != 'true' }}
+    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-hit != 'true' && (inputs.update_branch == 'twilight' || needs.pgo-cache.outputs.windows-cs-hit != 'true') }}
     permissions:
       contents: write
     secrets: inherit
@@ -417,7 +422,7 @@ jobs:
   windows-step-cs-1:
     name: Windows build step 3a (CS-instrumented build)
     uses: ./.github/workflows/windows-release-build.yml
-    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-cs-hit != 'true' && !failure() && !cancelled() }}
+    if: ${{ !inputs.disable-pgo && inputs.update_branch != 'twilight' && needs.pgo-cache.outputs.windows-cs-hit != 'true' && !failure() && !cancelled() }}
     permissions:
       contents: write
     secrets: inherit
@@ -436,7 +441,7 @@ jobs:
   windows-step-cs-2:
     name: Windows build step 3b (Generate CS profile data)
     uses: ./.github/workflows/windows-profile-build.yml
-    if: ${{ !inputs.disable-pgo && needs.pgo-cache.outputs.windows-cs-hit != 'true' && !failure() && !cancelled() }}
+    if: ${{ !inputs.disable-pgo && inputs.update_branch != 'twilight' && needs.pgo-cache.outputs.windows-cs-hit != 'true' && !failure() && !cancelled() }}
     permissions:
       contents: write
     secrets: inherit
@@ -461,13 +466,13 @@ jobs:
     with:
       build-version: ${{ needs.build-data.outputs.version }}
       generate-pgo: false
-      cs-pgo: ${{ inputs.disable-pgo && '' || 'use' }}
+      cs-pgo: ${{ (!inputs.disable-pgo && inputs.update_branch != 'twilight') && 'use' || '' }}
       disable-pgo: ${{ inputs.disable-pgo }}
       release-branch: ${{ inputs.update_branch }}
       MOZ_BUILD_DATE: ${{needs.buildid.outputs.buildids}}
       use-sccache: ${{ inputs.use-sccache }}
-      pgo-cache-key-prefix: ${{ needs.pgo-cache.outputs.prefix && format('{0}-windows-cs', needs.pgo-cache.outputs.prefix) || '' }}
-      pgo-cache-hit: ${{ needs.pgo-cache.outputs.windows-cs-hit == 'true' }}
+      pgo-cache-key-prefix: ${{ needs.pgo-cache.outputs.prefix && format('{0}-{1}', needs.pgo-cache.outputs.prefix, inputs.update_branch == 'twilight' && 'windows' || 'windows-cs') || '' }}
+      pgo-cache-hit: ${{ (inputs.update_branch == 'twilight' && needs.pgo-cache.outputs.windows-hit == 'true') || (inputs.update_branch != 'twilight' && needs.pgo-cache.outputs.windows-cs-hit == 'true') }}
 
   linux:
     name: Linux build
@@ -538,6 +543,7 @@ jobs:
     permissions:
       contents: write
     secrets: inherit
+    if: ${{ !failure() && !cancelled() }}
     needs: [build-data, mac-step-3]
     with:
       build-version: ${{ needs.build-data.outputs.version }}
@@ -554,7 +560,7 @@ jobs:
     needs: [linux, build-data]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -563,6 +569,7 @@ jobs:
         uses: useblacksmith/setup-node@v5
         with:
           node-version-file: ".nvmrc"
+          cache: npm
 
       - name: Install dependencies
         run: |
@@ -629,6 +636,7 @@ jobs:
   release:
     permissions: write-all
     name: Release
+    if: ${{ !failure() && !cancelled() }}
     needs:
       [
         build-data,
@@ -645,7 +653,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
           token: ${{ secrets.DEPLOY_KEY }}
@@ -654,7 +662,7 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: Checkout updates repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: zen-browser/updates-server
           path: updates-server
@@ -824,7 +832,7 @@ jobs:
 
     steps:
       - name: Checkout Flatpak repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: zen-browser/release-utils
           token: ${{ secrets.DEPLOY_KEY }}
@@ -848,7 +856,7 @@ jobs:
           commit_user_email: zen-browser-auto@users.noreply.github.com
 
       - name: Checkout Flatpak repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: zen-browser/flatpak
           token: ${{ secrets.DEPLOY_KEY }}
@@ -883,7 +891,7 @@ jobs:
 
     steps:
       - name: Checkout Flatpak repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: flathub/app.zen_browser.zen
           token: ${{ secrets.DEPLOY_KEY }}
@@ -899,7 +907,7 @@ jobs:
           name: zen.linux-aarch64.tar.xz
 
       - name: Update repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: zen-browser
           token: ${{ secrets.DEPLOY_KEY }}

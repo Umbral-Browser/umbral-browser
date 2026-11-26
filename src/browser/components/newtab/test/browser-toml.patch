@@ -1,9 +1,8 @@
 diff --git a/browser/components/newtab/test/browser/browser.toml b/browser/components/newtab/test/browser/browser.toml
-index 0a7579d2b0..66a8aa4c22 100644
 --- a/browser/components/newtab/test/browser/browser.toml
 +++ b/browser/components/newtab/test/browser/browser.toml
-@@ -20,3 +20,7 @@ skip-if = [
-   "os == 'win' && os_version == '11.26100' && arch == 'x86_64' && debug && socketprocess_networking && verify-standalone",
+@@ -19,3 +19,7 @@
+ skip-if = [
    "os == 'win' && os_version == '11.26200' && arch == 'x86_64' && debug && socketprocess_networking && verify-standalone",
  ]
 +

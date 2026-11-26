@@ -216,8 +216,21 @@ export class ZenLibraryDownloadsSection extends ZenLibrarySearchSection {
     return new lazy.FileUtils.File(download.target.path);
   }
 
+  /**
+   * @param {string} url - A download's source URL
+   * @returns {string} Its source, safe to show as the origin
+   */
   #formatUrl(url) {
-    return url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+    const parsed = URL.parse(url);
+    const uri = parsed && Services.io.newURI(parsed.href);
+    if (!uri) {
+      return "";
+    }
+    const host = lazy.BrowserUtils.formatURIForDisplay(uri);
+    if (uri.scheme !== "http" && uri.scheme !== "https") {
+      return host;
+    }
+    return (host + uri.pathQueryRef).replace(/\/$/, "");
   }
 
   #matchesQuery(download) {
@@ -460,8 +473,33 @@ export class ZenLibraryDownloadsSection extends ZenLibrarySearchSection {
     ).catch(console.error);
   }
 
+  /**
+   * Whether an action belongs in the menu at all, as against being offered
+   * and refused.
+   *
+   * @param {string} action - What the menu item does
+   * @param {object} download - The download it would do it to
+   * @returns {boolean} Whether to show it
+   */
+  #isActionShown(action, download) {
+    switch (action) {
+      case "pause":
+        return !download.stopped;
+      case "resume":
+        return download.canceled && download.hasPartialData;
+      case "unblock":
+        return lazy.isBlocked(download);
+      default:
+        return true;
+    }
+  }
+
   #isActionEnabled(action, download) {
     switch (action) {
+      case "pause":
+        return download.hasPartialData && !download.error;
+      case "resume":
+        return !download.error;
       case "open":
       case "copy":
       case "show":
@@ -495,6 +533,12 @@ export class ZenLibraryDownloadsSection extends ZenLibrarySearchSection {
       case "show":
         this.#showInFolder(download);
         break;
+      case "pause":
+        download.cancel().catch(console.error);
+        break;
+      case "resume":
+        download.start().catch(console.error);
+        break;
       case "unblock":
         lazy.confirmUnblock(download, window, this.#openDownload.bind(this));
         break;
@@ -527,6 +571,8 @@ export class ZenLibraryDownloadsSection extends ZenLibrarySearchSection {
   #buildMenu() {
     const menu = window.MozXULElement.parseXULToFragment(`
       <menupopup class="zen-library-downloads-menu">
+        <menuitem data-action="pause" data-l10n-id="downloads-cmd-pause"/>
+        <menuitem data-action="resume" data-l10n-id="downloads-cmd-resume"/>
         <menuitem data-action="open" data-l10n-id="library-downloads-menu-open"/>
         <menuitem data-action="show" data-l10n-id="downloads-cmd-show-menuitem-2"/>
         <menuseparator/>
@@ -564,13 +610,8 @@ export class ZenLibraryDownloadsSection extends ZenLibrarySearchSection {
           name: fileName,
         });
       }
-      const enabled = this.#isActionEnabled(action, download);
-      // Allowing a download only means anything to one that was stopped, so
-      // it is kept out of the way of every other.
-      if (action === "unblock") {
-        item.hidden = !enabled;
-      }
-      item.disabled = !enabled;
+      item.hidden = !this.#isActionShown(action, download);
+      item.disabled = !this.#isActionEnabled(action, download);
     }
     this.#menu.hidden = false;
     this.#menuRow?.removeAttribute("menu-open");

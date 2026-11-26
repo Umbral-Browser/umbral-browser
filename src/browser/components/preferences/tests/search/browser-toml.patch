@@ -1,13 +1,9 @@
 diff --git a/browser/components/preferences/tests/search/browser.toml b/browser/components/preferences/tests/search/browser.toml
-index fafa889dfa5e03eeb7137202fa9cf51bf8c2f380..8307615c52f9d09c6cf2edf5bab408591433bca8 100644
 --- a/browser/components/preferences/tests/search/browser.toml
 +++ b/browser/components/preferences/tests/search/browser.toml
-@@ -21,6 +21,8 @@ fail-if = [
+@@ -31,3 +31,5 @@
+ ["browser_searchsuggestions.js"]
  
- ["browser_searchRestoreDefaults.js"]
- 
-+["browser_umbral_searxng.js"]
+ ["browser_trendingsuggestions.js"]
 +
- ["browser_searchScroll.js"]
- support-files = [
-   "head.js","!/gfx/layers/apz/test/mochitest/apz_test_native_event_utils.js"]
++["browser_umbral_searxng.js"]

@@ -1,17 +1,16 @@
 diff --git a/browser/components/preferences/preferences.xhtml b/browser/components/preferences/preferences.xhtml
 --- a/browser/components/preferences/preferences.xhtml
 +++ b/browser/components/preferences/preferences.xhtml
-@@ -38,6 +38,8 @@
-   <link rel="stylesheet" href="chrome://browser/content/preferences/widgets/setting-group.css" />
+@@ -39,6 +39,8 @@
    <link rel="stylesheet" href="chrome://browser/content/preferences/widgets/setting-pane.css" />
    <link rel="stylesheet" href="chrome://browser/content/preferences/widgets/setting-control.css" />
+   <link rel="stylesheet" href="chrome://browser/content/ipprotection/vpn-site-rules-list.css" />
 +
 +#include zen-preferences-links.xhtml
--
-+
+ 
    <link rel="localization" href="branding/brand.ftl"/>
    <link rel="localization" href="browser/browser.ftl"/>
-@@ -121,11 +123,35 @@
+@@ -123,11 +125,35 @@
          iconsrc="chrome://browser/skin/preferences/category-general.svg"
          data-l10n-id="pane-general-title">
        </html:moz-page-nav-button>
@@ -50,17 +49,20 @@ diff --git a/browser/components/preferences/preferences.xhtml b/browser/componen
        </html:moz-page-nav-button>
        <html:moz-page-nav-button id="category-home"
          view="paneHome"
-@@ -224,3 +250,9 @@
+@@ -222,6 +248,12 @@
+         support-page="preferences"
+         iconsrc="chrome://global/skin/icons/help.svg"
          data-l10n-id="help-button-label2">
-       </html:moz-page-nav-button>
++      </html:moz-page-nav-button>
 +      <html:moz-page-nav-button id="umbralSupportButton"
 +        slot="secondary-nav"
 +        iconsrc="chrome://global/skin/icons/heart.svg"
 +        data-l10n-id="umbral-support-button"
 +        href="https://ko-fi.com/umbralbrowser">
-+      </html:moz-page-nav-button>
+       </html:moz-page-nav-button>
      </html:moz-page-nav>
-@@ -257,6 +283,22 @@
+ 
+@@ -259,6 +291,22 @@
  #include privacy.inc.xhtml
  #include sync.inc.xhtml
  #include moreFromMozilla.inc.xhtml

@@ -55,7 +55,7 @@ var gZenMarketplaceManager = {
 
     await this._buildModsList();
 
-    const checkForUpdateClick = (event) => {
+    const checkForUpdateClick = event => {
       if (event.target === checkForUpdates) {
         event.preventDefault();
 
@@ -134,7 +134,7 @@ var gZenMarketplaceManager = {
       `zen-theme-disable-all-${!areModsDisabled ? "enabled" : "disabled"}`,
     );
 
-    mozToggle.addEventListener("toggle", async (event) => {
+    mozToggle.addEventListener("toggle", async event => {
       const { pressed = false } = event.target || {};
 
       this.modsList.style.display = pressed ? "" : "none";
@@ -214,8 +214,8 @@ var gZenMarketplaceManager = {
 
     let timeout;
 
-    const filePromise = new Promise((resolve) => {
-      input.addEventListener("change", (event) => {
+    const filePromise = new Promise(resolve => {
+      input.addEventListener("change", event => {
         if (timeout) {
           clearTimeout(timeout);
         }
@@ -406,7 +406,7 @@ var gZenMarketplaceManager = {
         dialog.close();
       });
 
-      mozToggle.addEventListener("toggle", async (event) => {
+      mozToggle.addEventListener("toggle", async event => {
         const modId = event.target
           .closest(".zenThemeMarketplaceItem")
           .querySelector(".zenThemeMarketplaceItemUninstallButton")
@@ -457,7 +457,7 @@ var gZenMarketplaceManager = {
       ).textContent = mod.description;
       fragment
         .querySelector(".zenThemeMarketplaceItemUninstallButton")
-        .addEventListener("click", async (event) => {
+        .addEventListener("click", async event => {
           const [msg] = await document.l10n.formatValues([
             { id: "zen-theme-marketplace-remove-confirmation" },
           ]);
@@ -672,7 +672,7 @@ var gZenMarketplaceManager = {
 
               input.addEventListener(
                 "change",
-                gZenMods.debounce((event) => {
+                gZenMods.debounce(event => {
                   const value = event.target.value;
 
                   Services.prefs.setStringPref(property, value);

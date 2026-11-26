@@ -35,15 +35,15 @@ diff --git a/browser/components/preferences/config/account-sync.mjs b/browser/co
  });
  
  Preferences.addSetting({
-@@ -833,7 +848,7 @@
-   },
+@@ -834,7 +849,7 @@
  });
  
 -let accountsEnabled = Services.prefs.getBoolPref("identity.fxaccounts.enabled");
 +let accountsEnabled = false;
- 
- SettingGroupManager.registerGroups({
-   defaultBrowserSync: window.createDefaultBrowserConfig({
+ let perDeviceSyncEnabled = Services.prefs.getBoolPref(
+   "services.sync.perDeviceEngineChoices",
+   false
+ );
 @@ -843,7 +858,7 @@
    }),
    accountDisabled: {
